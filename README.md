@@ -161,33 +161,32 @@ reproducible y eficiente.
 
 <br><br>
 
-<a id="dependencias"></a>
-## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
+<a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
+## 4. Dependencias y Entorno de Ejecución (Contenedores)
 
-> **📝 Nota: Inmutabilidad y Reproducibilidad**
->
-> Para garantizar que el análisis sea idéntico en cualquier clúster, **OmniRNA-seq** no depende de librerías locales. Todo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**.
+**📝 Nota: Inmutabilidad y Reproducibilidad**
+
+Para garantizar que el análisis sea idéntico en cualquier clúster, **OmniRNA-seq** no depende de librerías locales. Todo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**.
 
 <br>
 
-> $\Large \color{#d35400}{\textbf{⚠️ Limitaciones Críticas y Estándares}}$
+> [!WARNING]
+> **⚠️ Limitaciones Críticas y Estándares**
 >
-> $\color{#d35400}{\text{Es obligatorio cumplir estos requisitos para evitar fallos:}}$
->
-> ---
+> Es obligatorio cumplir estos requisitos para evitar fallos:
 >
 > **1. Formato de Calidad (Estricto Phred+33)**
-> Calibrado solo para Illumina ≥1.8.
-> $\color{#d35400}{\textbf{Restricción:}}$ $\color{#d35400}{\text{Archivos antiguos con Phred+64 requieren conversión previa.}}$
+> * Calibrado solo para Illumina ≥1.8.
+> * **Restricción:** Archivos antiguos con Phred+64 requieren conversión previa.
 >
 > **2. Estrategia de Trimming Inmutable**
-> Uso exclusivo de **Trimmomatic** por trazabilidad clínica.
-> $\color{#d35400}{\textbf{Restricción:}}$ $\color{#d35400}{\text{No se permite sustituir por otros limpiadores (ej. fastp).}}$
+> * Uso exclusivo de **Trimmomatic** por trazabilidad clínica.
+> * **Restricción:** No se permite sustituir por otros limpiadores (ej. fastp).
 
 <br>
 
 <details>
-<summary>$\Large \color{#000080}{\textbf{🛠️ Herramientas de Procesamiento Upstream (Gold Standard)}}$</summary>
+<summary><strong>🛠️ Herramientas de Procesamiento Upstream (Gold Standard)</strong></summary>
 <br>
 
 * **Control de Calidad:** `FastQC v0.12.1` y `MultiQC v1.29`
@@ -198,7 +197,7 @@ reproducible y eficiente.
 </details>
 
 <details>
-<summary>$\Large \color{#000080}{\textbf{🧬 Entorno Estadístico Downstream (R/Bioconductor)}}$</summary>
+<summary><strong>🧬 Entorno Estadístico Downstream (R/Bioconductor)</strong></summary>
 <br>
 
 Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor (`r_custom_env.sif`) con **R v4.3+**.
@@ -216,15 +215,17 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 * `biomaRt v2.58.2`
 * `argparse v2.2.3` 🔌
 
-#### 🌍 Organismos Soportados Nativamente
-* Arabidopsis thaliana (🌱)
-* Homo sapiens (👤)
-* Mus musculus (🐭)
-* Rattus norvegicus (🐀)
-* Danio rerio (🐟)
-* Drosophila melanogaster (🦗)
-* Caenorhabditis elegans (🐛)
-* Saccharomyces cerevisiae (🍺)
+#### 🌍 Organismos Soportados Nativamente (Paquetes de Anotación)
+| Organismo | Paquete de Anotación (DB) |
+| :--- | :--- |
+| Arabidopsis thaliana (🌱) | `org.At.tair.db` |
+| Homo sapiens (👤) | `org.Hs.eg.db` |
+| Mus musculus (🐭) | `org.Mm.eg.db` |
+| Rattus norvegicus (🐀) | `org.Rn.eg.db` |
+| Danio rerio (🐟) | `org.Dr.eg.db` |
+| Drosophila melanogaster (🦗) | `org.Dm.eg.db` |
+| Caenorhabditis elegans (🐛) | `org.Ce.eg.db` |
+| Saccharomyces cerevisiae (🍺) | `org.Sc.sgd.db` |
 
 #### 📊 Suite de Visualización & Reportes
 * `ggplot2 v3.5.0`, `ggrepel v0.9.5`, `pheatmap v1.0.12`
