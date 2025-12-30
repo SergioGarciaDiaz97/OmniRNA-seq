@@ -159,6 +159,7 @@ reproducible y eficiente.
 
 </details>
 
+<br><br>
 <a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
 ## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
 
