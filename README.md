@@ -54,62 +54,60 @@ OmniRNA-seq/
 `Launcher → Python (data engineering) → R (estadística/biológica) → PDFs publicables`
 
 ---
-
 ## 🚀 2. Modos de Ejecución (Orquestación Inteligente)
 
-El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (públicos vs. locales) y el formato de entrada (crudos vs. matriz).
+El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (**públicos vs. locales**) y el formato de entrada (**crudos vs. matriz**).
 
 Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver apartado [5. Configuración JSON](#-5-centro-de-control-de-configuración-json)) para ahorrar espacio de almacenamiento.
 
-<br>
+---
 
 <details>
 <summary>$\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$</summary>
 
-<br>
-
-> [!TIP]
-> **Ideal para:** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**.
+> [!TIP]  
+> **Ideal para:** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**.  
 > **Activación:** Requiere suministrar un **Project_ID** (ej. PRJNA, SRP) como argumento.
 
-<br>
+### $\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$
+- **Configuración:** `"counting_method": "featurecounts"`.
+- **Descripción:** Interroga las APIs de ENA/SRA para recuperar automáticamente metadatos y FASTQs. Ejecuta el pipeline integral: QC, alineamiento y cuantificación.
 
-* **$\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$**
-    * **Configuración:** `"counting_method": "featurecounts"`.
-    * **Descripción:** Interroga las APIs de ENA/SRA para recuperar automáticamente metadatos y FASTQs. Ejecuta el pipeline integral: QC, alineamiento y cuantificación.
-
-* **$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$**
-    * **Configuración:** `"counting_method": "precomputed_csv" + URL remota`.
-    * **Descripción:** Descarga la matriz de conteos directamente del autor, omitiendo el alineamiento para saltar al análisis estadístico y funcional.
+### $\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$
+- **Configuración:** `"counting_method": "precomputed_csv" + URL remota`.
+- **Descripción:** Descarga la matriz de conteos directamente del autor, omitiendo el alineamiento para saltar al análisis estadístico y funcional.
 
 **Sintaxis (Bash):**
-```bash
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
-```
-<details> <summary>
 
-<summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada)}}$</summary>
+text
+</details>
 
-<br>
-
-> [!TIP]
-> **Ideal para:** Datos propios del laboratorio o colaboraciones privadas sin conexión externa.
-> **Activación:** Se ejecuta **sin argumento** de `Project_ID`.
-> *(Guía disponible en la carpeta `Modo local`)*.
-
-* **$\color{#8B0000}{\text{Procesamiento de Crudos (Raw Data Workflow):}}$**
-    * **Configuración:** `"fastq_list_strategy": "manual" + Manifiesto`.
-    * **Descripción:** Ingesta vía rutas locales (**URI file://**) para ejecutar alineamiento y conteo.
-
-* **$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis):}}$**
-    * **Configuración:** `"counting_method": "precomputed_csv"`.
-    * **Descripción:** **Bypass** de computación intensiva para ejecutar directamente DESeq2 y reportes.
-
-**Sintaxis (Bash):**
-```
-sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
-```
-<br>
+---
 
 <details>
-[!IMPORTANT]🛡️ Resiliencia Automática & Fault ToleranceGracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster (ej. Walltime Limit), basta con re-lanzar el comando original; el sistema detectará los pasos completados y saltará directamente a la etapa pendiente.
+<summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada)}}$</summary>
+
+> [!TIP]  
+> **Ideal para:** Datos propios del laboratorio o colaboraciones privadas sin conexión externa.  
+> **Activación:** Se ejecuta **sin argumento** de `Project_ID`.  
+> *(Guía disponible en la carpeta `Modo local`)*.
+
+### $\color{#8B0000}{\text{Procesamiento de Crudos (Raw Data Workflow):}}$
+- **Configuración:** `"fastq_list_strategy": "manual" + Manifiesto`.
+- **Descripción:** Ingesta vía rutas locales (**URI file://**) para ejecutar alineamiento y conteo.
+
+### $\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis):}}$
+- **Configuración:** `"counting_method": "precomputed_csv"`.
+- **Descripción:** **Bypass** de computación intensiva para ejecutar directamente DESeq2 y reportes.
+
+**Sintaxis (Bash):**
+sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
+
+text
+</details>
+
+---
+
+> [!IMPORTANT] **🛡️ Resiliencia Automática & Fault Tolerance**  
+> Gracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster (ej. Walltime Limit), basta con re-lanzar el comando original; el sistema detectará los pasos completados y saltará directamente a la etapa pendiente.
