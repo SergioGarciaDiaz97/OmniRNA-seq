@@ -162,7 +162,8 @@ reproducible y eficiente.
 <br><br>
 
 <a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
-## 4. Dependencias y Entorno de Ejecución (Contenedores)
+
+## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
 
 **📝 Nota: Inmutabilidad y Reproducibilidad**
 
@@ -186,7 +187,7 @@ Para garantizar que el análisis sea idéntico en cualquier clúster, **OmniRNA-
 <br>
 
 <details>
-<summary><strong>🛠️ Herramientas de Procesamiento Upstream (Gold Standard)</strong></summary>
+<summary>$\Large \color{#2E8B57}{\textbf{🛠️ Herramientas de Procesamiento Upstream (Gold Standard):}}$</summary>
 <br>
 
 * **Control de Calidad:** `FastQC v0.12.1` y `MultiQC v1.29`
