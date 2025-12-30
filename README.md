@@ -62,7 +62,7 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver apartado [5. Configuración JSON](#-5-centro-de-control-de-configuración-json)) para ahorrar espacio de almacenamiento.
 
 <details>
-<summary>$\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$</summary>
+<summary>$\Large \color{#000080}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$</summary>
 
 <br>
 
@@ -87,7 +87,7 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 </details> 
 
 <details>
-<summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada / On-Premise)}}$</summary>
+<summary>$\Large \color{#000080}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada / On-Premise)}}$</summary>
 <br>
 
 <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 10px 0; border-radius: 4px;">
@@ -152,7 +152,7 @@ reproducible y eficiente.
 <br><br>
 <details>
 
-<summary>$\Large \color{#8B0000}{\textbf{⚙️ Responsabilidades clave del launcher}}$</summary>
+<summary>$\Large \color{#000080}{\textbf{⚙️ Responsabilidades clave del launcher}}$</summary>
 
 - **Gestión eficiente de volúmenes**  
   Configuración dinámica de <i>bind paths</i> y directorios temporales sobre sistemas de archivos paralelos
