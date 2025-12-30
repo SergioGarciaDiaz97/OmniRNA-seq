@@ -95,11 +95,11 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 <span style="font-weight: bold; color: #856404;"><b>Activación:</b></span> Se ejecuta <b>sin</b> argumento de Project_ID. Como tutorial para el modo local hemos replicado este método partiendo de muestras fastq descargadas (<b>ver sección en este GitHub en carpeta Modo local</b>).
 </div>
 
-### $\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$
+### $\color{#2E8B57}{\text{Flujo Completo (End-to-End Processing):}}$
 - **Configuración:** `"fastq_list_strategy": "manual" + Manifiesto de archivos.`.
 - **Descripción:** Procesa archivos FASTQ alojados en el sistema de ficheros local. Utiliza un manifiesto de rutas (URI file://) para ingerir las muestras y ejecutar el alineamiento y conteo.
 
-### $\color{#8B0000}{\text{Flujo Acelerado Local (Direct Matrix Analysis - Local):}}$
+### $\color{#2E8B57}{\text{Flujo Acelerado Local (Direct Matrix Analysis - Local):}}$
 - **Configuración:** `"counting_method": "precomputed_csv" + Ruta local al archivo.`.
 - **Descripción:** Ingesta directa de una matriz de conteos (.csv) suministrada externamente o pre-calculada.
 
