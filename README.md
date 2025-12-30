@@ -164,12 +164,21 @@ reproducible y eficiente.
 <a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
 ## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
 
-> [!NOTE]
-> **Inmutabilidad y Reproducibilidad Absoluta**
+> **📝 Nota: Inmutabilidad y Reproducibilidad**
 >
-> Para garantizar que el análisis sea idéntico independientemente del clúster donde se despliegue, **OmniRNA-seq** no depende de librerías instaladas en el sistema anfitrión.
+> Para garantizar que el análisis sea idéntico independientemente del clúster donde se despliegue, **OmniRNA-seq** no depende de librerías instaladas en el sistema anfitrión. Todo el flujo de trabajo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**.
+
+<br>
+
+> $\Large \color{#d35400}{\textbf{⚠️ Limitaciones Críticas y Estándares}}$
 >
-> Todo el flujo de trabajo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**, asegurando un entorno de computación estanco y portable.
+> **1. Formato de Calidad (Estricto Phred+33)**
+> El pipeline está calibrado exclusivamente para codificación de calidad moderna (Illumina 1.8+).
+> $\color{#d35400}{\text{Restricción: El uso de archivos antiguos con Phred+64 requiere conversión previa.}}$
+>
+> **2. Estrategia de Trimming Inmutable**
+> Por diseño, se utiliza exclusivamente **Trimmomatic** debido a su trazabilidad clínica.
+> $\color{#d35400}{\text{Restricción: No se permite la sustitución por otros limpiadores (ej. fastp) en la config estándar.}}$
 
 <br>
 
@@ -184,22 +193,6 @@ El pipeline orquesta automáticamente imágenes oficiales de **nf-core** y **Bio
 * **Alineamiento:** `STAR v2.7.10a` y `HISAT2 v2.2.1`.
 * **Cuantificación:** `Subread featureCounts v2.0.6` y `StringTie v2.2.3`.
 
-<br>
-
-> [!WARNING]
-> ### ⚠️ Limitaciones Críticas y Estándares de Entrada
-> **Es imperativo cumplir estos requisitos para evitar fallos de ejecución o resultados espurios.**
->
-> ---
->
-> 📉 **1. Formato de Calidad (Estricto Phred+33)**
-> El pipeline está calibrado exclusivamente para codificación de calidad moderna (Illumina 1.8+).
-> * **Restricción:** El uso de archivos FASTQ antiguos con codificación **Phred+64 requiere conversión previa externa**. De lo contrario, el control de calidad y el recorte fallarán.
->
-> ✂️ **2. Estrategia de Trimming Inmutable**
-> Por diseño, se utiliza exclusivamente **Trimmomatic** debido a su robustez y trazabilidad en entornos clínicos y académicos.
-> * **Restricción:** **No se permite** la sustitución por otros limpiadores más rápidos pero menos configurables (ej. *fastp* o *cutadapt*) en la configuración estándar del pipeline.
-
 </details>
 
 <br>
@@ -211,7 +204,6 @@ El pipeline orquesta automáticamente imágenes oficiales de **nf-core** y **Bio
 Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor personalizado (`r_custom_env.sif`) que integra un ecosistema completo de **R v4.3+** versionado.
 
 #### 🏗️ Infraestructura y Núcleo Bioconductor (Vitales)
-*Sin estos cimientos, el análisis genómico no es posible.*
 * `BiocManager (v1.30.23)`, `BiocGenerics (v0.48.1)`
 * `S4Vectors (v0.40.2)`, `IRanges (v2.36.0)`, `GenomicRanges (v1.54.1)`
 * `SummarizedExperiment (v1.32.0)`, `BiocParallel (v1.36.0)`
@@ -225,7 +217,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 * **`argparse (v2.2.3)`**: 🔌 **Puente vital** para la orquestación con Python.
 
 #### 🌍 Organismos Soportados Nativamente (Anotación Offline)
-Base de datos de anotación pre-cargada para evitar dependencias de internet en tiempo de ejecución:
+Base de datos de anotación pre-cargada:
 * 🌱 *Arabidopsis thaliana* (`org.At.tair.db`)
 * 👤 *Homo sapiens* (`org.Hs.eg.db`)
 * 🐭 *Mus musculus* (`org.Mm.eg.db`)
