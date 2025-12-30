@@ -78,17 +78,24 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 ```
 <br>
 
-$\huge \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada / On-Premise)}}$
+---
 
-**Caso de uso:** Análisis de datos propios del laboratorio o colaboraciones privadas, sin conexión a APIs externas. **Activación:** Se ejecuta **sin argumento** de Project_ID. Como tutorial para el modo local hemos replicado este método partiendo de muestras fastq descargadas (**ver sección en este GitHub en carpeta Modo local**).
+$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada / On-Premise)}}$
+
+> [!TIP]
+> **Ideal para:** Análisis de datos propios o colaboraciones privadas sin conexión externa.
+> **Activación:** Se ejecuta **sin argumento** de `Project_ID`. 
+> *(Tutorial disponible en la carpeta `Modo local` de este repositorio).*
+
+<br>
 
 * **$\color{#8B0000}{\text{Procesamiento de Crudos (Raw Data Workflow):}}$**
-    * **Configuración:** `"fastq_list_strategy": "manual" + Manifiesto de archivos`.
-    * **Descripción:** Procesa archivos FASTQ alojados en el sistema de ficheros local. Utiliza un manifiesto de rutas (**URI file://**) para ingerir las muestras y ejecutar el alineamiento y conteo.
+    * **Configuración:** `"fastq_list_strategy": "manual" + Manifiesto`.
+    * **Descripción:** Ingesta vía rutas locales (**URI file://**) para ejecutar alineamiento y conteo.
 
-* **$\color{#8B0000}{\text{Flujo Acelerado Local (Direct Matrix Analysis - Local):}}$**
-    * **Configuración:** `"counting_method": "precomputed_csv" + Ruta local al archivo`.
-    * **Descripción:** Ingesta directa de una matriz de conteos (**.csv**) suministrada externamente o pre-calculada. Realiza un **bypass** de la etapa de computación intensiva para ejecutar exclusivamente los módulos de estadística (DESeq2), enriquecimiento y generación de reportes.
+* **$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis):}}$**
+    * **Configuración:** `"counting_method": "precomputed_csv"`.
+    * **Descripción:** **Bypass** de computación intensiva para ejecutar directamente DESeq2 y reportes.
 
 **Sintaxis (Bash):**
 ```text
