@@ -67,9 +67,9 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 
 <div style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 12px; margin: 10px 0; border-radius: 4px;">
 <span style="color: #28a745; font-size: 1.2em;">💡</span> 
-<span style="color: #155724; font-weight: bold;">**Ideal para:**</span> Meta-análisis y benchmarking utilizando datos de <span style="font-weight: bold;">**GEO, ENA o SRA**</span>.  
+**<span style="color: #155724;">Ideal para:</span>** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**.  
 
-<span style="color: #155724; font-weight: bold;">**Activación:**</span> Requiere suministrar un **Project_ID** (ej. PRJNA, SRP) como argumento.
+**<span style="color: #155724;">Activación:</span>** Requiere suministrar un **Project_ID** (ej. PRJNA, SRP) como argumento.
 </div>
 
 ### $\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$
