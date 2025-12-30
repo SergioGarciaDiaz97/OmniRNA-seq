@@ -54,6 +54,7 @@ OmniRNA-seq/
 `Launcher → Python (data engineering) → R (estadística/biológica) → PDFs publicables`
 
 ---
+
 ## 🚀 2. Modos de Ejecución (Orquestación Inteligente)
 
 El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (**públicos vs. locales**) y el formato de entrada (**crudos vs. matriz**).
@@ -65,9 +66,10 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 <details>
 <summary>$\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$</summary>
 
-> [!TIP]  
-> **Ideal para:** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**.  
-> **Activación:** Requiere suministrar un **Project_ID** (ej. PRJNA, SRP) como argumento.
+<div style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 12px; margin: 10px 0; border-radius: 4px;">
+💡 <span style="color: #155724; font-weight: bold;">Ideal para:</span> Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**.  
+💡 <span style="color: #155724; font-weight: bold;">Activación:</span> Requiere suministrar un **Project_ID** (ej. PRJNA, SRP) como argumento.
+</div>
 
 ### $\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$
 - **Configuración:** `"counting_method": "featurecounts"`.
@@ -81,7 +83,6 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 ```text
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 ```
-
 </details>
 
 ---
@@ -89,10 +90,11 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 <details>
 <summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada)}}$</summary>
 
-> [!TIP]  
-> **Ideal para:** Datos propios del laboratorio o colaboraciones privadas sin conexión externa.  
-> **Activación:** Se ejecuta **sin argumento** de `Project_ID`.  
-> *(Guía disponible en la carpeta `Modo local`)*.
+<div style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 12px; margin: 10px 0; border-radius: 4px;">
+💡 <span style="color: #155724; font-weight: bold;">Ideal para:</span> Datos propios del laboratorio o colaboraciones privadas sin conexión externa.  
+💡 <span style="color: #155724; font-weight: bold;">Activación:</span> Se ejecuta **sin argumento** de `Project_ID`.  
+💡 <span style="color: #155724;">*(Guía disponible en la carpeta `Modo local`)*</span>
+</div>
 
 ### $\color{#8B0000}{\text{Procesamiento de Crudos (Raw Data Workflow):}}$
 - **Configuración:** `"fastq_list_strategy": "manual" + Manifiesto`.
@@ -102,8 +104,8 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 - **Configuración:** `"counting_method": "precomputed_csv"`.
 - **Descripción:** **Bypass** de computación intensiva para ejecutar directamente DESeq2 y reportes.
 
-**Sintaxis (Bash):**
 ```text
+**Sintaxis (Bash):**
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 ```
 
