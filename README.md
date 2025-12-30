@@ -135,9 +135,9 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 <br><br>
 
 <a id="launcher"></a>
-<h2 style="color:#8B0000; margin-top:30px;">
-  🎛️ 3. Punto de entrada: Launcher maestro (RNA_SEQ_LETS_TRY.sh)
-</h2>
+<div style="color:#8B0000; margin-top:30px;">
+## 🎛️ 3. Punto de entrada: Launcher maestro (RNA_SEQ_LETS_TRY.sh)
+</div>
 
 
 <div style="
