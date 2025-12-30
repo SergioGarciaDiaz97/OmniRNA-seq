@@ -8,15 +8,15 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 ---
 
 ## 📚 Índice
-1. [Organización del Proyecto](#-1-organización-del-proyecto-separation-of-concerns)  
-2. [Modos de Ejecución](#-2-modos-de-ejecución-orquestación-inteligente)  
-3. [Launcher Maestro](#-3-punto-de-entrada-launcher-maestro-rna_seq_lets_trysh)  
-4. [Dependencias y Contenedores](#-4-dependencias-y-entorno-de-ejecución-contenedores)  
-5. [Centro de Configuración JSON](#-5-centro-de-control-de-configuración-json)  
-6. [Requisitos de Metadatos](#-6-requisitos-de-metadatos-metadata_archivos)  
-7. [Arquitectura del Sistema](#-7-arquitectura-del-sistema)  
-8. [Estructura Global de Resultados](#-8-estructura-global-de-resultados-output-tree)  
-9. [Autoría y Colaboraciones](#-9-autoría-impacto-y-colaboración)
+1. [Organización del Proyecto](# 1-organización-del-proyecto-separation-of-concerns)  
+2. [Modos de Ejecución](# 2-modos-de-ejecución-orquestación-inteligente)  
+3. [Launcher Maestro](# 3-punto-de-entrada-launcher-maestro-rna_seq_lets_trysh)  
+4. [Dependencias y Contenedores](# 4-dependencias-y-entorno-de-ejecución-contenedores)  
+5. [Centro de Configuración JSON](# 5-centro-de-control-de-configuración-json)  
+6. [Requisitos de Metadatos](# 6-requisitos-de-metadatos-metadata_archivos)  
+7. [Arquitectura del Sistema](# 7-arquitectura-del-sistema)  
+8. [Estructura Global de Resultados](# 8-estructura-global-de-resultados-output-tree)  
+9. [Autoría y Colaboraciones](# 9-autoría-impacto-y-colaboración)
 
 ---
 
