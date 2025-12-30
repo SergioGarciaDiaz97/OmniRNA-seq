@@ -63,10 +63,13 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 
 <br>
 
-$\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$
+<details>
+<summary>$\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$</summary>
+
 <br>
+
 > [!NOTE]
-> **Ideal para:** para utilizar datos de **GEO, ENA o SRA**.
+> **Ideal para:** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**.
 > **Activación:** Requiere un **Project_ID** (ej. PRJNA, SRP) como argumento.
 
 * **$\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$**
