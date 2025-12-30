@@ -83,7 +83,23 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
     * **Descripción:** Descarga la matriz de conteos del autor, omitiendo el alineamiento para saltar al análisis estadístico.
 
 **Sintaxis (Bash):**
-```bash
+```
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
-<details><summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada)}}$</summary>[!TIP]Ideal para: Datos propios del laboratorio o colaboraciones privadas sin conexión externa.Activación: Se ejecuta sin argumento de Project_ID.(Guía disponible en la carpeta Modo local).$\color{#8B0000}{\text{Procesamiento de Crudos (Raw Data Workflow):}}$Configuración: "fastq_list_strategy": "manual" + Manifiesto.Descripción: Ingesta vía rutas locales (URI file://) para ejecutar alineamiento y conteo.$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis):}}$Configuración: "counting_method": "precomputed_csv".Descripción: Bypass de computación intensiva para ejecutar directamente DESeq2 y reportes.Sintaxis (Bash):Bashsbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
+```
+
+<br>
+
+<details>
+<summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada)}}$</summary>
+[!TIP]
+>**Ideal para:** Datos propios del laboratorio o colaboraciones privadas sin conexión externa.
+>**Activación:** Se ejecuta sin argumento de Project_ID.(Guía disponible en la carpeta Modo local).
+* **$\color{#8B0000}{\text{Procesamiento de Crudos (Raw Data Workflow):}}$**
+   * **Configuración:** "fastq_list_strategy": "manual" + Manifiesto.Descripción: Ingesta vía rutas locales (URI file://) para ejecutar alineamiento y conteo.
+* **$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis):}}$**
+   * **Configuración:** `"counting_method": "precomputed_csv"`.
+   * **Descripción:** Bypass de computación intensiva para ejecutar directamente DESeq2 y reportes.
+   **Sintaxis (Bash):**
+   ```sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
+   ```
 [!IMPORTANT]🛡️ Resiliencia Automática & Fault ToleranceGracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster (ej. Walltime Limit), basta con re-lanzar el comando original; el sistema detectará los pasos completados y saltará directamente a la etapa pendiente.
