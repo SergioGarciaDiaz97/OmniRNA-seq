@@ -79,7 +79,8 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 
 **Sintaxis (Bash):**
 ```text
-sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx```
+sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
+```
 
 </details>
 
@@ -103,7 +104,8 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx```
 
 **Sintaxis (Bash):**
 ```text
-sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json```
+sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
+```
 
 </details>
 
