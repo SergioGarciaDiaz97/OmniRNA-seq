@@ -135,7 +135,7 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 <br><br>
 
 <a id="launcher"></a>
-## 🎛️ $\color{#8B0000}{\text{3. Punto de entrada: Launcher maestro (sh)}}$
+## 🎛️ $\color{#8B0000}{\text{3. Punto de entrada: Launcher maestro.sh}}$
 
 <div style="
   background-color:#eef4fb;
