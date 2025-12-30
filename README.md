@@ -74,6 +74,18 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 
 <br>
 
+<details>
+<summary>$\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$</summary>
+
+<br>
+
+> [!TIP]
+> **Ideal para:** Utilizar datos públicos de **GEO, ENA o SRA**.
+> **Activación:** Requiere suministrar un **Project_ID** (ej. PRJNA, SRP) como argumento.
+> *(Tutorial disponible en la documentación del modo Explorer)*.
+
+<br>
+
 * **$\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$**
     * **Configuración:** `"counting_method": "featurecounts"`.
     * **Descripción:** Interroga las APIs de ENA/SRA para recuperar automáticamente metadatos y FASTQs. Ejecuta el pipeline integral: QC, alineamiento y cuantificación.
@@ -89,7 +101,6 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 ```
 </details>
-
 ---
 
 $\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada / On-Premise)}}$
