@@ -85,31 +85,29 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 ```
 </details> 
 
-
 <details>
-<summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada)}}$</summary>
+<summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada / On-Premise)}}$</summary>
+<br>
 
-<div style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 12px; margin: 10px 0; border-radius: 4px;">
-<span style="color: #28a745; font-size: 1.2em;">💡</span> 
-<span style="color: #155724; font-weight: bold;">**Ideal para:**</span> Datos propios del laboratorio o colaboraciones privadas sin conexión externa.  
-
-<span style="color: #155724; font-weight: bold;">**Activación:**</span> Se ejecuta **sin argumento** de `Project_ID`.  
-<span style="color: #155724;">*(Guía disponible en la carpeta `Modo local`)*</span>
+<div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 10px 0; border-radius: 4px;">
+<span style="font-size: 1.2em;">💡</span> 
+<span style="font-weight: bold; color: #856404;"><b>Ideal para: </b></span> Análisis de datos propios del laboratorio o colaboraciones privadas, sin conexión a APIs externas.<br>
+<span style="font-weight: bold; color: #856404;"><b>Activación:</b></span> Se ejecuta <b>sin</b> argumento de Project_ID. Como tutorial para el modo local hemos replicado este método partiendo de muestras fastq descargadas (<b>ver sección en este GitHub en carpeta Modo local</b>).
 </div>
 
-### $\color{#8B0000}{\text{Procesamiento de Crudos (Raw Data Workflow):}}$
-- **Configuración:** `"fastq_list_strategy": "manual" + Manifiesto`.
-- **Descripción:** Ingesta vía rutas locales (**URI file://**) para ejecutar alineamiento y conteo.
+### $\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$
+- **Configuración:** `"fastq_list_strategy": "manual" + Manifiesto de archivos.`.
+- **Descripción:** Procesa archivos FASTQ alojados en el sistema de ficheros local. Utiliza un manifiesto de rutas (URI file://) para ingerir las muestras y ejecutar el alineamiento y conteo.
 
-### $\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis):}}$
-- **Configuración:** `"counting_method": "precomputed_csv"`.
-- **Descripción:** **Bypass** de computación intensiva para ejecutar directamente DESeq2 y reportes.
+### $\color{#8B0000}{\text{Flujo Acelerado Local (Direct Matrix Analysis - Local):}}$
+- **Configuración:** `"counting_method": "precomputed_csv" + Ruta local al archivo.`.
+- **Descripción:** Ingesta directa de una matriz de conteos (.csv) suministrada externamente o pre-calculada.
 
 **Sintaxis (Bash):**
-```
+```bash
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 ```
-</details>
+</details> 
 
 ---
 
