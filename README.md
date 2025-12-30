@@ -63,6 +63,7 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 
 <details>
 <summary>$\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$</summary>
+
 <br>
 
 <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 10px 0; border-radius: 4px;">
