@@ -55,7 +55,7 @@ OmniRNA-seq/
 
 ---
 
-## 🚀 2. Modos de Ejecución (Orquestación Inteligente)
+## 🚀  $\color{#8B0000}{\text{2. Modos de Ejecución (Orquestación Inteligente):}}$
 
 El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (**públicos vs. locales**) y el formato de entrada (**crudos vs. matriz**).
 
