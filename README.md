@@ -166,7 +166,10 @@ reproducible y eficiente.
 
 > [!NOTE]
 > **Inmutabilidad y Reproducibilidad Absoluta**
-> Para garantizar que el análisis sea idéntico independientemente del clúster donde se despliegue, **OmniRNA-seq** no depende de librerías instaladas en el sistema anfitrión. Todo el flujo de trabajo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**, asegurando un entorno de computación estanco y portable.
+>
+> Para garantizar que el análisis sea idéntico independientemente del clúster donde se despliegue, **OmniRNA-seq** no depende de librerías instaladas en el sistema anfitrión.
+>
+> Todo el flujo de trabajo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**, asegurando un entorno de computación estanco y portable.
 
 <br>
 
@@ -181,10 +184,21 @@ El pipeline orquesta automáticamente imágenes oficiales de **nf-core** y **Bio
 * **Alineamiento:** `STAR v2.7.10a` y `HISAT2 v2.2.1`.
 * **Cuantificación:** `Subread featureCounts v2.0.6` y `StringTie v2.2.3`.
 
+<br>
+
 > [!WARNING]
-> **⚠️ Nota Técnica sobre Estándares de Secuenciación**
-> * **Formato de Calidad (Phred+33):** El pipeline asume estrictamente una codificación de calidad moderna (Illumina 1.8+). El uso de archivos antiguos con Phred+64 requiere conversión previa externa.
-> * **Estrategia de Trimming:** Por diseño, se utiliza exclusivamente **Trimmomatic** debido a su robustez y trazabilidad en entornos clínicos/académicos. No se permite la sustitución por otros limpiadores (ej. *fastp*) en la configuración estándar.
+> ### ⚠️ Limitaciones Críticas y Estándares de Entrada
+> **Es imperativo cumplir estos requisitos para evitar fallos de ejecución o resultados espurios.**
+>
+> ---
+>
+> 📉 **1. Formato de Calidad (Estricto Phred+33)**
+> El pipeline está calibrado exclusivamente para codificación de calidad moderna (Illumina 1.8+).
+> * **Restricción:** El uso de archivos FASTQ antiguos con codificación **Phred+64 requiere conversión previa externa**. De lo contrario, el control de calidad y el recorte fallarán.
+>
+> ✂️ **2. Estrategia de Trimming Inmutable**
+> Por diseño, se utiliza exclusivamente **Trimmomatic** debido a su robustez y trazabilidad en entornos clínicos y académicos.
+> * **Restricción:** **No se permite** la sustitución por otros limpiadores más rápidos pero menos configurables (ej. *fastp* o *cutadapt*) en la configuración estándar del pipeline.
 
 </details>
 
