@@ -55,13 +55,11 @@ OmniRNA-seq/
 
 ---
 
----
-
----
-
 ## 🚀 2. Modos de Ejecución (Orquestación Inteligente)
 
-El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo basándose en la fuente de datos (públicos vs. locales) y el formato de entrada. Además, incluye parámetros de optimización de almacenamiento (ver [Configuración JSON](#v-⚙️-5-centro-de-control-de-configuración-json)).
+El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (públicos vs. locales) y el formato de entrada (crudos vs. matriz).
+
+Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver apartado [5. Configuración JSON](#-5-centro-de-control-de-configuración-json)) para ahorrar espacio de almacenamiento.
 
 <br>
 
@@ -71,25 +69,25 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 <br>
 
 > [!TIP]
-> **Ideal para:** Meta-análisis y benchmarking con datos de **GEO, ENA o SRA**.
+> **Ideal para:** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**.
 > **Activación:** Requiere suministrar un **Project_ID** (ej. PRJNA, SRP) como argumento.
-
-* **$\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$**
-    * **Configuración:** `"counting_method": "featurecounts"`.
-    * **Descripción:** Interroga las APIs de ENA/SRA para recuperar automáticamente metadatos y FASTQs. Ejecuta QC, alineamiento y cuantificación.
-
-* **$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$**
-    * **Configuración:** `"counting_method": "precomputed_csv" + URL remota"`.
-    * **Descripción:** Descarga la matriz de conteos del autor, omitiendo el alineamiento para saltar al análisis estadístico.
-
-**Sintaxis (Bash):**
-```
-sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
-```
 
 <br>
 
-<details>
+* **$\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$**
+    * **Configuración:** `"counting_method": "featurecounts"`.
+    * **Descripción:** Interroga las APIs de ENA/SRA para recuperar automáticamente metadatos y FASTQs. Ejecuta el pipeline integral: QC, alineamiento y cuantificación.
+
+* **$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$**
+    * **Configuración:** `"counting_method": "precomputed_csv" + URL remota`.
+    * **Descripción:** Descarga la matriz de conteos directamente del autor, omitiendo el alineamiento para saltar al análisis estadístico y funcional.
+
+**Sintaxis (Bash):**
+```bash
+sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
+```
+<details> <summary>
+
 <summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada)}}$</summary>
 
 <br>
