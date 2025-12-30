@@ -43,7 +43,7 @@ OmniRNA-seq/
 │   ├── 03_Functional_analysis_viz.R
 │   └── 04_Comprehensive_Report_Builder.R
 └── logs/                      # Trazas de ejecución SLURM
-
+```
 **Flujo lógico:**  
 `Launcher → Python (data engineering) → R (estadística/biológica) → PDFs publicables`
 
