@@ -78,9 +78,8 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 - **Descripción:** Descarga la matriz de conteos directamente del autor, omitiendo el alineamiento para saltar al análisis estadístico y funcional.
 
 **Sintaxis (Bash):**
-sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
+```sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx```
 
-text
 </details>
 
 ---
@@ -102,7 +101,7 @@ text
 - **Descripción:** **Bypass** de computación intensiva para ejecutar directamente DESeq2 y reportes.
 
 **Sintaxis (Bash):**
-sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
+```sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json```
 
 text
 </details>
