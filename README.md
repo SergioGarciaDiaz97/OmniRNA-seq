@@ -56,21 +56,21 @@ OmniRNA-seq/
 ---
 
 ## 🚀 2. Modos de Ejecución (Orquestación Inteligente)
-
-
+<br>
 El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (públicos vs. locales) y el formato de entrada (crudos vs. matriz), definido en el archivo de configuración JSON. Existen los parámetros (ver apartado [5. Centro de configuración JSON](#v-⚙️-5-centro-de-control-de-configuración-json)) **cleanup_only_fastq** y **retain_only_fastqc_and_bam** para ahorrar espacio de almacenamiento en la memoria.
-
+<br>
 $\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada de Repositorios)}}$  
+<br>
 **Caso de uso:** Meta-análisis y benchmarking utilizando datos públicos (GEO, ENA, SRA). **Activación:** Se ejecuta suministrando un **Project_ID** (ej. PRJNA, SRP) como argumento.
-
+<br>
 * **$\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$**
     * **Configuración:** `"counting_method": "featurecounts"`.
     * **Descripción:** El sistema interroga las APIs de ENA/SRA para recuperar automáticamente los metadatos del diseño experimental y los archivos FASTQ crudos. Ejecuta el pipeline completo: control de calidad, alineamiento y cuantificación.
-
-* **$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$**
+<br>
+**$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$**
     * **Configuración:** `"counting_method": "precomputed_csv" + URL remota`.
     * **Descripción:** Descarga la matriz de conteos procesada directamente desde el repositorio del autor. Omite el alineamiento para saltar inmediatamente al análisis estadístico y funcional.
-
+<br>
 **Sintaxis (Bash):**
 ```text
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
