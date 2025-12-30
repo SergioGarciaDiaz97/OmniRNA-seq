@@ -19,7 +19,7 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 9. [Autoría y Colaboraciones](#autoría-impacto-y-colaboración)
 ---
 
-<a id="organizacion"></a> <a id="modos"></a> <a id="launcher"></a>
+<a id="organizacion"></a>
 ## 📂 $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
 
 ```text
@@ -51,7 +51,7 @@ OmniRNA-seq/
 └── logs/                      # Trazas de ejecución SLURM
 ```
 **Flujo lógico:**  
-`Launcher → Python (data engineering) → R (estadística/biológica) → PDFs publicables`
+`Flujo → Python (data engineering) → R (estadística/biológica) → PDFs publicables`
 
 ---
 
@@ -135,7 +135,8 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 <br><br>
 
 <a id="launcher"></a>
-## 🎛️ $\ Punto de entrada: Launcher maestro (`RNA_SEQ_LETS_TRY.sh`)
+## 🎛️ $\color{#8B0000}{\text{3. Punto de entrada: Launcher maestro (`RNA_SEQ_LETS_TRY.sh`)}}$
+
 
 <div style="
   background-color:#eef4fb;
