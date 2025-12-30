@@ -228,7 +228,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 | Caenorhabditis elegans (🐛) | `org.Ce.eg.db` |
 | Saccharomyces cerevisiae (🍺) | `org.Sc.sgd.db` |
 
-#### $\color{#2E8B57}{\text{📊 Suite de Visualización & Reportes}}$
+#### $\color{#2E8B57}{\text{📊 Suite de Visualización \& Reportes}}$
 * `ggplot2 v3.5.0`, `ggrepel v0.9.5`, `pheatmap v1.0.12`
 * `rmarkdown v2.26` & `knitr v1.46`
 
