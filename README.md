@@ -62,9 +62,9 @@ OmniRNA-seq/
 El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo basándose en la fuente de datos (públicos vs. locales) y el formato de entrada (crudos vs. matriz). Para optimizar el almacenamiento, el sistema incluye los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver [5. Configuración JSON](#v-⚙️-5-centro-de-control-de-configuración-json)).
 <br>
 $\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$
-
+<br>
 > [!NOTE]
-> **Ideal para:** Meta-análisis y benchmarking con datos de **GEO, ENA o SRA**.
+> **Ideal para:** para utilizar datos de **GEO, ENA o SRA**.
 > **Activación:** Requiere un **Project_ID** (ej. PRJNA, SRP) como argumento.
 
 * **$\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$**
