@@ -187,7 +187,7 @@ Para garantizar que el análisis sea idéntico en cualquier clúster, **OmniRNA-
 <br>
 
 <details>
-<summary>$\Large \color{#2E8B57}{\textbf{🛠️ Herramientas de Procesamiento Upstream (Gold Standard):}}$</summary>
+<summary>$\Large \color{#000080}{\textbf{🛠️ Herramientas de Procesamiento Upstream (Gold Standard):}}$</summary>
 <br>
 
 * **Control de Calidad:** `FastQC v0.12.1` y `MultiQC v1.29`
@@ -198,17 +198,17 @@ Para garantizar que el análisis sea idéntico en cualquier clúster, **OmniRNA-
 </details>
 
 <details>
-<summary><strong>🧬 Entorno Estadístico Downstream (R/Bioconductor)</strong></summary>
+<summary>$\Large \color{#000080}{\textbf{🧬 Entorno Estadístico Downstream (R/Bioconductor)}}$</summary>
 <br>
 
 Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor (`r_custom_env.sif`) con **R v4.3+**.
 
-#### 🏗️ Núcleo Bioconductor
+#### $\color{#2E8B57}{\text{🏗️ Núcleo Bioconductor}}$
 * `BiocManager v1.30.23`, `BiocGenerics v0.48.1`
 * `S4Vectors v0.40.2`, `IRanges v2.36.0`, `GenomicRanges v1.54.1`
 * `SummarizedExperiment v1.32.0`, `BiocParallel v1.36.0`
 
-#### ⚙️ Motor Bioinformático
+#### $\color{#2E8B57}{\text{⚙️ Motor Bioinformático}}$
 * `DESeq2 v1.42.1`
 * `clusterProfiler v4.10.1`
 * `gprofiler2 v0.2.3`
@@ -216,7 +216,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 * `biomaRt v2.58.2`
 * `argparse v2.2.3` 🔌
 
-#### 🌍 Organismos Soportados Nativamente (Paquetes de Anotación)
+#### $\color{#2E8B57}{\text{🌍 Organismos Soportados Nativamente (Paquetes de Anotación)}}$
 | Organismo | Paquete de Anotación (DB) |
 | :--- | :--- |
 | Arabidopsis thaliana (🌱) | `org.At.tair.db` |
@@ -228,7 +228,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 | Caenorhabditis elegans (🐛) | `org.Ce.eg.db` |
 | Saccharomyces cerevisiae (🍺) | `org.Sc.sgd.db` |
 
-#### 📊 Suite de Visualización & Reportes
+#### $\color{#2E8B57}{\text{📊 Suite de Visualización & Reportes}}$
 * `ggplot2 v3.5.0`, `ggrepel v0.9.5`, `pheatmap v1.0.12`
 * `rmarkdown v2.26` & `knitr v1.46`
 
