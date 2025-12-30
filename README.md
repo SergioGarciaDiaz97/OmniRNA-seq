@@ -110,23 +110,26 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 ```
 </details> 
 
----
 
 <div style="
-  background-color:#e8f5e9;
+  background-color:#f5f5f5;
   border-left:5px solid #2e7d32;
-  padding:14px;
-  margin:14px 0;
+  padding:16px;
+  margin:18px 0;
   border-radius:6px;
 ">
-<span style="font-size:1.3em;">🛡️</span>
-<b style="color:#1b5e20;"> Resiliencia Automática</b><br>
-<span style="color:#1b5e20;">
-Gracias a su arquitectura modular, <b>OmniRNA-seq</b> es capaz de retomar ejecuciones interrumpidas.
-Si un job es cancelado por el clúster por exceder el <i>walltime</i>, basta con re-lanzar el comando original;
-el sistema detecta los pasos ya completados y los archivos válidos, saltando directamente a la etapa pendiente.
-</span>
+  <span style="font-size:1.3em;">🛡️</span>
+  <span style="font-weight:600; color:#1b5e20; font-size:1.1em;">
+    Resiliencia Automática
+  </span>
+  <br><br>
+  <span style="color:#333;">
+    Gracias a su arquitectura modular, <b>OmniRNA-seq</b> es capaz de retomar ejecuciones interrumpidas.
+    Si un job es cancelado por el clúster por exceder el <i>walltime</i>, basta con re-lanzar el comando original;
+    el sistema detecta los pasos ya completados y los archivos válidos, continuando directamente desde la etapa pendiente.
+  </span>
 </div>
+
 
 <br><br>
 
