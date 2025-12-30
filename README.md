@@ -109,7 +109,7 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 ```
 </details> 
-
+<br><br>
 
 <div style="
   background-color:#f5f5f5;
