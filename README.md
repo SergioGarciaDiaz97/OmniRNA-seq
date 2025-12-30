@@ -151,7 +151,7 @@ reproducible y eficiente.
 </div>
 
 <details>
-<summary><span style="font-size:1.1em;"><b>⚙️ Responsabilidades clave del launcher</b></span></summary>
+<summary>$\Large \textbf{⚙️ Responsabilidades clave del launcher}$</summary>
 <br><br>
 
 - **Gestión eficiente de volúmenes**  
