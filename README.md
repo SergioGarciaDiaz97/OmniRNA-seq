@@ -128,6 +128,8 @@ el sistema detecta los pasos ya completados y los archivos válidos, saltando di
 </span>
 </div>
 
+<br><br>
+
 <a id="3-punto-de-entrada-launcher-maestro-rna_seq_lets_trysh"></a>
 
 ## 🎛️ 3. Punto de entrada: Launcher maestro (`RNA_SEQ_LETS_TRY.sh`)
@@ -145,7 +147,9 @@ que actúa como interfaz entre el usuario y el clúster HPC, garantizando ejecuc
 reproducible y eficiente.
 </div>
 
-### ⚙️ Responsabilidades clave del launcher
+<details>
+<summary><b>⚙️ Responsabilidades clave del launcher</b></summary>
+<br>
 
 - **Gestión eficiente de volúmenes**  
   Configuración dinámica de <i>bind paths</i> y directorios temporales sobre sistemas de archivos paralelos
@@ -158,4 +162,6 @@ reproducible y eficiente.
 - **Limpieza automática**  
   Implementación de <i>exit traps</i> para la eliminación segura de archivos temporales,
   optimizando el uso de almacenamiento en infraestructuras compartidas.
+
+</details>
 
