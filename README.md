@@ -112,5 +112,19 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 
 ---
 
-> [!IMPORTANT] **🛡️ Resiliencia Automática & Fault Tolerance**  
-> Gracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster (ej. Walltime Limit), basta con re-lanzar el comando original; el sistema detectará los pasos completados y saltará directamente a la etapa pendiente.
+<div style="
+  background-color:#e8f5e9;
+  border-left:5px solid #2e7d32;
+  padding:14px;
+  margin:14px 0;
+  border-radius:6px;
+">
+<span style="font-size:1.3em;">🛡️</span>
+<b style="color:#1b5e20;"> Resiliencia Automática</b><br>
+<span style="color:#1b5e20;">
+Gracias a su arquitectura modular, <b>OmniRNA-seq</b> es capaz de retomar ejecuciones interrumpidas.
+Si un job es cancelado por el clúster por exceder el <i>walltime</i>, basta con re-lanzar el comando original;
+el sistema detecta los pasos ya completados y los archivos válidos, saltando directamente a la etapa pendiente.
+</span>
+</div>
+
