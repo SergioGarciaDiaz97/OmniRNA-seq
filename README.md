@@ -8,19 +8,19 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 ---
 
 ## 📚 Índice
-1. [Organización del Proyecto](#1 -organización-del-proyecto-separation-of-concerns)  
-2. [Modos de Ejecución](# 2-modos-de-ejecución-orquestación-inteligente)  
-3. [Launcher Maestro](# 3-punto-de-entrada-launcher-maestro-rna_seq_lets_trysh)  
-4. [Dependencias y Contenedores](# 4-dependencias-y-entorno-de-ejecución-contenedores)  
-5. [Centro de Configuración JSON](# 5-centro-de-control-de-configuración-json)  
-6. [Requisitos de Metadatos](# 6-requisitos-de-metadatos-metadata_archivos)  
-7. [Arquitectura del Sistema](# 7-arquitectura-del-sistema)  
-8. [Estructura Global de Resultados](# 8-estructura-global-de-resultados-output-tree)  
-9. [Autoría y Colaboraciones](# 9-autoría-impacto-y-colaboración)
+1. [Organización del Proyecto](#organización-del-proyecto-separation-of-concerns)  
+2. [Modos de Ejecución](#modos-de-ejecución-orquestación-inteligente)  
+3. [Launcher Maestro](#punto-de-entrada-launcher-maestro-rna_seq_lets_trysh)  
+4. [Dependencias y Contenedores](#dependencias-y-entorno-de-ejecución-contenedores)  
+5. [Centro de Configuración JSON](#centro-de-control-de-configuración-json)  
+6. [Requisitos de Metadatos](#requisitos-de-metadatos-metadata_archivos)  
+7. [Arquitectura del Sistema](#arquitectura-del-sistema)  
+8. [Estructura Global de Resultados](#estructura-global-de-resultados-output-tree)  
+9. [Autoría y Colaboraciones](#autoría-impacto-y-colaboración)
 
 ---
 
-## 📂  $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
+## 📂 $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
 
 
 ```text
@@ -56,7 +56,7 @@ OmniRNA-seq/
 
 ---
 
-## 🚀  $\color{#8B0000}{\text{2. Modos de Ejecución (Orquestación Inteligente):}}$
+## 🚀 $\color{#8B0000}{\text{2. Modos de Ejecución (Orquestación Inteligente):}}$
 
 El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (**públicos vs. locales**) y el formato de entrada (**crudos vs. matriz**).
 
@@ -136,7 +136,8 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 
 <a id="3-punto-de-entrada-launcher-maestro-rna_seq_lets_trysh"></a>
 
-## 🎛️ 3. Punto de entrada: Launcher maestro (`RNA_SEQ_LETS_TRY.sh`)
+
+## 🎛️ $ Punto de entrada: Launcher maestro (`RNA_SEQ_LETS_TRY.sh`)
 
 <div style="
   background-color:#eef4fb;
