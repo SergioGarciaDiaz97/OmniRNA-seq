@@ -71,11 +71,11 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 <span style="font-weight: bold; color: #856404;">Activación:</span> Requiere suministrar un <b>Project_ID</b> (ej. PRJNA, SRP) como argumento.
 </div>
 
-### $\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$
+### $\color{#2E8B57}{\text{Flujo Completo (End-to-End Processing):}}$
 - **Configuración:** `"counting_method": "featurecounts"`.
 - **Descripción:** Interroga las APIs de ENA/SRA para recuperar automáticamente metadatos y FASTQs. Ejecuta el pipeline integral: QC, alineamiento y cuantificación.
 
-### $\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$
+### $\color{#2E8B57}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$
 - **Configuración:** `"counting_method": "precomputed_csv" + URL remota`.
 - **Descripción:** Descarga la matriz de conteos directamente del autor, omitiendo el alineamiento para saltar al análisis estadístico y funcional.
 
