@@ -139,10 +139,8 @@ reproducible y eficiente.
   margin:14px 0;
   border-radius:6px;
 ">
-<b>Orquestación centralizada del pipeline.</b><br>
-Todo el flujo de trabajo se controla desde un <b>único script Bash optimizado para SLURM</b>,
-que actúa como interfaz entre el usuario y el clúster HPC, garantizando ejecución robusta,
-reproducible y eficiente.
+<b>Resiliencia Automática:</b><br>
+Resiliencia Automática: Gracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster por exceder el tiempo de pared (walltime), basta con re-lanzar el comando original; el sistema detectará los pasos completados y los archivos válidos, saltando directamente a la etapa pendiente.
 </div>
 <br><br>
 <details>
