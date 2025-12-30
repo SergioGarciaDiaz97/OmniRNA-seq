@@ -51,7 +51,7 @@ OmniRNA-seq/
 └── logs/                      # Trazas de ejecución SLURM
 ```
 **Flujo lógico:**  
-`Flujo → Python (data engineering) → R (estadística/biológica) → PDFs publicables`
+`Python (data engineering) → R (estadística/biológica) → PDFs publicables`
 
 ---
 
@@ -142,8 +142,7 @@ Todo el flujo de trabajo se controla desde un <b>único script Bash optimizado p
 que actúa como interfaz entre el usuario y el clúster HPC, garantizando ejecución robusta,
 reproducible y eficiente.
 </div>
-
-<br><br>
+<br>
 <details>
 
 <summary>$\Large \color{#000080}{\textbf{⚙️ Responsabilidades clave del launcher}}$</summary>
