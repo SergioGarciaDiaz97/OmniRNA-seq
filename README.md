@@ -230,7 +230,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 #### $\color{#2E8B57}{\text{📊 Suite de Visualización y Reportes}}$
 * `ggplot2 v3.5.0`, `ggrepel v0.9.5`, `pheatmap v1.0.12`
-* `rmarkdown v2.26` & `knitr v1.46`
+* `rmarkdown v2.26`  `knitr v1.46`
 
 </details>
 
@@ -246,8 +246,6 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 **OmniRNA-seq** nace con la filosofía del **código abierto (licencia MIT)** para eliminar barreras en la ciencia. Sin embargo, su arquitectura robusta es el resultado de cientos de horas de ingeniería y la dedicación exclusiva de un **Investigador Predoctoral (FPU)**.
 
-<br>
-
 ### $\color{#000080}{\text{🏫 Colaboraciones Locales}}$
 
 Para análisis de datos privados (FASTQs o matrices de conteos), ofrezco soporte directo. Facilita tus archivos + `metadata.csv` y recibirás tus resultados procesados.
@@ -255,7 +253,6 @@ Para análisis de datos privados (FASTQs o matrices de conteos), ofrezco soporte
 * 🆔 **ORCID:** [0000-0003-0207-9026](https://orcid.org/0000-0003-0207-9026)
 * 📧 **Contacto:** sergio120897@gmail.com
 
-<br>
 
 ### $\color{#000080}{\text{🌟 Impacto: Tu Cita es el Motor}}$
 
@@ -263,9 +260,8 @@ Para análisis de datos privados (FASTQs o matrices de conteos), ofrezco soporte
 >
 > Si este pipeline agiliza tu investigación, una **cita en tu paper** es la mejor forma de validarlo y apoyar mi carrera académica.
 
-<br>
 
-### $\color{#000080}{\text{🧬 Soporte Experto \& Co-autoría}}$
+### $\color{#000080}{\text{🧬 Soporte Experto \ Co-autoría}}$
 
 La ciencia es mejor cuando se comparte. Si necesitas una integración profunda, auditoría de datos o soporte bioinformático experto para elevar el impacto de tu estudio, estoy totalmente abierto a la **colaboración y co-autoría**.
 
