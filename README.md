@@ -161,74 +161,93 @@ reproducible y eficiente.
 
 <br><br>
 
-<a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
-## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
+<a id="dependencias"></a>
+<h2 style="color:#8B0000;">
+  📦 4. Dependencias y Entorno de Ejecución (Contenedores)
+</h2>
 
-> **📝 Nota: Inmutabilidad y Reproducibilidad**
->
-> Para garantizar que el análisis sea idéntico independientemente del clúster donde se despliegue, **OmniRNA-seq** no depende de librerías instaladas en el sistema anfitrión. Todo el flujo de trabajo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**.
+<div style="
+  background-color:#fdf6e3;
+  border-left:5px solid #f39c12;
+  padding:14px;
+  margin:12px 0;
+  border-radius:6px;
+">
+  <strong>📝 Nota: Inmutabilidad y Reproducibilidad</strong><br>
+  Para garantizar que el análisis sea idéntico en cualquier clúster, 
+  <strong>OmniRNA-seq</strong> no depende de librerías locales. 
+  Todo se ejecuta mediante imágenes de contenedores <strong>Apptainer</strong> o <strong>Singularity</strong>.
+</div>
 
-<br>
+<div style="
+  background-color:#fdecea;
+  border-left:5px solid #e74c3c;
+  padding:14px;
+  margin:12px 0;
+  border-radius:6px;
+">
+  <strong>⚠️ Limitaciones Críticas y Estándares</strong><br><br>
+  <strong>1. Formato de Calidad (Estricto Phred+33)</strong><br>
+  Calibrado solo para Illumina ≥1.8.<br>
+  <span style="color:#c0392b;"><em>Restricción:</em> Archivos antiguos con Phred+64 requieren conversión previa.</span><br><br>
 
-> $\Large \color{#d35400}{\textbf{⚠️ Limitaciones Críticas y Estándares}}$
->
-> **1. Formato de Calidad (Estricto Phred+33)**
-> El pipeline está calibrado exclusivamente para codificación de calidad moderna (Illumina 1.8+).
-> $\color{#d35400}{\text{Restricción: El uso de archivos antiguos con Phred+64 requiere conversión previa.}}$
->
-> **2. Estrategia de Trimming Inmutable**
-> Por diseño, se utiliza exclusivamente **Trimmomatic** debido a su trazabilidad clínica.
-> $\color{#d35400}{\text{Restricción: No se permite la sustitución por otros limpiadores (ej. fastp) en la config estándar.}}$
-
-<br>
+  <strong>2. Estrategia de Trimming Inmutable</strong><br>
+  Uso exclusivo de <strong>Trimmomatic</strong> por trazabilidad clínica.<br>
+  <span style="color:#c0392b;"><em>Restricción:</em> No se permite sustituir por otros limpiadores (ej. fastp) en la configuración estándar.</span>
+</div>
 
 <details>
-<summary>$\Large \color{#000080}{\textbf{🛠️ Herramientas de Procesamiento Upstream (Gold Standard)}}$</summary>
+<summary style="font-size:1.1em; font-weight:bold; color:#000080;">🛠️ Herramientas de Procesamiento Upstream (Gold Standard)</summary>
+
 <br>
+<ul>
+  <li><strong>Control de Calidad:</strong> FastQC v0.12.1 y MultiQC v1.29</li>
+  <li><strong>Limpieza y Trimming:</strong> Trimmomatic v0.39</li>
+  <li><strong>Alineamiento:</strong> STAR v2.7.10a y HISAT2 v2.2.1</li>
+  <li><strong>Cuantificación:</strong> Subread featureCounts v2.0.6 y StringTie v2.2.3</li>
+</ul>
+</details>
 
-El pipeline orquesta automáticamente imágenes oficiales de **nf-core** y **Biocontainers** con versiones exactas definidas en el contrato actual:
+<details>
+<summary style="font-size:1.1em; font-weight:bold; color:#000080;">🧬 Entorno Estadístico Downstream (R/Bioconductor)</summary>
 
-* **Control de Calidad:** `FastQC v0.12.1` y `MultiQC v1.29`.
-* **Limpieza y Trimming:** `Trimmomatic v0.39`.
-* **Alineamiento:** `STAR v2.7.10a` y `HISAT2 v2.2.1`.
-* **Cuantificación:** `Subread featureCounts v2.0.6` y `StringTie v2.2.3`.
+<br>
+<p>Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor (`r_custom_env.sif`) con R v4.3+.</p>
+
+<h4>🏗️ Núcleo Bioconductor</h4>
+<ul>
+  <li>BiocManager v1.30.23, BiocGenerics v0.48.1</li>
+  <li>S4Vectors v0.40.2, IRanges v2.36.0, GenomicRanges v1.54.1</li>
+  <li>SummarizedExperiment v1.32.0, BiocParallel v1.36.0</li>
+</ul>
+
+<h4>⚙️ Motor Bioinformático</h4>
+<ul>
+  <li>DESeq2 v1.42.1</li>
+  <li>clusterProfiler v4.10.1</li>
+  <li>gprofiler2 v0.2.3</li>
+  <li>pathview v1.42.0</li>
+  <li>biomaRt v2.58.2</li>
+  <li>argparse v2.2.3 🔌</li>
+</ul>
+
+<h4>🌍 Organismos Soportados Nativamente</h4>
+<ul>
+  <li>Arabidopsis thaliana (🌱)</li>
+  <li>Homo sapiens (👤)</li>
+  <li>Mus musculus (🐭)</li>
+  <li>Rattus norvegicus (🐀)</li>
+  <li>Danio rerio (🐟)</li>
+  <li>Drosophila melanogaster (🪰 → reemplazar por 🐝 si no carga)</li>
+  <li>Caenorhabditis elegans (🪱 → reemplazar por 🐛 si no carga)</li>
+  <li>Saccharomyces cerevisiae (🍺)</li>
+</ul>
+
+<h4>📊 Suite de Visualización & Reportes</h4>
+<ul>
+  <li>ggplot2 v3.5.0, ggrepel v0.9.5, pheatmap v1.0.12</li>
+  <li>rmarkdown v2.26 & knitr v1.46</li>
+</ul>
 
 </details>
 
-<br>
-
-<details>
-<summary>$\Large \color{#000080}{\textbf{🧬 Entorno Estadístico Downstream (R/Bioconductor)}}$</summary>
-<br>
-
-Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor personalizado (`r_custom_env.sif`) que integra un ecosistema completo de **R v4.3+** versionado.
-
-#### 🏗️ Infraestructura y Núcleo Bioconductor (Vitales)
-* `BiocManager (v1.30.23)`, `BiocGenerics (v0.48.1)`
-* `S4Vectors (v0.40.2)`, `IRanges (v2.36.0)`, `GenomicRanges (v1.54.1)`
-* `SummarizedExperiment (v1.32.0)`, `BiocParallel (v1.36.0)`
-
-#### ⚙️ Motor Bioinformático (User Facing)
-* **`DESeq2 (v1.42.1)`**: Modelado estadístico de conteos.
-* **`clusterProfiler (v4.10.1)`**: Análisis de enriquecimiento (ORA/GSEA).
-* **`gprofiler2 (v0.2.3)`**: Consultas API multi-fuente.
-* **`pathview (v1.42.0)`**: Proyección visual en rutas KEGG.
-* **`biomaRt (v2.58.2)`**: Conexión con BioMart/Ensembl.
-* **`argparse (v2.2.3)`**: 🔌 **Puente vital** para la orquestación con Python.
-
-#### 🌍 Organismos Soportados Nativamente (Anotación Offline)
-Base de datos de anotación pre-cargada:
-* 🌱 *Arabidopsis thaliana* (`org.At.tair.db`)
-* 👤 *Homo sapiens* (`org.Hs.eg.db`)
-* 🐭 *Mus musculus* (`org.Mm.eg.db`)
-* 🐀 *Rattus norvegicus* (`org.Rn.eg.db`)
-* 🐟 *Danio rerio* (`org.Dr.eg.db`)
-* 🪰 *Drosophila melanogaster* (`org.Dm.eg.db`)
-* 🪱 *Caenorhabditis elegans* (`org.Ce.eg.db`)
-* 🍺 *Saccharomyces cerevisiae* (`org.Sc.sgd.db`)
-
-#### 📊 Suite de Visualización & Reportes
-* `ggplot2 v3.5.0`, `ggrepel v0.9.5`, `pheatmap v1.0.12`
-* `rmarkdown v2.26` & `knitr v1.46`
-
-</details>
