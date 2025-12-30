@@ -160,19 +160,20 @@ reproducible y eficiente.
 </details>
 
 <br><br>
+
 <a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
 ## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
 
 > [!NOTE]
 > **Inmutabilidad y Reproducibilidad Absoluta**
->
-> Para garantizar que el análisis sea idéntico independientemente del clúster donde se despliegue, **OmniRNA-seq** no depende de librerías instaladas en el sistema anfitrión.
->
-> Todo el flujo de trabajo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**, asegurando un entorno de computación estanco y portable.
+> Para garantizar que el análisis sea idéntico independientemente del clúster donde se despliegue, **OmniRNA-seq** no depende de librerías instaladas en el sistema anfitrión. Todo el flujo de trabajo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**, asegurando un entorno de computación estanco y portable.
 
 <br>
 
-### 🛠️ Herramientas de Procesamiento Upstream (Gold Standard)
+<details>
+<summary>$\Large \color{#000080}{\textbf{🛠️ Herramientas de Procesamiento Upstream (Gold Standard)}}$</summary>
+<br>
+
 El pipeline orquesta automáticamente imágenes oficiales de **nf-core** y **Biocontainers** con versiones exactas definidas en el contrato actual:
 
 * **Control de Calidad:** `FastQC v0.12.1` y `MultiQC v1.29`.
@@ -180,24 +181,20 @@ El pipeline orquesta automáticamente imágenes oficiales de **nf-core** y **Bio
 * **Alineamiento:** `STAR v2.7.10a` y `HISAT2 v2.2.1`.
 * **Cuantificación:** `Subread featureCounts v2.0.6` y `StringTie v2.2.3`.
 
-<br>
-
 > [!WARNING]
 > **⚠️ Nota Técnica sobre Estándares de Secuenciación**
->
 > * **Formato de Calidad (Phred+33):** El pipeline asume estrictamente una codificación de calidad moderna (Illumina 1.8+). El uso de archivos antiguos con Phred+64 requiere conversión previa externa.
-> * **Estrategia de Trimming:** Por diseño, se utiliza exclusivamente **Trimmomatic** debido a su robustez y trazabilidad en entornos clínicos/académicos. No se permite la sustitución por otros limpiadores (ej. *fastp* o *cutadapt*) en la configuración estándar.
+> * **Estrategia de Trimming:** Por diseño, se utiliza exclusivamente **Trimmomatic** debido a su robustez y trazabilidad en entornos clínicos/académicos. No se permite la sustitución por otros limpiadores (ej. *fastp*) en la configuración estándar.
+
+</details>
 
 <br>
-
-### 🧬 Entorno Estadístico Downstream (`r_custom_env.sif`)
-Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor personalizado que integra un ecosistema completo de **R/Bioconductor (v3.18)** versionado.
 
 <details>
-<summary>$\Large \color{#000080}{\textbf{👇 Desglose detallado de las librerías R en el SIF}}$</summary>
+<summary>$\Large \color{#000080}{\textbf{🧬 Entorno Estadístico Downstream (R/Bioconductor)}}$</summary>
 <br>
 
-El contenedor incluye las siguientes capas de software validadas (ver `requirements_R.txt` para lista completa):
+Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor personalizado (`r_custom_env.sif`) que integra un ecosistema completo de **R v4.3+** versionado.
 
 #### 🏗️ Infraestructura y Núcleo Bioconductor (Vitales)
 *Sin estos cimientos, el análisis genómico no es posible.*
@@ -223,12 +220,9 @@ Base de datos de anotación pre-cargada para evitar dependencias de internet en 
 * 🪰 *Drosophila melanogaster* (`org.Dm.eg.db`)
 * 🪱 *Caenorhabditis elegans* (`org.Ce.eg.db`)
 * 🍺 *Saccharomyces cerevisiae* (`org.Sc.sgd.db`)
-* 🐔 *Gallus gallus* (`org.Gg.eg.db`)
-* 🐸 *Xenopus laevis* (`org.Xl.eg.db`)
 
 #### 📊 Suite de Visualización & Reportes
 * `ggplot2 v3.5.0`, `ggrepel v0.9.5`, `pheatmap v1.0.12`
-* `enrichplot v1.22.0`, `plotly v4.10.4`
 * `rmarkdown v2.26` & `knitr v1.46`
 
 </details>
