@@ -8,7 +8,7 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 ---
 
 ## 📚 Índice
-1. [Organización del Proyecto](# 1-organización-del-proyecto-separation-of-concerns)  
+1. [Organización del Proyecto](#1organización-del-proyecto-separation-of-concerns)  
 2. [Modos de Ejecución](# 2-modos-de-ejecución-orquestación-inteligente)  
 3. [Launcher Maestro](# 3-punto-de-entrada-launcher-maestro-rna_seq_lets_trysh)  
 4. [Dependencias y Contenedores](# 4-dependencias-y-entorno-de-ejecución-contenedores)  
