@@ -68,9 +68,12 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 
 <br>
 
-> [!NOTE]
-> **Ideal para:** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**.
-> **Activación:** Requiere un **Project_ID** (ej. PRJNA, SRP) como argumento.
+| 💡 **INFO DE USO: MODO EXPLORER** |
+| :--- |
+| **Ideal para:** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**. |
+| **Activación:** Requiere un **Project_ID** (ej. PRJNA, SRP) como argumento. |
+
+<br>
 
 * **$\color{#8B0000}{\text{Flujo Completo (End-to-End Processing):}}$**
     * **Configuración:** `"counting_method": "featurecounts"`.
@@ -84,7 +87,7 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 ```text
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
 ```
-<br>
+</details>
 
 ---
 
