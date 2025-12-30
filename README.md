@@ -253,7 +253,7 @@ Para análisis de datos privados (FASTQs o matrices de conteos), ofrezco soporte
 * 🆔 **ORCID:** [0000-0003-0207-9026](https://orcid.org/0000-0003-0207-9026)
 * 📧 **Contacto:** sergio120897@gmail.com
 
-
+<details>
 ### $\color{#000080}{\text{🌟 Impacto: Tu Cita es el Motor}}$
 
 > **Tu reconocimiento es el verdadero motor de este proyecto.**
@@ -266,7 +266,7 @@ Para análisis de datos privados (FASTQs o matrices de conteos), ofrezco soporte
 La ciencia es mejor cuando se comparte. Si necesitas una integración profunda, auditoría de datos o soporte bioinformático experto para elevar el impacto de tu estudio, estoy totalmente abierto a la **colaboración y co-autoría**.
 
 ¡Transformemos juntos esos datos crudos en descubrimientos biológicos!
-
+</details>
 ---
 
 <div align="center">
