@@ -152,7 +152,7 @@ reproducible y eficiente.
 <br><br>
 <details>
 
-<summary>$\Large \color{#2E8B57}{\textbf{⚙️ Responsabilidades clave del launcher}}$</summary>
+<summary>$\Large \color{#8B0000}{\textbf{⚙️ Responsabilidades clave del launcher}}$</summary>
 
 - **Gestión eficiente de volúmenes**  
   Configuración dinámica de <i>bind paths</i> y directorios temporales sobre sistemas de archivos paralelos
