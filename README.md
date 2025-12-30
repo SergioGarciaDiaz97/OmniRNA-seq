@@ -55,7 +55,7 @@ OmniRNA-seq/
 
 ---
 
-## v 🚀 2. Modos de Ejecución (Orquestación Inteligente)
+## 🚀 2. Modos de Ejecución (Orquestación Inteligente)
 
 El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (públicos vs. locales) y el formato de entrada (crudos vs. matriz), definido en el archivo de configuración JSON. Existen los parámetros (ver apartado [5. Centro de configuración JSON](#v-⚙️-5-centro-de-control-de-configuración-json)) **cleanup_only_fastq** y **retain_only_fastqc_and_bam** para ahorrar espacio de almacenamiento en la memoria.
 
