@@ -149,7 +149,7 @@ Todo el flujo de trabajo se controla desde un <b>único script Bash optimizado p
 que actúa como interfaz entre el usuario y el clúster HPC, garantizando ejecución robusta,
 reproducible y eficiente.
 </div>
-
+<br><br>
 <details>
 <summary>$\Large \textbf{⚙️ Responsabilidades clave del launcher}$</summary>
 <br><br>
