@@ -68,10 +68,9 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 
 <br>
 
-| 💡 **INFO DE USO: MODO EXPLORER** |
-| :--- |
-| **Ideal para:** Meta-análisis y benchmarking utilizando datos de **GEO, ENA o SRA**. |
-| **Activación:** Requiere un **Project_ID** (ej. PRJNA, SRP) como argumento. |
+> [!TIP]
+> **Ideal para:** Análisis de datos públicos de repositorios **GEO, ENA o SRA**.
+> **Activación:** Requiere suministrar un **Project_ID** (ej. PRJNA, SRP) como argumento.
 
 <br>
 
@@ -82,6 +81,8 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 * **$\color{#8B0000}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$**
     * **Configuración:** `"counting_method": "precomputed_csv" + URL remota`.
     * **Descripción:** Descarga la matriz de conteos directamente del autor, omitiendo el alineamiento para saltar al análisis estadístico y funcional.
+
+<br>
 
 **Sintaxis (Bash):**
 ```text
