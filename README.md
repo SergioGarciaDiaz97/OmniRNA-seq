@@ -148,8 +148,8 @@ reproducible y eficiente.
 </div>
 
 <details>
-<summary><b>⚙️ Responsabilidades clave del launcher</b></summary>
-<br>
+<summary><span style="font-size:1.1em;"><b>⚙️ Responsabilidades clave del launcher</b></span></summary>
+<br><br>
 
 - **Gestión eficiente de volúmenes**  
   Configuración dinámica de <i>bind paths</i> y directorios temporales sobre sistemas de archivos paralelos
