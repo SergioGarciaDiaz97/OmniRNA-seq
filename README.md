@@ -20,7 +20,8 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 
 ---
 
-## 📂 1. Organización del Proyecto (Separation of Concerns)
+## 📂  $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
+
 
 ```text
 OmniRNA-seq/
