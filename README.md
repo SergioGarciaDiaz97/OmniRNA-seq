@@ -8,20 +8,19 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 ---
 
 ## 📚 Índice
-1. [Organización del Proyecto](#organización-del-proyecto-separation-of-concerns)  
-2. [Modos de Ejecución](#modos-de-ejecución-orquestación-inteligente)  
-3. [Launcher Maestro](#punto-de-entrada-launcher-maestro-rna_seq_lets_trysh)  
-4. [Dependencias y Contenedores](#dependencias-y-entorno-de-ejecución-contenedores)  
-5. [Centro de Configuración JSON](#centro-de-control-de-configuración-json)  
-6. [Requisitos de Metadatos](#requisitos-de-metadatos-metadata_archivos)  
-7. [Arquitectura del Sistema](#arquitectura-del-sistema)  
-8. [Estructura Global de Resultados](#estructura-global-de-resultados-output-tree)  
+1. [Organización del Proyecto](#organizacion)
+2. [Modos de Ejecución](#modos)
+3. [Launcher Maestro](#launcher)
+4. [Dependencias y Contenedores](#dependencias-y-entorno-de-ejecución-contenedores)
+5. [Centro de Configuración JSON](#centro-de-control-de-configuración-json)
+6. [Requisitos de Metadatos](#requisitos-de-metadatos-metadata_archivos)
+7. [Arquitectura del Sistema](#arquitectura-del-sistema)
+8. [Estructura Global de Resultados](#estructura-global-de-resultados-output-tree)
 9. [Autoría y Colaboraciones](#autoría-impacto-y-colaboración)
-
 ---
 
+<a id="organizacion"></a> <a id="modos"></a> <a id="launcher"></a>
 ## 📂 $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
-
 
 ```text
 OmniRNA-seq/
@@ -56,6 +55,7 @@ OmniRNA-seq/
 
 ---
 
+<a id="modos"></a> 
 ## 🚀 $\color{#8B0000}{\text{2. Modos de Ejecución (Orquestación Inteligente):}}$
 
 El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (**públicos vs. locales**) y el formato de entrada (**crudos vs. matriz**).
@@ -134,8 +134,7 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 
 <br><br>
 
-<a id="3-punto-de-entrada-launcher-maestro-rna_seq_lets_trysh"></a>
-
+<a id="launcher"></a>
 ## 🎛️ $\ Punto de entrada: Launcher maestro (`RNA_SEQ_LETS_TRY.sh`)
 
 <div style="
