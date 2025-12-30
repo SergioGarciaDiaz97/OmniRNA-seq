@@ -61,15 +61,13 @@ El pipeline implementa una lógica de decisión automatizada para determinar el 
 
 Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver apartado [5. Configuración JSON](#-5-centro-de-control-de-configuración-json)) para ahorrar espacio de almacenamiento.
 
----
-
 <details>
 <summary>$\Large \color{#8B0000}{\textbf{2.1. 🌍 Modo Explorer (Recuperación Automatizada)}}$</summary>
 <br>
 
 <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 10px 0; border-radius: 4px;">
 <span style="font-size: 1.2em;">💡</span> 
-<span style="font-weight: bold; color: #856404;">Ideal para:</span> Meta-análisis y benchmarking utilizando datos de <b>GEO, ENA o SRA</b>.<br>
+<span style="font-weight: bold; color: #856404;"><b>Ideal para</b>b>:</span> Meta-análisis y benchmarking utilizando datos de <b>GEO, ENA o SRA</b>.<br>
 <span style="font-weight: bold; color: #856404;">Activación:</span> Requiere suministrar un <b>Project_ID</b> (ej. PRJNA, SRP) como argumento.
 </div>
 
@@ -84,9 +82,9 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 **Sintaxis (Bash):**
 ```bash
 sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
-</details> ```
+```
+</details> 
 
----
 
 <details>
 <summary>$\Large \color{#8B0000}{\textbf{2.2. 💻 Modo Local (Infraestructura Privada)}}$</summary>
