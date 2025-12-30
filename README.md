@@ -276,6 +276,6 @@ La ciencia es mejor cuando se comparte. Si necesitas una integración profunda, 
 <div align="center">
 
 ### 👨‍💻 **Sergio García Díaz**
-**Lead Developer & FPU Fellow**
+**Lead Developer FPU Fellow**
 
 </div>
