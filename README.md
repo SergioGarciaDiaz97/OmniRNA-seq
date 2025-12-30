@@ -159,7 +159,7 @@ reproducible y eficiente.
 
 </details>
 
-<br><br>
+<br>
 
 <a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
 
