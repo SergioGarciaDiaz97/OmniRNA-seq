@@ -128,3 +128,34 @@ el sistema detecta los pasos ya completados y los archivos válidos, saltando di
 </span>
 </div>
 
+<a id="3-punto-de-entrada-launcher-maestro-rna_seq_lets_trysh"></a>
+
+## 🎛️ 3. Punto de entrada: Launcher maestro (`RNA_SEQ_LETS_TRY.sh`)
+
+<div style="
+  background-color:#eef4fb;
+  border-left:5px solid #1e3a8a;
+  padding:14px;
+  margin:14px 0;
+  border-radius:6px;
+">
+<b>Orquestación centralizada del pipeline.</b><br>
+Todo el flujo de trabajo se controla desde un <b>único script Bash optimizado para SLURM</b>,
+que actúa como interfaz entre el usuario y el clúster HPC, garantizando ejecución robusta,
+reproducible y eficiente.
+</div>
+
+### ⚙️ Responsabilidades clave del launcher
+
+- **Gestión eficiente de volúmenes**  
+  Configuración dinámica de <i>bind paths</i> y directorios temporales sobre sistemas de archivos paralelos
+  (p. ej. <b>BeeGFS</b>), minimizando cuellos de botella de I/O.
+
+- **Aislamiento y reproducibilidad**  
+  Ejecución controlada de contenedores <b>Apptainer</b>, asegurando versiones consistentes de herramientas
+  críticas como STAR, HISAT2, StringTie y R-Bioconductor.
+
+- **Limpieza automática**  
+  Implementación de <i>exit traps</i> para la eliminación segura de archivos temporales,
+  optimizando el uso de almacenamiento en infraestructuras compartidas.
+
