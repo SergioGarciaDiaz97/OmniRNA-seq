@@ -52,3 +52,41 @@ OmniRNA-seq/
 └── logs/                      # Trazas de ejecución SLURM
 
 Flujo lógico: Launcher → Python (data engineering) → R (estadística/biológica) → PDFs publicables
+
+## v 🚀 2. Modos de Ejecución (Orquestación Inteligente)
+
+El pipeline implementa una lógica de decisión automatizada para determinar el flujo de trabajo óptimo. Esta decisión se basa en la fuente de los datos (públicos vs. locales) y el formato de entrada (crudos vs. matriz), definido en el archivo de configuración JSON. Existen los parámetros (ver apartado [5. Configuración JSON](#-5-centro-de-control-de-configuración-json)) `cleanup_only_fastq` y `retain_only_fastqc_and_bam` para ahorrar espacio de almacenamiento en la memoria.
+
+### 2.1. 🌍 Modo Explorer (Recuperación Automatizada de Repositorios)
+**Caso de uso:** Meta-análisis y benchmarking utilizando datos públicos (GEO, ENA, SRA). **Activación:** Se ejecuta suministrando un Project_ID (ej. PRJNA, SRP) como argumento.
+
+* **Flujo Completo (End-to-End Processing):**
+    * **Configuración:** `"counting_method": "featurecounts"`.
+    * **Descripción:** El sistema interroga las APIs de ENA/SRA para recuperar automáticamente los metadatos del diseño experimental y los archivos FASTQ crudos. Ejecuta el pipeline completo: control de calidad, alineamiento y cuantificación.
+
+* **Flujo Acelerado (Direct Matrix Analysis - Public):**
+    * **Configuración:** `"counting_method": "precomputed_csv" + URL remota`.
+    * **Descripción:** Descarga la matriz de conteos procesada directamente desde el repositorio del autor. Omite el alineamiento para saltar inmediatamente al análisis estadístico y funcional.
+
+**Sintaxis (Bash):**
+```bash
+sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json PRJNAxxxx
+2.2. 💻 Modo Local (Infraestructura Privada / On-Premise)
+Caso de uso: Análisis de datos propios del laboratorio o colaboraciones privadas, sin conexión a APIs externas. Activación: Se ejecuta sin argumento de Project_ID. Como tutorial para el modo local hemos replicado este método partiendo de muestras fastq descargadas (ver sección en este GitHub en carpeta Modo local).
+
+Procesamiento de Crudos (Raw Data Workflow):
+
+Configuración: "fastq_list_strategy": "manual" + Manifiesto de archivos.
+
+Descripción: Procesa archivos FASTQ alojados en el sistema de ficheros local. Utiliza un manifiesto de rutas (URI file://) para ingerir las muestras y ejecutar el alineamiento y conteo.
+
+Flujo Acelerado Local (Direct Matrix Analysis - Local):
+
+Configuración: "counting_method": "precomputed_csv" + Ruta local al archivo.
+
+Descripción: Ingesta directa de una matriz de conteos (.csv) suministrada externamente o pre-calculada. Realiza un bypass de la etapa de computación intensiva para ejecutar exclusivamente los módulos de estadística (DESeq2), enriquecimiento y generación de reportes.
+
+Sintaxis (Bash):
+
+sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
+🛡️ Resiliencia Automática: Gracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster por exceder el tiempo de pared (walltime), basta con re-lanzar el comando original; el sistema detectará los pasos completados y los archivos válidos, saltando directamente a la etapa pendiente.
