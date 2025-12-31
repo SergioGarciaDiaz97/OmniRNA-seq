@@ -253,7 +253,7 @@ Algoritmos para normalización, modelado y anotación.
 * **Genómica:** `biomaRt`, `AnnotationDbi`, `GenomicFeatures`, `Rsamtools`
 * **Sistema:** `argparse` 🔌
 
-#### $\color{#2E8B57}{\text{🛠️ Ingeniería de Datos (Tidyverse & Utils)}}$
+#### $\color{#2E8B57}{\text{🛠️ Ingeniería de Datos (Tidyverse Utils)}}$
 Manipulación eficiente de tablas y datos.
 * `dplyr`, `tidyr`, `stringr`, `tibble`, `jsonlite`
 
