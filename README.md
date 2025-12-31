@@ -391,15 +391,15 @@ Este archivo actúa como la **llave maestra** 🗝️ que conecta los archivos c
 > 
 
 <br>
-
-
 <a id="arquitectura-del-sistema"></a>
 
 ## 🏗️ $\color{#8B0000}{\text{7. Arquitectura del Sistema}}$
 
 <br>
 
-### 🐍 $\color{#000080}{\text{1. Ingeniería de Datos y Orquestación (Python 3.10+)}}$
+<details>
+<summary>$\Large \color{#000080}{\text{1. Ingeniería de Datos y Orquestación (Python 3.10+)}}$</summary>
+<br>
 
 La capa de ingeniería actúa como el **sistema nervioso** del pipeline. Diseñada bajo el principio de *Responsabilidad Única*, gestiona la logística de datos antes de cualquier análisis estadístico.
 
@@ -409,9 +409,11 @@ La capa de ingeniería actúa como el **sistema nervioso** del pipeline. Diseña
 * **`01_pipeline_core.py` (El Motor):** Orquesta la ejecución secuencial de herramientas críticas (Trimmomatic, STAR, HISAT2, StringTie).
     * *Feature Destacada:* **Validación Cruzada**. Si se selecciona el modo `"both"`, ejecuta ambos alineadores y genera archivos de intersección para evaluar la consistencia técnica entre algoritmos.
 
----
+</details>
 
-### 📊 $\color{#000080}{\text{2. Suite Estadística y Biológica (R / Bioconductor)}}$
+<details>
+<summary>$\Large \color{#000080}{\text{2. Suite Estadística y Biológica (R / Bioconductor)}}$</summary>
+<br>
 
 Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro módulos especializados.
 
@@ -443,6 +445,7 @@ Actúa como el editor final.
 * **Renderizado de Doble Pase:** Pre-escanea los datos para calcular una paginación perfecta antes de generar el PDF.
 * **Fusión de Ontologías:** Integra GO (BP, MF, CC), KEGG y Reactome en una narrativa lineal jerarquizada por significancia ($p < 10^{-16}$).
 
+</details>
 <br>
 
 <a id="estructura-global-de-resultados-output-tree"></a>
