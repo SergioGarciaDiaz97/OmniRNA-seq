@@ -1,4 +1,4 @@
-# 🧬 OmniRNA-seq: High-Performance HPC Transcriptomics Pipeline
+# <img src="./assets/adn.gif" width="55" style="vertical-align: middle;"> OmniRNA-seq: High-Performance HPC Transcriptomics Pipeline
 
 OmniRNA-seq es un ecosistema bioinformático integral para el análisis automatizado y reproducible de datos de RNA‑seq *bulk* en entornos HPC. Transforma lecturas crudas de secuenciación en resultados biológicos interpretables y listos para publicación, desacoplando la **ingeniería de datos** (Python) del **modelado estadístico avanzado** (R/Bioconductor) y del **despliegue reproducible** basado en contenedores **Apptainer/Singularity**.
 
