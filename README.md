@@ -456,8 +456,8 @@ Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro
 
 #### $\color{#000080}{\text{B. Expresión Diferencial}}$
 ***02_Differential_expression.R*** Implementa Modelos Lineales Generalizados (**GLM**) mediante **DESeq2** con corrección Benjamini-Hochberg (FDR).
-* **Auditoría Previa:** Histogramas y boxplots para detectar outliers técnicos antes del modelado.
-* **Visualización:** Genera **Volcano Plots Interactivos** (HTML) para exploración *point-and-click*.
+* **Auditoría Previa:** Histogramas y boxplots para detectar outliers técnicos antes del modelado, MA plot para verificación de normalización.
+* **Visualización:** Genera **Volcano Plots Interactivos** (HTML) para exploración *point-and-click* y Heatmap de los genes más significativos.
 * **Genes Huérfanos:** Módulo de descubrimiento para identificar genes estadísticamente vitales sin ruta funcional conocida.
 
 #### $\color{#000080}{\text{C. Inteligencia Funcional}}$
