@@ -413,7 +413,6 @@ Este archivo actúa como la **llave maestra** que conecta los archivos crudos co
 
 <br>
 
-> [!Nota]
 > **🛠️ Nota Técnica: Sanitización Automática**
 >
 > El pipeline incluye un módulo de seguridad que genera un archivo `metadata_corregido.csv`. Este proceso detecta y corrige caracteres inválidos en los nombres de las muestras (ej. reemplaza guiones `-` por puntos `.`) para asegurar la compatibilidad total con **R**.
