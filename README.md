@@ -276,5 +276,3 @@ La ciencia es mejor cuando se comparte. Si necesitas una integración profunda, 
 **Lead Developer FPU Fellow**
 
 </div>
-El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para:
-**Homo sapiens**, **Mus musculus**, **Saccharomyces cerevisiae**, **Arabidopsis thaliana**, **Danio rerio**, **C. elegans** y **Drosophila melanogaster**.
