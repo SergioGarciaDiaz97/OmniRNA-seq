@@ -434,7 +434,7 @@ La capa de ingeniería actúa como el **sistema nervioso** del pipeline. Diseña
 * **`main.py` (El Director):** Procesa el archivo JSON, valida las rutas del sistema y decide la estrategia de ejecución global, delegando tareas a los submódulos.
 * **`experiment_profiler.py` (Inteligencia):** Se conecta automáticamente a las APIs públicas de **ENA** y **Ensembl** para recuperar metadatos y construir dinámicamente las URLs de referencia. **Para modo automático**.
 * **`data_conector.py` (Logística):** Gestiona la descarga paralela y robusta de archivos FASTQ, con lógica de reintentos y validación de integridad. **Para modo automático**.
-* **`01_pipeline_core.py` (El Motor):** Orquesta la ejecución secuencial de herramientas críticas (Trimmomatic, STAR, HISAT2, StringTie).
+* **`01_pipeline_core.py` (El Motor):** Orquesta la ejecución secuencial de herramientas críticas (FASTQC,Trimmomatic, STAR, HISAT2, StringTie, MultiQC).
     * *Feature Destacada:* **Validación Cruzada**. Si se selecciona el modo `"both"`, ejecuta ambos alineadores y genera archivos de intersección para evaluar la consistencia técnica entre algoritmos.
 
 </details>
