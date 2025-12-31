@@ -320,7 +320,7 @@ Una vez finalizado el pipeline, los resultados se organizan automáticamente en 
 <br>
 <details>
 <summary>$\Large \color{#000080}{\textbf{🔄 Descripción del Flujo de Datos}}$</summary>
-
+<br>
 El pipeline comienza con la fase de ingeniería de datos orquestada por Python usando `main.py` y ejecutado por `RNA_SEQ_LETS_TRY.sh`.
 
 Los scripts `experiment_profiler.py` y `data_conector.py` generan la carpeta **Info_<PRJ>** con los metadatos y la lista de descargas. A continuación, el motor principal `01_pipeline_core.py` se encarga del trabajo pesado: descarga y descomprime las referencias (**REFERENCE_GENOMES**) y los datos crudos (**FASTQ_FILES**), ejecuta el control de calidad y limpieza (**FASTQC**, **TRIMMED_READS**), realiza el alineamiento (**ALIGNMENTS_<STAR/HISAT2>**) y la cuantificación (**STRINGTIE**, **COUNTS**), produciendo las matrices de conteo `.txt` y `.tsv` que servirán de entrada para la estadística.
@@ -334,7 +334,7 @@ Una vez generadas las matrices, entran en acción los módulos de R:
 * **`03_Functional_analysis_viz.R`**: Sobre esa misma carpeta, añade las subcarpetas de visualización (sea/gsea/pathview_plots) y el dashboard HTML funcional.
 * **`04_Comprehensive_Report_Builder.R`**: Finalmente, recopila toda esta información para compilar el **Informe_Transcriptomica_Completo.pdf** usando gProfiler.
 
-Como broche final, Python vuelve a intervenir para generar el reporte de **MULTIQC**, que unifica las métricas de calidad de todas las herramientas (FastQC, Trimmomatic, STAR, HISAT2 y featureCounts), permitiendo al investigador validar la robustez técnica de la ejecución y justificar estadísticamente cualquier decisión de exclusión de muestras antes de la interpretación biológica.
+Finalmente Python vuelve a intervenir para generar el reporte de **MULTIQC**, que unifica las métricas de calidad de todas las herramientas (FastQC, Trimmomatic, STAR, HISAT2 y featureCounts), permitiendo al investigador validar la robustez técnica de la ejecución y justificar estadísticamente cualquier decisión de exclusión de muestras antes de la interpretación biológica.
 
 </details>
 
