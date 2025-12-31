@@ -542,7 +542,7 @@ Una vez finalizado el pipeline, los resultados se organizan automáticamente en 
 │   │   # --- Salidas de 03_Functional_analysis_viz.R ---
 │   ├── Informe_Interactivo_<CONTRASTE>.html     # (Dashboard global funcional)
 │   ├── Informe_Completo_Ontogenia_*.txt         # (Resumen texto plano)
-│   ├── sea_analysis_plots/                    # (Plots ORA/SEA: Dotplots, Emaplots, Cnetplots, tsv)
+│   ├── sea_analysis_plots/                      # (Plots ORA/SEA: Dotplots, Emaplots, Cnetplots, tablas de genes conectores, tsv)
 │   ├── gsea_analysis_plots/                     # (GSEA Plots y tsv)
 │   ├── pathview_plots/                          # (Mapas de rutas KEGG coloreados .png/.pdf)
 │   │
