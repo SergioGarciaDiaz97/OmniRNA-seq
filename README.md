@@ -197,43 +197,90 @@ Para garantizar que el análisis sea idéntico en cualquier clúster, **OmniRNA-
 
 </details>
 
-<details>
-<summary>$\Large \color{#000080}{\textbf{🧬 Entorno Estadístico Downstream (R/Bioconductor)}}$</summary>
+<a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
+
+## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
+
+**📝 Nota: Inmutabilidad y Reproducibilidad**
+
+Para garantizar que el análisis sea idéntico en cualquier clúster, **PLEXUS-seq** no depende de librerías locales. Todo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**.
+
 <br>
 
-Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor (`r_custom_env.sif`) con **R v4.3+**.
+> [!WARNING]
+> **⚠️ Limitaciones Críticas y Estándares**
+>
+> Es obligatorio cumplir estos requisitos para evitar fallos:
+>
+> **1. Formato de Calidad (Estricto Phred+33)**
+> * Calibrado solo para Illumina ≥1.8.
+> * **Restricción:** Archivos antiguos con Phred+64 requieren conversión previa.
+>
+> **2. Estrategia de Trimming Inmutable**
+> * Uso exclusivo de **Trimmomatic** por trazabilidad académica.
+> * **Restricción:** No se permite sustituir por otros limpiadores (ej. fastp).
 
-#### $\color{#2E8B57}{\text{🏗️ Núcleo Bioconductor}}$
-* `BiocManager v1.30.23`, `BiocGenerics v0.48.1`
-* `S4Vectors v0.40.2`, `IRanges v2.36.0`, `GenomicRanges v1.54.1`
-* `SummarizedExperiment v1.32.0`, `BiocParallel v1.36.0`
+<br>
 
-#### $\color{#2E8B57}{\text{⚙️ Motor Bioinformático}}$
-* `DESeq2 v1.42.1`
-* `clusterProfiler v4.10.1`
-* `gprofiler2 v0.2.3`
-* `pathview v1.42.0`
-* `biomaRt v2.58.2`
-* `argparse v2.2.3` 🔌
+<details>
+<summary>$\Large \color{#000080}{\textbf{🛠️ Herramientas de Procesamiento Upstream (Gold Standard)}}$</summary>
+<br>
 
-#### $\color{#2E8B57}{\text{🌍 Organismos Soportados Nativamente (Paquetes de Anotación)}}$
-| Organismo | Paquete de Anotación (DB) |
-| :--- | :--- |
-| Arabidopsis thaliana (🌱) | `org.At.tair.db` |
-| Homo sapiens (👤) | `org.Hs.eg.db` |
-| Mus musculus (🐭) | `org.Mm.eg.db` |
-| Rattus norvegicus (🐀) | `org.Rn.eg.db` |
-| Danio rerio (🐟) | `org.Dr.eg.db` |
-| Drosophila melanogaster (🦗) | `org.Dm.eg.db` |
-| Caenorhabditis elegans (🐛) | `org.Ce.eg.db` |
-| Saccharomyces cerevisiae (🍺) | `org.Sc.sgd.db` |
-
-#### $\color{#2E8B57}{\text{📊 Suite de Visualización y Reportes}}$
-* `ggplot2 v3.5.0`, `ggrepel v0.9.5`, `pheatmap v1.0.12`
-* `rmarkdown v2.26`  `knitr v1.46`
+* **Control de Calidad:** `FastQC v0.12.1` y `MultiQC v1.29`
+* **Limpieza y Trimming:** `Trimmomatic v0.39`
+* **Alineamiento:** `STAR v2.7.10a` y `HISAT2 v2.2.1`
+* **Cuantificación:** `Subread featureCounts v2.0.6` y `StringTie v2.2.3`
 
 </details>
 
+<details>
+<summary>$\Large \color{#000080}{\textbf{🧬 Entorno Estadístico Downstream (R / Bioconductor)}}$</summary>
+<br>
+
+Los módulos de análisis diferencial y funcional se ejecutan dentro de un contenedor dedicado (`r_custom_env.sif`) con **R v4.3+**.
+
+#### $\color{#2E8B57}{\text{🏗️ Núcleo Bioconductor e Infraestructura}}$
+Gestiona las estructuras de datos genómicos y la paralelización.
+* `BiocManager`, `BiocGenerics`, `BiocParallel`
+* `S4Vectors`, `IRanges`, `GenomicRanges`
+* `SummarizedExperiment`, `MatrixGenerics`
+* `Rcpp`, `RcppArmadillo`, `locfit`
+
+#### $\color{#2E8B57}{\text{⚙️ Motor Bioinformático y Estadístico}}$
+Algoritmos para normalización, modelado y anotación.
+* **Análisis Diferencial:** `DESeq2`, `limma`, `vsn`, `matrixStats`
+* **Enriquecimiento:** `clusterProfiler`, `gprofiler2`, `pathview`
+* **Genómica:** `biomaRt`, `AnnotationDbi`, `GenomicFeatures`, `Rsamtools`
+* **Sistema:** `argparse` 🔌
+
+#### $\color{#2E8B57}{\text{🛠️ Ingeniería de Datos (Tidyverse & Utils)}}$
+Manipulación eficiente de tablas y datos.
+* `dplyr`, `tidyr`, `stringr`, `tibble`, `jsonlite`
+
+#### $\color{#2E8B57}{\text{🌍 Organismos Soportados Nativamente}}$
+Paquetes de anotación (`org.*.db`) para mapeo automático de IDs:
+
+| Organismo | Paquete de Anotación (DB) |
+| :--- | :--- |
+| **Homo sapiens** (👤 Humano) | `org.Hs.eg.db` |
+| **Mus musculus** (🐭 Ratón) | `org.Mm.eg.db` |
+| **Rattus norvegicus** (🐀 Rata) | `org.Rn.eg.db` |
+| **Danio rerio** (🐟 Pez Cebra) | `org.Dr.eg.db` |
+| **Drosophila melanogaster** (🦗 Mosca) | `org.Dm.eg.db` |
+| **Caenorhabditis elegans** (🐛 Gusano) | `org.Ce.eg.db` |
+| **Saccharomyces cerevisiae** (🍺 Levadura) | `org.Sc.sgd.db` |
+| **Arabidopsis thaliana** (🌱 Planta) | `org.At.tair.db` |
+| **Gallus gallus** (🐔 Pollo) | `org.Gg.eg.db` |
+| **Xenopus laevis** (🐸 Rana) | `org.Xl.eg.db` |
+
+#### $\color{#2E8B57}{\text{📊 Suite de Visualización y Reportes}}$
+Generación de gráficos de publicación y dashboards interactivos.
+* **Gráficos Estáticos:** `ggplot2`, `ggrepel`, `pheatmap`, `enrichplot`, `RColorBrewer`
+* **Composición:** `cowplot`, `patchwork`, `gridExtra`, `png`
+* **Interactividad:** `plotly`
+* **Reportes:** `rmarkdown`, `knitr`
+
+</details>
 
 <br>
 <a id="centro-de-control-de-configuración-json"></a>
