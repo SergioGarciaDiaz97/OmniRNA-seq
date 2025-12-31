@@ -238,6 +238,109 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 
 <br>
+
+<a id="centro-de-control-de-configuración-json"></a>
+
+## ⚙️ $\color{#000080}{\text{5. Centro de Control de Configuración (📁 JSON/)}}$
+
+OmniRNA-seq sigue un enfoque de **Arquitectura Basada en Contratos**. Los archivos JSON definen completamente el experimento, asegurando que la ejecución sea reproducible y auditable.
+
+<br>
+
+### $\color{#000080}{\text{1. Project Setup: Infraestructura y Metodología}}$
+Define el esqueleto del flujo de trabajo:
+
+* **`aligner`**: Selección del motor de alineamiento (`star`, `hisat2` o `both`). El modo `both` permite validación cruzada para identificar sesgos algorítmicos.
+* **`counting_method`**: Define si el análisis parte de lecturas crudas (`featureCounts`) o de una matriz precalculada (`precomputed_csv`).
+* **`quantification_options`**: Módulo de inteligencia para la normalización (StringTie):
+    * `run_for`: Define qué métricas calcular (`tpm`, `fpkm`). Corrige el sesgo por longitud de gen y profundidad.
+    * `run_exploratory_analysis`: Activa/desactiva el QC Estadístico (EDA) para detectar outliers.
+    * `explore_on`: Define sobre qué matriz normalizada se realizará el diagnóstico.
+
+---
+
+### $\color{#000080}{\text{2. Source Data: Estrategias de Ingesta}}$
+* **`fastq_list_strategy`**:
+    * **`automatic`**: Usa la **API de ENA** para descargar muestras indicadas en la URL generada por `data_conector.py`.
+    * **`manual`**: (Obligatorio para modo local). El usuario provee una lista de URLs/rutas específicas en `fastq_list_file` para mayor flexibilidad.
+* **`genome_urls`**: Descarga automática y construcción dinámica de genomas y anotaciones.
+
+---
+
+### $\color{#000080}{\text{3. Tool Parameters: Rendimiento y Rigor}}$
+Define la estrategia computacional y los criterios de calidad.
+
+**A. Paralelización Inteligente (Throttling)**
+Para evitar el *I/O thrashing* en clústers compartidos, el pipeline procesa la ingesta en bloques concurrentes usando `threads`, `threads_per_sample` y `max_parallel_samples`. Maximiza el throughput sin violar cuotas.
+
+**B. Gestión del Ciclo de Vida (Storage Lifecycle)**
+Limpieza asíncrona a nivel de worker para optimizar espacio:
+
+| Clave JSON | Valor | Descripción Técnica |
+| :--- | :--- | :--- |
+| `retain_only_fastqc_and_bam` | **True** | **Modo Ahorro Máximo:** Tras generar el BAM, purga FASTQs (crudos/trimmed), SAM y temporales (`_STARtmp`). Solo guarda reportes y BAM final. |
+| `cleanup_only_fastq` | **True** | **Ahorro Intermedio:** Elimina únicamente los FASTQ crudos descomprimidos, manteniendo las lecturas limpias (trimmed) en disco. |
+| *Zero-Noise Protection* | *(Auto)* | **Integridad:** Detecta y elimina archivos de 0 bytes de intentos fallidos previos, forzando una regeneración limpia. |
+
+**C. Parámetros de Herramientas**
+* **Trimmomatic:** Configuración de limpieza (`leading`, `trailing`, `slidingwindow`, `minlen`) y adaptadores (`adapter_fasta_url`).
+* **STAR (`sjdbOverhang`):** Se calibra automáticamente (`ReadLength - 1`) para optimizar el mapeo en uniones de empalme (*splice junctions*).
+* **FeatureCounts (`strand_specific`):** Topología de la librería (0: unstranded, 1: forward, 2: reverse).
+* **Analysis Thresholds:** Define los cortes (`log2fc`, `padj`) para considerar un gen como Expresado Diferencialmente (DEG).
+
+---
+
+### $\color{#000080}{\text{4. DESeq2 Experiment: Diseño Experimental}}$
+Conecta la matriz de expresión con las variables biológicas:
+
+* **`metadata_path`**: Ruta al archivo `.csv` que vincula FASTQ con grupos biológicos.
+* **`grouping_variable`**: Columna de interés (ej. `condition`).
+* **`design_formula`**: Modelo estadístico (ej. `~ batch + condition`). Soporta diseños complejos e interacciones.
+* **`control_group`**: Nivel de referencia (*baseline*). Todos los Fold Changes se calculan contra este grupo.
+
+---
+
+### $\color{#000080}{\text{5. Annotation: Contexto Biológico}}$
+Gestiona la interoperabilidad entre bases de datos:
+
+* **`organism_db`**: Paquete de Bioconductor para anotación (GO/KEGG).
+* **`key_type`**: Formato de entrada de los IDs en el GTF (ej. `ENSEMBL`, `ENTREZID`).
+* **`strip_gene_version` (true):** Pre-procesamiento vital para Ensembl. Elimina versiones de transcrito (ej. `FBgn00.1` → `FBgn00`) para asegurar un mapeo exacto.
+
+---
+
+### $\color{#000080}{\text{6. Container Images: Reproducibilidad Binaria}}$
+Definición explícita de las rutas a imágenes **Singularity/Apptainer** (`.sif`). Esto congela las versiones de todo el software (STAR, R, Samtools), garantizando la inmutabilidad del entorno.
+
+---
+
+### $\color{#000080}{\text{7. Scripts: Orquestación de Motores Analíticos (R)}}$
+Mapa de rutas que desacopla el motor de ejecución de la lógica estadística:
+* `r_exploratory_script_path` → **01_EDA_QC.R**
+* `r_deseq2_script_path` → **02_Differential_expression.R**
+* `r_enrichment_plotter_script_path` → **03_Functional_analysis_viz.R**
+* `r_pdf_report_script_path` → **04_Comprehensive_Report_Builder.R**
+
+---
+
+### $\color{#000080}{\text{8. Functional Analysis: Inteligencia Biológica 🧠}}$
+Capa de interpretación de alto nivel para transformar listas de genes en narrativas mecanísticas.
+
+**🧬 Dualidad Analítica (SEA vs. GSEA)**
+* **SEA (ORA) - `run_sea_analysis`**: Análisis de Sobre-representación (Test Hipergeométrico). Ideal para procesos discretos ("encendido/apagado"). Desglosado en ontologías `BP`, `MF`, `CC`.
+* **GSEA - `run_gsea_analysis`**: Análisis de Enriquecimiento de Sets Genéticos. Analiza el **transcriptoma completo rankeado**, detectando cambios sutiles pero coordinados en rutas completas.
+
+**📊 Visualización Avanzada (`run_enrichment_plots`)**
+El pipeline genera automáticamente una suite gráfica `top_n`:
+* **Enrichment Maps (EMAP):** Visualiza redundancia y clústers de términos GO.
+* **Gene-Concept Networks (CNET):** Vincula genes clave con sus rutas biológicas.
+* **Ridgeplots:** Distribución de frecuencia de cambio (NES).
+* **Pathview:** Proyecta datos de expresión (Colores UP/DOWN) sobre mapas metabólicos oficiales de **KEGG**.
+
+**📄 Reporte Final:** Ejecuta g:Profiler y compila el `Informe_Transcriptomica_Completo.pdf`.
+
+<br>
+
 <a id="requisitos-de-metadatos-metadata_archivos"></a>
 
 ## 📄 $\color{#000080}{\text{6. Requisitos de Metadatos (MetadataArchivos/)}}$
