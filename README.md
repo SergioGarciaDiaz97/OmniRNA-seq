@@ -356,20 +356,41 @@ Mapa de rutas que desacopla el motor de ejecución de la lógica estadística:
 <summary>$\Large \color{#000080}{\text{8. Functional Analysis: Inteligencia Biológica 🧠}}$</summary>
 <br>
 
-Capa de interpretación de alto nivel para transformar listas de genes en narrativas mecanísticas.
+Capa de interpretación de alto nivel, diseñada para transformar las listas de genes en narrativas mecanísticas mediante algoritmos de enriquecimiento de última generación.
 
-**🧬 Dualidad Analítica (SEA vs. GSEA)**
-* **SEA (ORA) - `run_sea_analysis`**: Análisis de Sobre-representación (Test Hipergeométrico). Ideal para procesos discretos ("encendido/apagado"). Desglosado en ontologías `BP`, `MF`, `CC`.
-* **GSEA - `run_gsea_analysis`**: Análisis de Enriquecimiento de Sets Genéticos. Analiza el **transcriptoma completo rankeado**, detectando cambios sutiles pero coordinados en rutas completas.
+<br>
 
-**📊 Visualización Avanzada (`run_enrichment_plots`)**
-El pipeline genera automáticamente una suite gráfica `top_n`:
-* **Enrichment Maps (EMAP):** Visualiza redundancia y clústers de términos GO.
-* **Gene-Concept Networks (CNET):** Vincula genes clave con sus rutas biológicas.
-* **Ridgeplots:** Distribución de frecuencia de cambio (NES).
-* **Pathview:** Proyecta datos de expresión (Colores UP/DOWN) sobre mapas metabólicos oficiales de **KEGG**.
+**🦁 $\color{#000080}{\text{A. Configuración de Especie}}$**
+Definición de las bases de datos externas para la consulta en tiempo real.
+* **`gprofiler_organism_code`**: Identificador semántico (ej. `hsapiens`) para consultas a la API de g:Profiler. Garantiza que las anotaciones (GO, Reactome) estén actualizadas al día de la ejecución.
+* **`pathview_kegg_code`**: Código de tres letras (ej. `hsa`) compatible con KEGG para el mapeo visual de rutas metabólicas.
 
-**📄 Reporte Final:** Ejecuta g:Profiler y compila el `Informe_Transcriptomica_Completo.pdf`.
+<br>
+
+**🧬 $\color{#000080}{\text{B. Dualidad Analítica (SEA vs. GSEA)}}$**
+* **`run_sea_analysis` (ORA)**: Ejecuta el Análisis de Sobre-representación. Compara tu lista de genes significativos contra el "background" genómico (Test Hipergeométrico). Ideal para procesos discretos ("encendido/apagado").
+    * **`sea_ontologies`**: Segmenta el análisis en las tres ramas de Gene Ontology: `BP` (Procesos), `MF` (Función Molecular) y `CC` (Componente Celular).
+* **`run_gsea_analysis`**: Activa el Gene Set Enrichment Analysis. Analiza el **transcriptoma completo rankeado** por su Fold Change (sin cortes de significancia). Detecta cambios sutiles pero coordinados en rutas completas que el análisis estándar ignoraría.
+
+<br>
+
+**📉 $\color{#000080}{\text{C. Rigor Estadístico}}$**
+Control estricto de falsos positivos.
+* **`kegg_padj_threshold` / `sea_padj_cutoff`**: Filtro de significancia tras la corrección por múltiples test (FDR Benjamini-Hochberg), asegurando bases estadísticas sólidas.
+* **`sea_qvalue_cutoff`**: Control adicional de la tasa de error, vital en estudios con alta densidad de datos.
+
+<br>
+
+**📊 $\color{#000080}{\text{D. Visualización Avanzada y Reportes}}$**
+El pipeline (`run_enrichment_plots`) genera automáticamente una suite gráfica controlada por los parámetros `top_n`:
+
+* **`top_n_emap`**: Genera *Enrichment Maps* para visualizar la redundancia y conectividad entre términos GO (agrupamiento por similitud).
+* **`top_n_cnet`**: Crea *Gene-Concept Networks*, vinculando visualmente los genes significativos con las rutas biológicas a las que pertenecen.
+* **`top_n_ridge`**: Produce *Ridgeplots* (gráficos de crestas) para mostrar la distribución de frecuencia del cambio (NES) en las rutas principales.
+* **`top_n_gseaplot`**: Genera los perfiles de enriquecimiento clásicos (running score) para las rutas con mayor impacto biológico.
+* **`Pathview`**: Proyecta los datos de expresión sobre mapas oficiales de **KEGG**, renderizando archivos donde cada enzima se colorea según su regulación (🔴 UP / 🟢 DOWN).
+
+**📄 Reporte Final (`run_final_pdf_reports`)**: Ejecuta g:Profiler (multifuente GO/KEGG/REAC) y compila el `Informe_Transcriptomica_Completo.pdf` (TOC, Volcano Plots y tablas paginadas).
 
 </details>
 
