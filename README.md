@@ -455,7 +455,7 @@ Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro
     * **Enfoque Robusto ($N \ge 5$):** Usa Mediana y MAD. (Alerta > 2.5 MAD | Fallo > 3.0 MAD).
 
 #### $\color{#000080}{\text{B. Expresión Diferencial}}$
-***02_Differential_expression.R*** Implementa Modelos Lineales Generalizados (**GLM**) mediante **DESeq2** con corrección Benjamini-Hochberg (FDR).
+***02_Differential_expression.R*** Implementa Modelos Lineales Generalizados (**GLM**) mediante **DESeq2** con corrección Benjamini-Hochberg (FDR). Permite la ejecución automatizada de múltiples comparaciones pareadas (ej. Control vs. Tratamiento 1, Control vs. Tratamiento 2, etc) bajo un mismo diseño experimental.
 * **Auditoría Previa:** Histogramas y boxplots para detectar outliers técnicos antes del modelado, MA plot para verificación de normalización.
 * **Visualización:** Genera **Volcano Plots Interactivos** (HTML) para exploración *point-and-click* y Heatmap de los genes más significativos.
 * **Genes Huérfanos:** Módulo de descubrimiento para identificar genes estadísticamente vitales sin ruta funcional conocida.
@@ -469,7 +469,7 @@ Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro
 
 #### $\color{#000080}{\text{D. Reporte Final}}$
 ***04_Comprehensive_Report_Builder.R*** Actúa como el editor final.
-* **g:Profiler en tiempo real:** Consultas multifuente para garantizar anotaciones actualizadas.
+* **g:Profiler en tiempo real:** Consultas multifuente para garantizar anotaciones actualizadas para los genes significativos.
 * **Renderizado de Doble Pase:** Pre-escanea los datos para calcular una paginación perfecta antes de generar el PDF.
 * **Fusión de Ontologías:** Integra GO (BP, MF, CC), KEGG y Reactome en una narrativa lineal jerarquizada por significancia ($p < 10^{-16}$).
 
