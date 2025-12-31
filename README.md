@@ -450,7 +450,7 @@ Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro
 
 1.  **PCA Multidimensional Secuencial:** No se limita al plano principal. Analiza proyecciones iterativas (PC1 vs PC2... hasta PC4 vs PC5) para detectar *batch effects* ocultos.
 2.  **Clustering Jerárquico Especificado:** Usa distancias Euclidianas y aglomeración por *Complete Linkage* para maximizar la disimilitud.
-3.  **Algoritmo Heurístico de Auditoría:** Genera un diagnóstico automático (semáforo) adaptando sus matemáticas al tamaño del grupo ($N$):
+3.  **Algoritmo Heurístico de Auditoría:** Genera un diagnóstico automático (semáforo) adaptando sus matemáticas al tamaño del grupo ($N$). Para que funcione N de muestras >2 por grupo:
     * **Enfoque Clásico ($N < 5$):** Usa Media y SD. (Alerta > 1.5 SD | Fallo > 2.0 SD).
     * **Enfoque Robusto ($N \ge 5$):** Usa Mediana y MAD. (Alerta > 2.5 MAD | Fallo > 3.0 MAD).
 
@@ -461,11 +461,12 @@ Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro
 * **Genes Huérfanos:** Módulo de descubrimiento para identificar genes estadísticamente vitales sin ruta funcional conocida.
 
 #### $\color{#2E8B57}{\text{C. Inteligencia Funcional}}$
-***03_Functional_analysis_viz.R*** Utiliza el motor de **clusterProfiler** para crear una narrativa visual integral.
+***03_Functional_analysis_viz.R*** Utiliza el motor de **clusterProfiler** para crear una narrativa visual integral. También habilitado para múltiples comparaciones habilitadas.
 * **Dualidad Analítica:** Ejecuta en paralelo **SEA** (Sobre-representación) y **GSEA** (Enriquecimiento de Sets) sobre el transcriptoma completo.
 * **Pathview:** Mapea la expresión diferencial sobre diagramas oficiales de **KEGG**, coloreando nodos (🔴 UP / 🟢 DOWN) para visualizar el flujo metabólico.
-* **Dashboard Interactivo:** Compila todos los hallazgos en un HTML unificado.
 * **Genes Conectores:** Algoritmo exclusivo que identifica genes puente entre diferentes procesos biológicos.
+* **Suite de Visualización:** Genera gráficos avanzados (Dotplots, CnetPlots, EmapPlots, RidgePlots) optimizados para publicación. Recopila automáticamente todas las rutas renderizadas por Pathview en un único atlas PDF.
+* **Dashboard Interactivo:** Compila todos los hallazgos en un HTML unificado.
 
 #### $\color{#2E8B57}{\text{D. Reporte Final}}$
 ***04_Comprehensive_Report_Builder.R*** Actúa como el editor final.
