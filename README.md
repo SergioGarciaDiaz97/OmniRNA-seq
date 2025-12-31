@@ -240,7 +240,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 <br>
 <a id="centro-de-control-de-configuración-json"></a>
 
-## ⚙️ $\color{#000080}{\text{5. Centro de Control de Configuración (📁 JSON/)}}$
+## ⚙️ $\color{#8B0000}{\text{5. Centro de Control de Configuración (📁 JSON/)}}$
 
 OmniRNA-seq sigue un enfoque de **Arquitectura Basada en Contratos**. Los archivos JSON definen completamente el experimento, asegurando que la ejecución sea reproducible y auditable.
 
@@ -368,7 +368,7 @@ El pipeline genera automáticamente una suite gráfica `top_n`:
 
 <a id="requisitos-de-metadatos-metadata_archivos"></a>
 
-## 📄 $\color{#000080}{\text{6. Requisitos de Metadatos (MetadataArchivos/)}}$
+## 📄 $\color{#8B0000}{\text{6. Requisitos de Metadatos (MetadataArchivos/)}}$
 
 Para que el motor estadístico **DESeq2** interprete correctamente el diseño experimental, se requiere un archivo `metadata.csv` estándar correspondiente al análisis, ubicado en la carpeta **Metadata_Archivos/** (y referenciado en el JSON).
 
