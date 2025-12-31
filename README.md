@@ -3,7 +3,7 @@
   <span style="line-height: 1; font-weight: bold;">OmniRNA-seq: High-Performance HPC Transcriptomics Pipeline</span>
 </h2>
  haz el gif un poco menos alto y mas ancho
-OmniRNA-seq es un ecosistema bioinformático integral para el análisis automatizado y reproducible de datos de RNA‑seq *bulk* en entornos HPC. Transforma lecturas crudas de secuenciación en resultados biológicos interpretables y listos para publicación, desacoplando la **ingeniería de datos** (Python) del **modelado estadístico avanzado** (R/Bioconductor) y del **despliegue reproducible** basado en contenedores **Apptainer/Singularity**.
+OmniRNA-seq es un ecosistema bioinformático integral para el análisis automatizado y reproducible de datos de **RNA‑seq bulk** en entornos HPC. Transforma lecturas crudas de secuenciación en resultados biológicos interpretables y listos para publicación, desacoplando la **ingeniería de datos** (Python) del **modelado estadístico avanzado** (R/Bioconductor) y del **despliegue reproducible** basado en contenedores **Apptainer/Singularity**.
 
 El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para:
 ***Homo sapiens***, ***Mus musculus***, ***Saccharomyces cerevisiae***, ***Arabidopsis thaliana***, ***Danio rerio***, ***Caenorhabditis elegans*** y ***Drosophila melanogaster***.
