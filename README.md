@@ -1,4 +1,4 @@
-## <img src="./assets/adn.gif" width="100"> OmniRNA-seq: High-Performance HPC Transcriptomics Pipeline
+## <img src="./assets/adn.gif" width="100" style="vertical-align: top;"> OmniRNA-seq: High-Performance HPC Transcriptomics Pipeline
 OmniRNA-seq es un ecosistema bioinformático integral para el análisis automatizado y reproducible de datos de RNA‑seq *bulk* en entornos HPC. Transforma lecturas crudas de secuenciación en resultados biológicos interpretables y listos para publicación, desacoplando la **ingeniería de datos** (Python) del **modelado estadístico avanzado** (R/Bioconductor) y del **despliegue reproducible** basado en contenedores **Apptainer/Singularity**.
 
 El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para:
@@ -232,43 +232,49 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 </details>
 
 
-
-
-
 <br>
-
-<a id="autoría-impacto-y-colaboración"></a>
+<a id="autoria-impacto-y-colaboracion"></a>
 
 ## 🤝 $\color{#8B0000}{\text{9. Autoría, Impacto y Colaboración}}$
 
-**OmniRNA-seq** nace con la filosofía del **código abierto (licencia MIT)** para eliminar barreras en la ciencia. Sin embargo, su arquitectura robusta es el resultado de cientos de horas de ingeniería y la dedicación exclusiva de un **Investigador Predoctoral (FPU)**.
+OmniRNA-seq nace con la filosofía del **código abierto (licencia MIT)** para eliminar barreras en la ciencia. Sin embargo, su arquitectura robusta es el resultado de cientos de horas de ingeniería y la dedicación exclusiva de un **Investigador Predoctoral (FPU)**.
 
-### $\color{#000080}{\text{🏫 Colaboraciones Locales}}$
+<br>
+
+<details>
+<summary>$\Large \color{#000080}{\textbf{🏫 Colaboraciones Locales, Contacto e Impacto}}$</summary>
+<br>
 
 Para análisis de datos privados (FASTQs o matrices de conteos), ofrezco soporte directo. Facilita tus archivos + `metadata.csv` y recibirás tus resultados procesados.
 
 * 🆔 **ORCID:** [0000-0003-0207-9026](https://orcid.org/0000-0003-0207-9026)
 * 📧 **Contacto:** sergio120897@gmail.com
 
-<details>
-### $\color{#000080}{\text{🌟 Impacto: Tu Cita es el Motor}}$
+<br>
+
+### 🌟 Impacto: Tu Cita es el Motor
 
 > **Tu reconocimiento es el verdadero motor de este proyecto.**
 >
 > Si este pipeline agiliza tu investigación, una **cita en tu paper** es la mejor forma de validarlo y apoyar mi carrera académica.
 
+</details>
 
-### $\color{#000080}{\text{🧬 Soporte Experto \ Co-autoría}}$
+<br>
+
+### $\color{#000080}{\text{🧬 Soporte Experto \& Co-autoría}}$
 
 La ciencia es mejor cuando se comparte. Si necesitas una integración profunda, auditoría de datos o soporte bioinformático experto para elevar el impacto de tu estudio, estoy totalmente abierto a la **colaboración y co-autoría**.
 
 ¡Transformemos juntos esos datos crudos en descubrimientos biológicos!
-</details>
+
 ---
 
 <div align="center">
 
 ### 👨‍💻 **Sergio García Díaz**
-**Lead Developer FPU Fellow**
+**Lead Developer & FPU Fellow**
 
 </div>
+El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para:
+**Homo sapiens**, **Mus musculus**, **Saccharomyces cerevisiae**, **Arabidopsis thaliana**, **Danio rerio**, **C. elegans** y **Drosophila melanogaster**.
