@@ -238,7 +238,6 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 
 <br>
-
 <a id="centro-de-control-de-configuración-json"></a>
 
 ## ⚙️ $\color{#000080}{\text{5. Centro de Control de Configuración (📁 JSON/)}}$
@@ -247,7 +246,10 @@ OmniRNA-seq sigue un enfoque de **Arquitectura Basada en Contratos**. Los archiv
 
 <br>
 
-### $\color{#000080}{\text{1. Project Setup: Infraestructura y Metodología}}$
+<details>
+<summary>$\Large \color{#000080}{\text{1. Project Setup: Infraestructura y Metodología}}$</summary>
+<br>
+
 Define el esqueleto del flujo de trabajo:
 
 * **`aligner`**: Selección del motor de alineamiento (`star`, `hisat2` o `both`). El modo `both` permite validación cruzada para identificar sesgos algorítmicos.
@@ -257,17 +259,23 @@ Define el esqueleto del flujo de trabajo:
     * `run_exploratory_analysis`: Activa/desactiva el QC Estadístico (EDA) para detectar outliers.
     * `explore_on`: Define sobre qué matriz normalizada se realizará el diagnóstico.
 
----
+</details>
 
-### $\color{#000080}{\text{2. Source Data: Estrategias de Ingesta}}$
+<details>
+<summary>$\Large \color{#000080}{\text{2. Source Data: Estrategias de Ingesta}}$</summary>
+<br>
+
 * **`fastq_list_strategy`**:
     * **`automatic`**: Usa la **API de ENA** para descargar muestras indicadas en la URL generada por `data_conector.py`.
     * **`manual`**: (Obligatorio para modo local). El usuario provee una lista de URLs/rutas específicas en `fastq_list_file` para mayor flexibilidad.
 * **`genome_urls`**: Descarga automática y construcción dinámica de genomas y anotaciones.
 
----
+</details>
 
-### $\color{#000080}{\text{3. Tool Parameters: Rendimiento y Rigor}}$
+<details>
+<summary>$\Large \color{#000080}{\text{3. Tool Parameters: Rendimiento y Rigor}}$</summary>
+<br>
+
 Define la estrategia computacional y los criterios de calidad.
 
 **A. Paralelización Inteligente (Throttling)**
@@ -288,9 +296,12 @@ Limpieza asíncrona a nivel de worker para optimizar espacio:
 * **FeatureCounts (`strand_specific`):** Topología de la librería (0: unstranded, 1: forward, 2: reverse).
 * **Analysis Thresholds:** Define los cortes (`log2fc`, `padj`) para considerar un gen como Expresado Diferencialmente (DEG).
 
----
+</details>
 
-### $\color{#000080}{\text{4. DESeq2 Experiment: Diseño Experimental}}$
+<details>
+<summary>$\Large \color{#000080}{\text{4. DESeq2 Experiment: Diseño Experimental}}$</summary>
+<br>
+
 Conecta la matriz de expresión con las variables biológicas:
 
 * **`metadata_path`**: Ruta al archivo `.csv` que vincula FASTQ con grupos biológicos.
@@ -298,32 +309,44 @@ Conecta la matriz de expresión con las variables biológicas:
 * **`design_formula`**: Modelo estadístico (ej. `~ batch + condition`). Soporta diseños complejos e interacciones.
 * **`control_group`**: Nivel de referencia (*baseline*). Todos los Fold Changes se calculan contra este grupo.
 
----
+</details>
 
-### $\color{#000080}{\text{5. Annotation: Contexto Biológico}}$
+<details>
+<summary>$\Large \color{#000080}{\text{5. Annotation: Contexto Biológico}}$</summary>
+<br>
+
 Gestiona la interoperabilidad entre bases de datos:
 
 * **`organism_db`**: Paquete de Bioconductor para anotación (GO/KEGG).
 * **`key_type`**: Formato de entrada de los IDs en el GTF (ej. `ENSEMBL`, `ENTREZID`).
 * **`strip_gene_version` (true):** Pre-procesamiento vital para Ensembl. Elimina versiones de transcrito (ej. `FBgn00.1` → `FBgn00`) para asegurar un mapeo exacto.
 
----
+</details>
 
-### $\color{#000080}{\text{6. Container Images: Reproducibilidad Binaria}}$
+<details>
+<summary>$\Large \color{#000080}{\text{6. Container Images: Reproducibilidad Binaria}}$</summary>
+<br>
+
 Definición explícita de las rutas a imágenes **Singularity/Apptainer** (`.sif`). Esto congela las versiones de todo el software (STAR, R, Samtools), garantizando la inmutabilidad del entorno.
 
----
+</details>
 
-### $\color{#000080}{\text{7. Scripts: Orquestación de Motores Analíticos (R)}}$
+<details>
+<summary>$\Large \color{#000080}{\text{7. Scripts: Orquestación de Motores (R)}}$</summary>
+<br>
+
 Mapa de rutas que desacopla el motor de ejecución de la lógica estadística:
 * `r_exploratory_script_path` → **01_EDA_QC.R**
 * `r_deseq2_script_path` → **02_Differential_expression.R**
 * `r_enrichment_plotter_script_path` → **03_Functional_analysis_viz.R**
 * `r_pdf_report_script_path` → **04_Comprehensive_Report_Builder.R**
 
----
+</details>
 
-### $\color{#000080}{\text{8. Functional Analysis: Inteligencia Biológica 🧠}}$
+<details>
+<summary>$\Large \color{#000080}{\text{8. Functional Analysis: Inteligencia Biológica 🧠}}$</summary>
+<br>
+
 Capa de interpretación de alto nivel para transformar listas de genes en narrativas mecanísticas.
 
 **🧬 Dualidad Analítica (SEA vs. GSEA)**
@@ -338,6 +361,8 @@ El pipeline genera automáticamente una suite gráfica `top_n`:
 * **Pathview:** Proyecta datos de expresión (Colores UP/DOWN) sobre mapas metabólicos oficiales de **KEGG**.
 
 **📄 Reporte Final:** Ejecuta g:Profiler y compila el `Informe_Transcriptomica_Completo.pdf`.
+
+</details>
 
 <br>
 
