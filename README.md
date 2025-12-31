@@ -240,7 +240,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 <br>
 <a id="requisitos-de-metadatos-metadata_archivos"></a>
 
-## 📄 $\color{#000080}{\text{6. Requisitos de Metadatos (Metadata_Archivos/)}}$
+## 📄 $\color{#000080}{\text{6. Requisitos de Metadatos (MetadataArchivos/)}}$
 
 Para que el motor estadístico **DESeq2** interprete correctamente el diseño experimental, se requiere un archivo `metadata.csv` estándar correspondiente al análisis, ubicado en la carpeta **Metadata_Archivos/** (y referenciado en el JSON).
 
