@@ -392,6 +392,59 @@ Este archivo actúa como la **llave maestra** 🗝️ que conecta los archivos c
 
 <br>
 
+
+<a id="arquitectura-del-sistema"></a>
+
+## 🏗️ $\color{#8B0000}{\text{7. Arquitectura del Sistema}}$
+
+<br>
+
+### 🐍 $\color{#000080}{\text{1. Ingeniería de Datos y Orquestación (Python 3.10+)}}$
+
+La capa de ingeniería actúa como el **sistema nervioso** del pipeline. Diseñada bajo el principio de *Responsabilidad Única*, gestiona la logística de datos antes de cualquier análisis estadístico.
+
+* **`main.py` (El Director):** Procesa el archivo JSON, valida las rutas del sistema y decide la estrategia de ejecución global, delegando tareas a los submódulos.
+* **`experiment_profiler.py` (Inteligencia):** Se conecta automáticamente a las APIs públicas de **ENA** y **Ensembl** para recuperar metadatos y construir dinámicamente las URLs de referencia.
+* **`data_conector.py` (Logística):** Gestiona la descarga paralela y robusta de archivos FASTQ, con lógica de reintentos y validación de integridad.
+* **`01_pipeline_core.py` (El Motor):** Orquesta la ejecución secuencial de herramientas críticas (Trimmomatic, STAR, HISAT2, StringTie).
+    * *Feature Destacada:* **Validación Cruzada**. Si se selecciona el modo `"both"`, ejecuta ambos alineadores y genera archivos de intersección para evaluar la consistencia técnica entre algoritmos.
+
+---
+
+### 📊 $\color{#000080}{\text{2. Suite Estadística y Biológica (R / Bioconductor)}}$
+
+Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro módulos especializados.
+
+#### $\color{#000080}{\text{A. Control de Calidad y Exploración (01_EDA_QC.R)}}$
+Establece la línea base de calidad aplicando transformación `log2(x+1)` y ejecutando una **auditoría adaptativa**:
+
+1.  **PCA Multidimensional Secuencial:** No se limita al plano principal. Analiza proyecciones iterativas (PC1 vs PC2... hasta PC4 vs PC5) para detectar *batch effects* ocultos.
+2.  **Clustering Jerárquico Especificado:** Usa distancias Euclidianas y aglomeración por *Complete Linkage* para maximizar la disimilitud.
+3.  **Algoritmo Heurístico de Auditoría:** Genera un diagnóstico automático (semáforo) adaptando sus matemáticas al tamaño del grupo ($N$):
+    * **Enfoque Clásico ($N < 5$):** Usa Media y SD. (Alerta > 1.5 SD | Fallo > 2.0 SD).
+    * **Enfoque Robusto ($N \ge 5$):** Usa Mediana y MAD. (Alerta > 2.5 MAD | Fallo > 3.0 MAD).
+
+#### $\color{#000080}{\text{B. Expresión Diferencial (02_Differential_expression.R)}}$
+Implementa Modelos Lineales Generalizados (**GLM**) mediante **DESeq2** con corrección Benjamini-Hochberg (FDR).
+* **Auditoría Previa:** Histogramas y boxplots para detectar outliers técnicos antes del modelado.
+* **Visualización:** Genera **Volcano Plots Interactivos** (HTML) para exploración *point-and-click*.
+* **Genes Huérfanos:** Módulo de descubrimiento para identificar genes estadísticamente vitales sin ruta funcional conocida.
+
+#### $\color{#000080}{\text{C. Inteligencia Funcional (03_Functional_analysis_viz.R)}}$
+Utiliza el motor de **clusterProfiler** para crear una narrativa visual integral.
+* **Dualidad Analítica:** Ejecuta en paralelo **SEA** (Sobre-representación) y **GSEA** (Enriquecimiento de Sets) sobre el transcriptoma completo.
+* **Pathview:** Mapea la expresión diferencial sobre diagramas oficiales de **KEGG**, coloreando nodos (🔴 UP / 🟢 DOWN) para visualizar el flujo metabólico.
+* **Dashboard Interactivo:** Compila todos los hallazgos en un HTML unificado.
+* **Genes Conectores:** Algoritmo exclusivo que identifica genes puente entre diferentes procesos biológicos.
+
+#### $\color{#000080}{\text{D. Reporte Final (04_Comprehensive_Report_Builder.R)}}$
+Actúa como el editor final.
+* **g:Profiler en tiempo real:** Consultas multifuente para garantizar anotaciones actualizadas.
+* **Renderizado de Doble Pase:** Pre-escanea los datos para calcular una paginación perfecta antes de generar el PDF.
+* **Fusión de Ontologías:** Integra GO (BP, MF, CC), KEGG y Reactome en una narrativa lineal jerarquizada por significancia ($p < 10^{-16}$).
+
+<br>
+
 <a id="estructura-global-de-resultados-output-tree"></a>
 
 ## 📂 $\color{#8B0000}{\text{8. Estructura Global de Resultados (Output Tree)}}$
