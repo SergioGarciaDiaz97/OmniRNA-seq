@@ -22,6 +22,7 @@ _Haz clic en cualquier apartado para ir directamente a la sección._
 
 <a id="organizacion"></a>
 ## 📂 $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
+Para que funcione el pipeline es necesario alojar los diferentes archivos en las carpetas indicadas a continuación.
 
 ```text
 OmniRNA-seq/
