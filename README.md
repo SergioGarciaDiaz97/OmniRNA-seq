@@ -181,7 +181,7 @@ Para garantizar que el análisis sea idéntico en cualquier clúster, **OmniRNA-
 > * **Restricción:** Archivos antiguos con Phred+64 requieren conversión previa.
 >
 > **2. Estrategia de Trimming Inmutable**
-> * Uso exclusivo de **Trimmomatic** por trazabilidad clínica.
+> * Uso exclusivo de **Trimmomatic** por trazabilidad académica.
 > * **Restricción:** No se permite sustituir por otros limpiadores (ej. fastp).
 
 <br>
