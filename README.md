@@ -238,6 +238,31 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 
 <br>
+<a id="requisitos-de-metadatos-metadata_archivos"></a>
+
+## 📄 $\color{#000080}{\text{6. Requisitos de Metadatos (Metadata_Archivos/)}}$
+
+Para que el motor estadístico **DESeq2** interprete correctamente el diseño experimental, se requiere un archivo `metadata.csv` estándar correspondiente al análisis, ubicado en la carpeta **Metadata_Archivos/** (y referenciado en el JSON).
+
+Este archivo actúa como la **llave maestra** 🗝️ que conecta los archivos crudos con las variables biológicas.
+
+<br>
+
+### $\color{#000080}{\text{📋 Reglas de Formato}}$
+
+* **1. Primera Columna:** Debe contener los **IDs de las muestras** (coincidentes con los nombres de los archivos FASTQ/BAM).
+* **2. Columnas de Factores:** Variables biológicas de interés (ej. *Genotipo*, *Tratamiento*, *Tiempo*).
+* **3. Consistencia:** Los nombres de las columnas deben coincidir **exactamente** con los términos usados en la `design_formula` del archivo JSON.
+
+<br>
+
+> [!NOTE]
+> **🛠️ Nota Técnica: Sanitización Automática**
+>
+> El pipeline incluye un módulo de seguridad que genera un archivo `metadata_corregido.csv`. Este proceso detecta y corrige caracteres inválidos en los nombres de las muestras (ej. reemplaza guiones `-` por puntos `.`) para asegurar la compatibilidad total con **R**.
+> 
+
+<br>
 
 <a id="estructura-global-de-resultados-output-tree"></a>
 
