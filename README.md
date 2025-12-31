@@ -74,7 +74,7 @@ Existen los parámetros `cleanup_only_fastq` y `retain_only_fastqc_and_bam` (ver
 </div>
 
 ### $\color{#2E8B57}{\text{Flujo Completo (End-to-End Processing):}}$
-- **Configuración:** `"counting_method": "featurecounts"`.
+- **Configuración:** `"counting_method": "featureCounts"`.
 - **Descripción:** Interroga las APIs de ENA/SRA para recuperar automáticamente metadatos y FASTQs. Ejecuta el pipeline integral: QC, alineamiento y cuantificación.
 
 ### $\color{#2E8B57}{\text{Flujo Acelerado (Direct Matrix Analysis - Public):}}$
