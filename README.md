@@ -28,13 +28,11 @@ Para que funcione el pipeline es necesario alojar los diferentes archivos en las
 OmniRNA-seq/
 ├── RNA_SEQ_LETS_TRY.sh        # Launcher maestro (HPC / SLURM)
 ├── JSON/                      # Configuración del experimento (El Contrato)
-│   ├── project01.json
-│   └── project02.json
+│   ├── project01.json 
 │   └── ...
 │ 
 ├── Metadata_Archivos/         # Archivos CSV de diseño experimental
 │   ├── metadata_project01.csv
-│   └── metadata_project02.csv
 │   └── ...
 │
 ├── src/
