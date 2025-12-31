@@ -167,42 +167,6 @@ reproducible y eficiente.
 
 **📝 Nota: Inmutabilidad y Reproducibilidad**
 
-Para garantizar que el análisis sea idéntico en cualquier clúster, **OmniRNA-seq** no depende de librerías locales. Todo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**.
-
-<br>
-
-> [!WARNING]
-> **⚠️ Limitaciones Críticas y Estándares**
->
-> Es obligatorio cumplir estos requisitos para evitar fallos:
->
-> **1. Formato de Calidad (Estricto Phred+33)**
-> * Calibrado solo para Illumina ≥1.8.
-> * **Restricción:** Archivos antiguos con Phred+64 requieren conversión previa.
->
-> **2. Estrategia de Trimming Inmutable**
-> * Uso exclusivo de **Trimmomatic** por trazabilidad académica.
-> * **Restricción:** No se permite sustituir por otros limpiadores (ej. fastp).
-
-<br>
-
-<details>
-<summary>$\Large \color{#000080}{\textbf{🛠️ Herramientas de Procesamiento Upstream (Gold Standard):}}$</summary>
-<br>
-
-* **Control de Calidad:** `FastQC v0.12.1` y `MultiQC v1.29`
-* **Limpieza y Trimming:** `Trimmomatic v0.39`
-* **Alineamiento:** `STAR v2.7.10a` y `HISAT2 v2.2.1`
-* **Cuantificación:** `Subread featureCounts v2.0.6` y `StringTie v2.2.3`
-
-</details>
-
-<a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
-
-## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
-
-**📝 Nota: Inmutabilidad y Reproducibilidad**
-
 Para garantizar que el análisis sea idéntico en cualquier clúster, **PLEXUS-seq** no depende de librerías locales. Todo se ejecuta mediante imágenes de contenedores **Apptainer** o **Singularity**.
 
 <br>
