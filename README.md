@@ -360,28 +360,28 @@ Capa de interpretación de alto nivel, diseñada para transformar las listas de 
 
 <br>
 
-**🦁 $\color{#000080}{\text{A. Configuración de Especie}}$**
+**🦁 $\color{#2E8B57}{\text{A. Configuración de Especie}}$**
 Definición de las bases de datos externas para la consulta en tiempo real.
 * **`gprofiler_organism_code`**: Identificador semántico (ej. `hsapiens`) para consultas a la API de g:Profiler. Garantiza que las anotaciones (GO, Reactome) estén actualizadas al día de la ejecución.
 * **`pathview_kegg_code`**: Código de tres letras (ej. `hsa`) compatible con KEGG para el mapeo visual de rutas metabólicas.
 
 <br>
 
-**🧬 $\color{#000080}{\text{B. Dualidad Analítica (SEA vs. GSEA)}}$**
+**🧬 $\color{#2E8B57}{\text{B. Dualidad Analítica (SEA vs. GSEA)}}$**
 * **`run_sea_analysis` (ORA)**: Ejecuta el Análisis de Sobre-representación. Compara tu lista de genes significativos contra el "background" genómico (Test Hipergeométrico). Ideal para procesos discretos ("encendido/apagado").
     * **`sea_ontologies`**: Segmenta el análisis en las tres ramas de Gene Ontology: `BP` (Procesos), `MF` (Función Molecular) y `CC` (Componente Celular).
 * **`run_gsea_analysis`**: Activa el Gene Set Enrichment Analysis. Analiza el **transcriptoma completo rankeado** por su Fold Change (sin cortes de significancia). Detecta cambios sutiles pero coordinados en rutas completas que el análisis estándar ignoraría.
 
 <br>
 
-**📉 $\color{#000080}{\text{C. Rigor Estadístico}}$**
+**📉 $\color{#2E8B57}{\text{C. Rigor Estadístico}}$**
 Control estricto de falsos positivos.
 * **`kegg_padj_threshold` / `sea_padj_cutoff`**: Filtro de significancia tras la corrección por múltiples test (FDR Benjamini-Hochberg), asegurando bases estadísticas sólidas.
 * **`sea_qvalue_cutoff`**: Control adicional de la tasa de error, vital en estudios con alta densidad de datos.
 
 <br>
 
-**📊 $\color{#000080}{\text{D. Visualización Avanzada y Reportes}}$**
+**📊 $\color{#2E8B57}{\text{D. Visualización Avanzada y Reportes}}$**
 El pipeline (`run_enrichment_plots`) genera automáticamente una suite gráfica controlada por los parámetros `top_n`:
 
 * **`top_n_emap`**: Genera *Enrichment Maps* para visualizar la redundancia y conectividad entre términos GO (agrupamiento por similitud).
