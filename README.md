@@ -1,5 +1,5 @@
 <h2 style="display: flex; align-items: center; gap: 15px;">
-  <img src="./assets/adn.gif" width="85" style="vertical-align: middle;">
+  <img src="./assets/adn.gif" width="80" style="vertical-align: middle;">
   <span style="line-height: 1; font-weight: bold;">OmniRNA-seq: High-Performance HPC Transcriptomics Pipeline</span>
 </h2>
  haz el gif un poco menos alto y mas ancho
