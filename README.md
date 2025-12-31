@@ -4,8 +4,7 @@
 </h2>
 OmniRNA-seq es un ecosistema bioinformático integral para el análisis automatizado y reproducible de datos de RNA‑seq bulk en entornos HPC. Transforma lecturas crudas de secuenciación en resultados biológicos interpretables y listos para publicación, desacoplando la ingeniería de datos (Python) del modelado estadístico avanzado (R/Bioconductor) y del despliegue reproducible basado en contenedores Apptainer/Singularity.
 
-El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para:
-***Homo sapiens***, ***Mus musculus***, ***Saccharomyces cerevisiae***, ***Arabidopsis thaliana***, ***Danio rerio***, ***Caenorhabditis elegans*** y ***Drosophila melanogaster***.
+El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para una amplia gama de modelos biológicos, incluyendo ***Homo sapiens***, ***Mus musculus***, ***Saccharomyces cerevisiae***, ***Arabidopsis thaliana***, ***Danio rerio***, ***Caenorhabditis elegans*** y ***Drosophila melanogaster***.
 
 ## 📚 Índice
 _Haz clic en cualquier apartado para ir directamente a la sección._
