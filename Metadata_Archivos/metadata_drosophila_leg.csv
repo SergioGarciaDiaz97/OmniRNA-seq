@@ -1,0 +1,7 @@
+sample_id,condition,sample_name
+SRR26372765,Control,Input3
+SRR26372766,Control,Input2
+SRR26372767,Control,Input1
+SRR26372768,Myoblasts,GFP3
+SRR26372769,Myoblasts,GFP2
+SRR26372770,Myoblasts,GFP1

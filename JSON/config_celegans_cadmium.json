@@ -1,0 +1,110 @@
+{
+  "project_setup": {
+    "base_dir": "Celegans_Cadmium_Project",
+    "host_bind_dir": "/mnt/beegfs/home/segardia",
+    "aligner": "star",
+    "counting_method": "featureCounts",
+    "sequencing_type": "paired-end",
+    "quantification_options": {
+      "run_exploratory_analysis": true,
+      "explore_on": [
+        "tpm",
+        "fpkm"
+      ],
+      "run_for": {
+        "star": [
+          "tpm",
+          "fpkm"
+        ],
+        "hisat2": [
+          "tpm",
+          "fpkm"
+        ]
+      }
+    }
+  },
+  "source_data": {
+    "fastq_list_strategy": "automatic",
+    "fastq_list_file": "/mnt/beegfs/home/segardia/Celegans_Cadmium_Project/PRJNA784101_fastq_urls.txt",
+    "genome_urls": [
+      "https://ftp.ensembl.org/pub/release-112/fasta/caenorhabditis_elegans/dna/Caenorhabditis_elegans.WBcel235.dna.toplevel.fa.gz",
+      "https://ftp.ensembl.org/pub/release-112/gtf/caenorhabditis_elegans/Caenorhabditis_elegans.WBcel235.112.gtf.gz"
+    ]
+  },
+  "tool_parameters": {
+    "threads": 4,
+    "threads_per_sample": 4,
+    "download_threads": 4,
+    "max_parallel_samples": 2,
+    "retain_only_fastqc_and_bam": false,
+    "cleanup_only_fastq": false,
+    "trimmomatic": {
+      "adapter_fasta_url": "https://raw.githubusercontent.com/timflutre/trimmomatic/master/adapters/TruSeq3-PE.fa",
+      "sliding_window": "4:20",
+      "leading": 3,
+      "trailing": 3,
+      "min_len": 36
+    },
+    "star": {
+      "sjdbOverhang": 149
+    },
+    "featurecounts": {
+      "strand_specific": 2
+    },
+    "analysis_thresholds": {
+      "log2fc": 0.8,
+      "padj": 0.05
+    }
+  },
+  "deseq2_experiment": {
+    "metadata_path": "Metadata_Archivos/metadata_celegans.csv",
+    "design_formula": "~ condition",
+    "control_group": "control",
+    "grouping_variable": "condition"
+  },
+  "annotation": {
+    "organism_db": "org.Ce.eg.db",
+    "key_type": "WORMBASE",
+    "strip_gene_version": false
+  },
+  "scripts": {
+    "r_exploratory_script_path": "R_CODES/01_EDA_QC.R",
+    "r_deseq2_script_path": "R_CODES/02_Differential_expression.R",
+    "r_enrichment_plotter_script_path": "R_CODES/03_Functional_analysis_viz.R",
+    "r_pdf_report_script_path": "R_CODES/04_Comprehensive_Report_Builder.R"
+  },
+  "container_images": {
+    "fastqc": "/mnt/beegfs/containers/nfcore/fastqc-0.12.1--hdfd78af_0.img",
+    "trimmomatic": "/mnt/beegfs/containers/nfcore/trimmomatic-0.39--hdfd78af_2.img",
+    "star": "/mnt/beegfs/containers/nfcore/quay.io-nf-core-htslib_samtools_star_gawk-311d422a50e6d829.img",
+    "stringtie": "/mnt/beegfs/containers/nfcore/stringtie-2.2.3--h43eeafb_0.img",
+    "hisat2": "/mnt/beegfs/containers/nfcore/depot.galaxyproject.org-singularity-hisat2-2.2.1--h1b792b2_3.img",
+    "featurecounts": "/mnt/beegfs/containers/nfcore/subread-2.0.6--he4a0461_2.img",
+    "r_deseq2": "/mnt/beegfs/home/segardia/r_custom_env.sif",
+    "multiqc": "/mnt/beegfs/containers/nfcore/multiqc-1.29--pyhdfd78af_0.img"
+  },
+  "functional_analysis": {
+    "run_kegg": true,
+    "gprofiler_organism_code": "celegans",
+    "pathview_kegg_code": "cel",
+    "kegg_padj_threshold": 0.05,
+    "run_enrichment_plots": true,
+    "run_final_pdf_reports": true,
+    "run_sea_analysis": true,
+    "sea_padj_cutoff": 0.05,
+    "sea_qvalue_cutoff": 0.1,
+    "sea_ontologies": [
+      "BP",
+      "MF",
+      "CC"
+    ],
+    "run_gsea_analysis": true,
+    "gsea_padj_cutoff": 0.05,
+    "plot_parameters": {
+      "top_n_emap": 15,
+      "top_n_cnet": 10,
+      "top_n_ridge": 15,
+      "top_n_gseaplot": 5
+    }
+  }
+}

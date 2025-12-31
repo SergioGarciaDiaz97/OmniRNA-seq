@@ -1,0 +1,109 @@
+{
+  "project_setup": {
+    "base_dir": "TEST_HUMAN_AIRWAY",
+    "host_bind_dir": "/mnt/beegfs/home/segardia",
+    "aligner": "star",
+    "counting_method": "featureCounts",
+    "sequencing_type": "paired-end",
+    "quantification_options": {
+      "run_exploratory_analysis": true,
+      "explore_on": [
+        "tpm",
+        "fpkm"
+      ],
+      "run_for": {
+        "star": [
+          "tpm",
+          "fpkm"
+        ]
+      }
+    }
+  },
+  "source_data": {
+    "fastq_list_strategy": "automatic",
+    "fastq_list_file": "/mnt/beegfs/home/segardia/TEST_HUMAN_AIRWAY/PRJNA229998_fastq_urls.txt",
+    "genome_urls": [
+      "https://ftp.ensembl.org/pub/release-111/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz",
+      "https://ftp.ensembl.org/pub/release-111/gtf/homo_sapiens/Homo_sapiens.GRCh38.111.gtf.gz"
+    ]
+  },
+  "tool_parameters": {
+    "threads": 6,
+    "threads_per_sample": 4,
+    "download_threads": 6,
+    "max_parallel_samples": 6,
+    "//_COMENTARIO": "--- GESTI\u00d3N DE LIMPIEZA ACTIVADA ---",
+    "retain_only_fastqc_and_bam": false,
+    "cleanup_only_fastq": false,
+    "trimmomatic": {
+      "adapter_fasta_url": "https://raw.githubusercontent.com/timflutre/trimmomatic/master/adapters/TruSeq3-PE.fa",
+      "sliding_window": "4:20",
+      "leading": 3,
+      "trailing": 3,
+      "min_len": 36
+    },
+    "star": {
+      "sjdbOverhang": 74
+    },
+    "featurecounts": {
+      "strand_specific": 0
+    },
+    "analysis_thresholds": {
+      "log2fc": 1.0,
+      "padj": 0.05
+    }
+  },
+  "deseq2_experiment": {
+    "metadata_path": "Metadata_Archivos/metadata_human.csv",
+    "design_formula": "~ cell_line + group",
+    "grouping_variable": "group",
+    "control_group": "Control",
+    "treatment_group": "Combined",
+    "control_group_contrast": "Control"
+  },
+  "annotation": {
+    "organism_db": "org.Hs.eg.db",
+    "key_type": "ENSEMBL",
+    "strip_gene_version": true
+  },
+  "container_images": {
+    "fastqc": "/mnt/beegfs/containers/nfcore/fastqc-0.12.1--hdfd78af_0.img",
+    "trimmomatic": "/mnt/beegfs/containers/nfcore/trimmomatic-0.39--hdfd78af_2.img",
+    "star": "/mnt/beegfs/containers/nfcore/quay.io-nf-core-htslib_samtools_star_gawk-311d422a50e6d829.img",
+    "stringtie": "/mnt/beegfs/containers/nfcore/stringtie-2.2.3--h43eeafb_0.img",
+    "hisat2": "/mnt/beegfs/containers/nfcore/depot.galaxyproject.org-singularity-hisat2-2.2.1--h1b792b2_3.img",
+    "featurecounts": "/mnt/beegfs/containers/nfcore/subread-2.0.6--he4a0461_2.img",
+    "r_deseq2": "/mnt/beegfs/home/segardia/r_custom_env.sif",
+    "multiqc": "/mnt/beegfs/containers/nfcore/multiqc-1.29--pyhdfd78af_0.img"
+  },
+  "scripts": {
+    "r_exploratory_script_path": "R_CODES/01_EDA_QC.R",
+    "r_deseq2_script_path": "R_CODES/02_Differential_expression.R",
+    "r_enrichment_plotter_script_path": "R_CODES/03_Functional_analysis_viz.R",
+    "r_pdf_report_script_path": "R_CODES/04_Comprehensive_Report_Builder.R"
+  },
+  "functional_analysis": {
+    "run_kegg": true,
+    "gprofiler_organism_code": "hsapiens",
+    "pathview_kegg_code": "hsa",
+    "kegg_padj_threshold": 0.05,
+    "run_enrichment_plots": true,
+    "run_final_pdf_reports": true,
+    "run_sea_analysis": true,
+    "sea_padj_cutoff": 0.05,
+    "sea_qvalue_cutoff": 0.1,
+    "sea_ontologies": [
+      "BP",
+      "MF",
+      "CC"
+    ],
+    "run_gsea_analysis": true,
+    "gsea_padj_cutoff": 0.05,
+    "plot_parameters": {
+      "top_n_emap": 15,
+      "top_n_cnet": 10,
+      "top_n_ridge": 15,
+      "top_n_gseaplot": 5
+    }
+  }
+}

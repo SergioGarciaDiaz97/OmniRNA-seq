@@ -1,0 +1,17 @@
+sample,cell_line,treatment,group
+SRR1039508,N61311,untreated,Control
+SRR1039509,N61311,Dex,Dexamethasone
+SRR1039510,N61311,Alb,Albuterol
+SRR1039511,N61311,Alb_Dex,Combined
+SRR1039512,N052611,untreated,Control
+SRR1039513,N052611,Dex,Dexamethasone
+SRR1039514,N052611,Alb,Albuterol
+SRR1039515,N052611,Alb_Dex,Combined
+SRR1039516,N080611,untreated,Control
+SRR1039517,N080611,Dex,Dexamethasone
+SRR1039518,N080611,Alb,Albuterol
+SRR1039519,N080611,Alb_Dex,Combined
+SRR1039520,N061011,untreated,Control
+SRR1039521,N061011,Dex,Dexamethasone
+SRR1039522,N061011,Alb,Albuterol
+SRR1039523,N061011,Alb_Dex,Combined
