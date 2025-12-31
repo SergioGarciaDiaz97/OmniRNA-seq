@@ -238,129 +238,59 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 
 <br>
-<a id="centro-de-control-de-configuración-json"></a>
+<a id="arquitectura-del-sistema"></a>
 
-## ⚙️ $\color{#8B0000}{\text{5. Centro de Control de Configuración (📁 JSON/)}}$
-
-OmniRNA-seq sigue un enfoque de **Arquitectura Basada en Contratos**. Los archivos JSON definen completamente el experimento, asegurando que la ejecución sea reproducible y auditable.
+## 🏗️ $\color{#8B0000}{\text{7. Arquitectura del Sistema}}$
 
 <br>
 
 <details>
-<summary>$\Large \color{#000080}{\text{1. Project Setup: Infraestructura y Metodología}}$</summary>
+<summary>$\Large \color{#000080}{\text{1. Ingeniería de Datos y Orquestación (Python 3.10+)}}$</summary>
 <br>
 
-Define el esqueleto del flujo de trabajo:
+La capa de ingeniería actúa como el **sistema nervioso** del pipeline. Diseñada bajo el principio de *Responsabilidad Única*, gestiona la logística de datos antes de cualquier análisis estadístico.
 
-* **`aligner`**: Selección del motor de alineamiento (`star`, `hisat2` o `both`). El modo `both` permite validación cruzada para identificar sesgos algorítmicos.
-* **`counting_method`**: Define si el análisis parte de lecturas crudas (`featureCounts`) o de una matriz precalculada (`precomputed_csv`).
-* **`quantification_options`**: Módulo de inteligencia para la normalización (StringTie):
-    * `run_for`: Define qué métricas calcular (`tpm`, `fpkm`). Corrige el sesgo por longitud de gen y profundidad.
-    * `run_exploratory_analysis`: Activa/desactiva el QC Estadístico (EDA) para detectar outliers.
-    * `explore_on`: Define sobre qué matriz normalizada se realizará el diagnóstico.
+* **`main.py` (El Director):** Procesa el archivo JSON, valida las rutas del sistema y decide la estrategia de ejecución global, delegando tareas a los submódulos.
+* **`experiment_profiler.py` (Inteligencia):** Se conecta automáticamente a las APIs públicas de **ENA** y **Ensembl** para recuperar metadatos y construir dinámicamente las URLs de referencia.
+* **`data_conector.py` (Logística):** Gestiona la descarga paralela y robusta de archivos FASTQ, con lógica de reintentos y validación de integridad.
+* **`01_pipeline_core.py` (El Motor):** Orquesta la ejecución secuencial de herramientas críticas (Trimmomatic, STAR, HISAT2, StringTie).
+    * *Feature Destacada:* **Validación Cruzada**. Si se selecciona el modo `"both"`, ejecuta ambos alineadores y genera archivos de intersección para evaluar la consistencia técnica entre algoritmos.
 
 </details>
 
 <details>
-<summary>$\Large \color{#000080}{\text{2. Source Data: Estrategias de Ingesta}}$</summary>
+<summary>$\Large \color{#000080}{\text{2. Suite Estadística y Biológica (R / Bioconductor)}}$</summary>
 <br>
 
-* **`fastq_list_strategy`**:
-    * **`automatic`**: Usa la **API de ENA** para descargar muestras indicadas en la URL generada por `data_conector.py`.
-    * **`manual`**: (Obligatorio para modo local). El usuario provee una lista de URLs/rutas específicas en `fastq_list_file` para mayor flexibilidad.
-* **`genome_urls`**: Descarga automática y construcción dinámica de genomas y anotaciones.
+Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro módulos especializados.
 
-</details>
+#### $\color{#000080}{\text{A. Control de Calidad y Exploración (01\_EDA\_QC.R)}}$
+Establece la línea base de calidad aplicando transformación `log2(x+1)` y ejecutando una **auditoría adaptativa**:
 
-<details>
-<summary>$\Large \color{#000080}{\text{3. Tool Parameters: Rendimiento y Rigor}}$</summary>
-<br>
+1.  **PCA Multidimensional Secuencial:** No se limita al plano principal. Analiza proyecciones iterativas (PC1 vs PC2... hasta PC4 vs PC5) para detectar *batch effects* ocultos.
+2.  **Clustering Jerárquico Especificado:** Usa distancias Euclidianas y aglomeración por *Complete Linkage* para maximizar la disimilitud.
+3.  **Algoritmo Heurístico de Auditoría:** Genera un diagnóstico automático (semáforo) adaptando sus matemáticas al tamaño del grupo ($N$):
+    * **Enfoque Clásico ($N < 5$):** Usa Media y SD. (Alerta > 1.5 SD | Fallo > 2.0 SD).
+    * **Enfoque Robusto ($N \ge 5$):** Usa Mediana y MAD. (Alerta > 2.5 MAD | Fallo > 3.0 MAD).
 
-Define la estrategia computacional y los criterios de calidad.
+#### $\color{#000080}{\text{B. Expresión Diferencial (02\_Differential\_expression.R)}}$
+Implementa Modelos Lineales Generalizados (**GLM**) mediante **DESeq2** con corrección Benjamini-Hochberg (FDR).
+* **Auditoría Previa:** Histogramas y boxplots para detectar outliers técnicos antes del modelado.
+* **Visualización:** Genera **Volcano Plots Interactivos** (HTML) para exploración *point-and-click*.
+* **Genes Huérfanos:** Módulo de descubrimiento para identificar genes estadísticamente vitales sin ruta funcional conocida.
 
-**A. Paralelización Inteligente (Throttling)**
-Para evitar el *I/O thrashing* en clústers compartidos, el pipeline procesa la ingesta en bloques concurrentes usando `threads`, `threads_per_sample` y `max_parallel_samples`. Maximiza el throughput sin violar cuotas.
+#### $\color{#000080}{\text{C. Inteligencia Funcional (03\_Functional\_analysis\_viz.R)}}$
+Utiliza el motor de **clusterProfiler** para crear una narrativa visual integral.
+* **Dualidad Analítica:** Ejecuta en paralelo **SEA** (Sobre-representación) y **GSEA** (Enriquecimiento de Sets) sobre el transcriptoma completo.
+* **Pathview:** Mapea la expresión diferencial sobre diagramas oficiales de **KEGG**, coloreando nodos (🔴 UP / 🟢 DOWN) para visualizar el flujo metabólico.
+* **Dashboard Interactivo:** Compila todos los hallazgos en un HTML unificado.
+* **Genes Conectores:** Algoritmo exclusivo que identifica genes puente entre diferentes procesos biológicos.
 
-**B. Gestión del Ciclo de Vida (Storage Lifecycle)**
-Limpieza asíncrona a nivel de worker para optimizar espacio:
-
-| Clave JSON | Valor | Descripción Técnica |
-| :--- | :--- | :--- |
-| `retain_only_fastqc_and_bam` | **True** | **Modo Ahorro Máximo:** Tras generar el BAM, purga FASTQs (crudos/trimmed), SAM y temporales (`_STARtmp`). Solo guarda reportes y BAM final. |
-| `cleanup_only_fastq` | **True** | **Ahorro Intermedio:** Elimina únicamente los FASTQ crudos descomprimidos, manteniendo las lecturas limpias (trimmed) en disco. |
-| *Zero-Noise Protection* | *(Auto)* | **Integridad:** Detecta y elimina archivos de 0 bytes de intentos fallidos previos, forzando una regeneración limpia. |
-
-**C. Parámetros de Herramientas**
-* **Trimmomatic:** Configuración de limpieza (`leading`, `trailing`, `slidingwindow`, `minlen`) y adaptadores (`adapter_fasta_url`).
-* **STAR (`sjdbOverhang`):** Se calibra automáticamente (`ReadLength - 1`) para optimizar el mapeo en uniones de empalme (*splice junctions*).
-* **FeatureCounts (`strand_specific`):** Topología de la librería (0: unstranded, 1: forward, 2: reverse).
-* **Analysis Thresholds:** Define los cortes (`log2fc`, `padj`) para considerar un gen como Expresado Diferencialmente (DEG).
-
-</details>
-
-<details>
-<summary>$\Large \color{#000080}{\text{4. DESeq2 Experiment: Diseño Experimental}}$</summary>
-<br>
-
-Conecta la matriz de expresión con las variables biológicas:
-
-* **`metadata_path`**: Ruta al archivo `.csv` que vincula FASTQ con grupos biológicos.
-* **`grouping_variable`**: Columna de interés (ej. `condition`).
-* **`design_formula`**: Modelo estadístico (ej. `~ batch + condition`). Soporta diseños complejos e interacciones.
-* **`control_group`**: Nivel de referencia (*baseline*). Todos los Fold Changes se calculan contra este grupo.
-
-</details>
-
-<details>
-<summary>$\Large \color{#000080}{\text{5. Annotation: Contexto Biológico}}$</summary>
-<br>
-
-Gestiona la interoperabilidad entre bases de datos:
-
-* **`organism_db`**: Paquete de Bioconductor para anotación (GO/KEGG).
-* **`key_type`**: Formato de entrada de los IDs en el GTF (ej. `ENSEMBL`, `ENTREZID`).
-* **`strip_gene_version` (true):** Pre-procesamiento vital para Ensembl. Elimina versiones de transcrito (ej. `FBgn00.1` → `FBgn00`) para asegurar un mapeo exacto.
-
-</details>
-
-<details>
-<summary>$\Large \color{#000080}{\text{6. Container Images: Reproducibilidad Binaria}}$</summary>
-<br>
-
-Definición explícita de las rutas a imágenes **Singularity/Apptainer** (`.sif`). Esto congela las versiones de todo el software (STAR, R, Samtools), garantizando la inmutabilidad del entorno.
-
-</details>
-
-<details>
-<summary>$\Large \color{#000080}{\text{7. Scripts: Orquestación de Motores (R)}}$</summary>
-<br>
-
-Mapa de rutas que desacopla el motor de ejecución de la lógica estadística:
-* `r_exploratory_script_path` → **01_EDA_QC.R**
-* `r_deseq2_script_path` → **02_Differential_expression.R**
-* `r_enrichment_plotter_script_path` → **03_Functional_analysis_viz.R**
-* `r_pdf_report_script_path` → **04_Comprehensive_Report_Builder.R**
-
-</details>
-
-<details>
-<summary>$\Large \color{#000080}{\text{8. Functional Analysis: Inteligencia Biológica 🧠}}$</summary>
-<br>
-
-Capa de interpretación de alto nivel para transformar listas de genes en narrativas mecanísticas.
-
-**🧬 Dualidad Analítica (SEA vs. GSEA)**
-* **SEA (ORA) - `run_sea_analysis`**: Análisis de Sobre-representación (Test Hipergeométrico). Ideal para procesos discretos ("encendido/apagado"). Desglosado en ontologías `BP`, `MF`, `CC`.
-* **GSEA - `run_gsea_analysis`**: Análisis de Enriquecimiento de Sets Genéticos. Analiza el **transcriptoma completo rankeado**, detectando cambios sutiles pero coordinados en rutas completas.
-
-**📊 Visualización Avanzada (`run_enrichment_plots`)**
-El pipeline genera automáticamente una suite gráfica `top_n`:
-* **Enrichment Maps (EMAP):** Visualiza redundancia y clústers de términos GO.
-* **Gene-Concept Networks (CNET):** Vincula genes clave con sus rutas biológicas.
-* **Ridgeplots:** Distribución de frecuencia de cambio (NES).
-* **Pathview:** Proyecta datos de expresión (Colores UP/DOWN) sobre mapas metabólicos oficiales de **KEGG**.
-
-**📄 Reporte Final:** Ejecuta g:Profiler y compila el `Informe_Transcriptomica_Completo.pdf`.
+#### $\color{#000080}{\text{D. Reporte Final (04\_Comprehensive\_Report\_Builder.R)}}$
+Actúa como el editor final.
+* **g:Profiler en tiempo real:** Consultas multifuente para garantizar anotaciones actualizadas.
+* **Renderizado de Doble Pase:** Pre-escanea los datos para calcular una paginación perfecta antes de generar el PDF.
+* **Fusión de Ontologías:** Integra GO (BP, MF, CC), KEGG y Reactome en una narrativa lineal jerarquizada por significancia ($p < 10^{-16}$).
 
 </details>
 
