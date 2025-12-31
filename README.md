@@ -402,9 +402,8 @@ El pipeline (`run_enrichment_plots`) genera automáticamente una suite gráfica 
 
 Para que el motor estadístico **DESeq2** interprete correctamente el diseño experimental, se requiere un archivo `metadata.csv` estándar correspondiente al análisis, ubicado en la carpeta **Metadata_Archivos/** (y referenciado en el JSON).
 
-Este archivo actúa como la **llave maestra** 🗝️ que conecta los archivos crudos con las variables biológicas.
+Este archivo actúa como la **llave maestra** que conecta los archivos crudos con las variables biológicas.
 
-<br>
 
 ### $\color{#000080}{\text{📋 Reglas de Formato}}$
 
