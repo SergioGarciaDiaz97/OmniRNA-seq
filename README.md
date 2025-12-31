@@ -265,7 +265,7 @@ Define el esqueleto del flujo de trabajo:
 * **`counting_method`**: Define si el análisis parte de lecturas crudas (`featureCounts`) o de una matriz precalculada (`precomputed_csv`).
 * **`quantification_options`**: Módulo de inteligencia para la normalización (StringTie):
     * `run_for`: Define qué métricas calcular (`tpm`, `fpkm`). Corrige el sesgo por longitud de gen y profundidad.
-    * `run_exploratory_analysis`: Activa/desactiva el QC Estadístico (EDA) para detectar outliers.
+    * `run_exploratory_analysis`: Activa/desactiva el QC Estadístico (EDA) ideal para detectar posibles comportamientos outliers en muestras.
     * `explore_on`: Define sobre qué matriz normalizada se realizará el diagnóstico.
 
 </details>
