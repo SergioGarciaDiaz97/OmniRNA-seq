@@ -7,6 +7,33 @@ OmniRNA-seq es un ecosistema bioinformático integral para el análisis automati
 
 El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para una amplia gama de modelos biológicos, incluyendo ***Homo sapiens***, ***Mus musculus***, ***Saccharomyces cerevisiae***, ***Arabidopsis thaliana***, ***Danio rerio***, ***Caenorhabditis elegans*** y ***Drosophila melanogaster***.
 
+---
+
+## 🛠️ Instalación y Despliegue
+
+OmniRNA-seq utiliza una arquitectura de tres niveles para garantizar la máxima reproducibilidad en clústeres HPC: gestión de versiones (**Git**), orquestación de dependencias (**Conda**) e inmutabilidad de herramientas bioinformáticas (**Apptainer/Singularity**).
+
+### 🏗️ Guía de Instalación Rápida
+
+Ejecute la siguiente secuencia de comandos para inicializar el ecosistema completo en su nodo de acceso:
+
+```bash
+# 1. Clonación del repositorio maestro
+git clone [https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git](https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git)
+cd OmniRNA-seq
+
+# 2. Inicialización del entorno de orquestación (Conda)
+# Configura Python 3.10+ y las dependencias de ingeniería de datos
+conda env create -f environment.yml
+conda activate omnirna_env
+
+# 3. Aprovisionamiento de contenedores inmutables
+# Descarga automáticamente las imágenes .sif (STAR, DESeq2, FastQC, etc.)
+chmod +x download_containers.sh
+./download_containers.sh
+```
+
+
 ## 📚 Índice
 _Haz clic en cualquier apartado para ir directamente a la sección._
 1. [Organización del Proyecto](#organizacion)
