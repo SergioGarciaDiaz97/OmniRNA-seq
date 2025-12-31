@@ -461,7 +461,7 @@ Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro
 * **Genes Huérfanos:** Módulo de descubrimiento para identificar genes estadísticamente vitales sin ruta funcional conocida.
 
 #### $\color{#2E8B57}{\text{C. Inteligencia Funcional}}$
-***03_Functional_analysis_viz.R*** Utiliza el motor de **clusterProfiler** para crear una narrativa visual integral. También habilitado para múltiples comparaciones habilitadas.
+***03_Functional_analysis_viz.R*** Utiliza el motor de **clusterProfiler** para crear una narrativa visual integral. También habilitado para múltiples comparaciones.
 * **Dualidad Analítica:** Ejecuta en paralelo **SEA** (Sobre-representación) y **GSEA** (Enriquecimiento de Sets) sobre el transcriptoma completo.
 * **Pathview:** Mapea la expresión diferencial sobre diagramas oficiales de **KEGG**, coloreando nodos (🔴 UP / 🟢 DOWN) para visualizar el flujo metabólico.
 * **Genes Conectores:** Algoritmo exclusivo que identifica genes puente entre diferentes procesos biológicos.
