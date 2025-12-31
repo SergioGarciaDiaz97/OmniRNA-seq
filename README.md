@@ -262,7 +262,7 @@ Para análisis de datos privados (FASTQs o matrices de conteos), ofrezco soporte
 
 <br>
 
-### $\color{#000080}{\text{🧬 Soporte Experto \& Co-autoría}}$
+### $\color{#000080}{\text{🧬 Soporte Experto \Co-autoría}}$
 
 La ciencia es mejor cuando se comparte. Si necesitas una integración profunda, auditoría de datos o soporte bioinformático experto para elevar el impacto de tu estudio, estoy totalmente abierto a la **colaboración y co-autoría**.
 
@@ -273,7 +273,7 @@ La ciencia es mejor cuando se comparte. Si necesitas una integración profunda, 
 <div align="center">
 
 ### 👨‍💻 **Sergio García Díaz**
-**Lead Developer & FPU Fellow**
+**Lead Developer FPU Fellow**
 
 </div>
 El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para:
