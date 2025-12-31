@@ -239,8 +239,9 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 <br>
 <a id="autoría-impacto-y-colaboración"></a>
-## 🤝 $\color{#8B0000}{\text{9. Autoría, Impacto y Colaboración}}$
 
+
+## 🤝 $\color{#8B0000}{\text{9. Autoría, Impacto y Colaboración}}$
 OmniRNA-seq nace con la filosofía del **código abierto (licencia MIT)** para eliminar barreras en la ciencia. Sin embargo, su arquitectura robusta es el resultado de cientos de horas de ingeniería y la dedicación exclusiva de un **Investigador Predoctoral (FPU)**.
 
 <br>
