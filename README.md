@@ -9,6 +9,7 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 **Homo sapiens**, **Mus musculus**, **Saccharomyces cerevisiae**, **Arabidopsis thaliana**, **Danio rerio**, **C. elegans** y **Drosophila melanogaster**.
 
 ## 📚 Índice
+_Haz clic en cualquier apartado para ir directamente a la sección._
 1. [Organización del Proyecto](#organizacion)
 2. [Modos de Ejecución](#modos)
 3. [Launcher Maestro](#launcher)
@@ -237,8 +238,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 
 <br>
-<a id="autoria-impacto-y-colaboracion"></a>
-
+<a id="autoría-impacto-y-colaboración"></a>
 ## 🤝 $\color{#8B0000}{\text{9. Autoría, Impacto y Colaboración}}$
 
 OmniRNA-seq nace con la filosofía del **código abierto (licencia MIT)** para eliminar barreras en la ciencia. Sin embargo, su arquitectura robusta es el resultado de cientos de horas de ingeniería y la dedicación exclusiva de un **Investigador Predoctoral (FPU)**.
