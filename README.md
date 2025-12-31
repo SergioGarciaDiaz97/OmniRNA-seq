@@ -238,7 +238,7 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 
 <br>
-<a id="arquitectura-del-sistema"></a>
+<a id="centro-de-control-de-configuración-json"></a>
 
 ## 🏗️ $\color{#8B0000}{\text{7. Arquitectura del Sistema}}$
 
