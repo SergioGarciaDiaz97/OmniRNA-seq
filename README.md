@@ -238,6 +238,89 @@ Los módulos de análisis diferencial y funcional se ejecutan dentro de un conte
 
 
 <br>
+
+<a id="estructura-global-de-resultados-output-tree"></a>
+
+## 📂 $\color{#8B0000}{\text{8. Estructura Global de Resultados (Output Tree)}}$
+
+Una vez finalizado el pipeline, los resultados se organizan automáticamente en la siguiente jerarquía de carpetas.
+
+```text
+<PROJECT_DIR>/
+├── <PROJECT_ID>_fastq_urls.txt                  # [Gen: data_conector.py]
+├── Info_<PROJECT_ID>/                           # [Gen: experiment_profiler.py] (No en local)
+│   ├── info_experiment_<ID>.txt                 # (Metadatos del diseño experimental)
+│   └── list_of_samples_<ID>.txt                 # (Tabla GSM | SRR | Título)
+│
+├── adapters/                                    # [Gen: 01_pipeline_core.py]
+│   └── TruSeq_adapters.fa
+│
+├── REFERENCE_GENOMES_FILES/                     # [Gen: 01_pipeline_core.py]
+│   ├── <Organism>.dna.toplevel.fa               # (Descargado de Ensembl)
+│   ├── <Organism>.<Version>.gtf                 # (Anotación)
+│   └── [Indices de STAR / HISAT2]               # (Generados por los alineadores)
+│
+├── FASTQ_FILES/                                 # [Gen: 01_pipeline_core.py]
+│   └── <SAMPLE>_1.fastq.gz                      # (Descarga raw)
+│
+├── FASTQC/                                      # [Gen: 01_pipeline_core.py]
+│   └── <SAMPLE>_fastqc.html                     # (Reporte calidad cruda)
+│
+├── TRIMMED_READS/                               # [Gen: 01_pipeline_core.py]
+│   └── <SAMPLE>.trimmed.fastq.gz                # (Lecturas limpias tras Trimmomatic)
+│
+├── ALIGNMENTS_<STAR|HISAT2>/                    # [Gen: 01_pipeline_core.py]
+│   └── <SAMPLE>_Aligned.sortedByCoord.out.bam   # (Archivo BAM final)
+│
+├── STRINGTIE_<STAR|HISAT2>/                     # [Gen: 01_pipeline_core.py]
+│   └── <SAMPLE>/gene_abundances.tsv             # (Cálculo intermedio TPM/FPKM)
+│
+├── COUNTS/                                      # [Gen: 01_pipeline_core.py]
+│   ├── counts_<ALIGNER>.txt                     # (Matriz conteos crudos - featureCounts)
+│   ├── counts_STAR.txt / counts_HISAT2.txt      # (Matrices duales si se activa modo "both")
+│   ├── <ALIGNER>_TPM_matrix.tsv                 # (Matriz normalizada TPM - StringTie)
+│   └── <ALIGNER>_FPKM_matrix.tsv                # (Matriz normalizada FPKM - StringTie)
+│
+├── EDA_RESULTS_<ALIGNER>_<TYPE>/                # [Gen: 01_EDA_QC.R]
+│   ├── 1_Distribution_Check.pdf
+│   ├── 2_Variance_Structure.pdf
+│   ├── 3_PCA_Analysis.pdf
+│   ├── 4_Dendrogram.pdf
+│   ├── 5_Sample_Correlation.pdf
+│   ├── 6_Top_Variable_Genes.pdf
+│   └── 7_QC_Report_Automated.txt                # (Informe de QC con sospechas de outliers)
+│
+├── DESEQ2_RESULTS_<ALIGNER>/                    # [Gen: Scripts R 02, 03 y 04]
+│   ├── metadata_corregido.csv                   # [01_pipeline_core -> pasa a R]
+│   │
+│   │   # --- Salidas de 02_Differential_expression.R ---
+│   ├── QC_estadisticas_conteos_crudos_*.txt
+│   ├── Resultados_Completos_<CONTRASTE>.txt     # (Tabla maestra con stats)
+│   ├── Resultados_Significativos_<CONTRASTE>.txt
+│   ├── genes_huerfanos_<CONTRASTE>.txt          # (Genes significativos sin GO/KEGG)
+│   ├── VolcanoPlot_Dashboard_<CONTRASTE>.html   # (Interactivo Plotly)
+│   ├── Analisis_Rutas_Enriquecidas_*.txt        # (Input para scripts visuales)
+│   │
+│   │   # --- Salidas de 03_Functional_analysis_viz.R ---
+│   ├── Informe_Interactivo_<CONTRASTE>.html     # (Dashboard global funcional)
+│   ├── Informe_Completo_Ontogenia_*.txt         # (Resumen texto plano)
+│   ├── sea_analysis_plots/                      # (Plots ORA/SEA: Dotplots, Cnetplots)
+│   ├── gsea_analysis_plots/                     # (Plots GSEA: Ridgeplots, GSEA curves)
+│   ├── pathview_plots/                          # (Mapas de rutas KEGG coloreados .png/.pdf)
+│   │
+│   │   # --- Salida de 04_Comprehensive_Report_Builder.R ---
+│   └── Informe_Transcriptomica_Completo_*.pdf   # (Reporte Final Paginado)
+│
+├── MULTIQC_<ALIGNER>_REPORT/                    # [Gen: 01_pipeline_core.py]
+│   └── multiqc_report.html                      # (Auditoría de calidad unificada)
+│
+└── WORKFLOW_COMPARISON/                         # [Gen: 01_pipeline_core.py - Solo modo "both"]
+    └── resumen_comparacion_genes.txt            # (Estadísticas de intersección STAR vs HISAT2)
+```
+<br>
+
+
+
 <a id="autoría-impacto-y-colaboración"></a>
 
 
