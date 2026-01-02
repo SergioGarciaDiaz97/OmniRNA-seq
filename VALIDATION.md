@@ -7,7 +7,7 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 A continuación, se detallan los resultados obtenidos, contrastando las expectativas biológicas con los datos de salida generados por el pipeline.
 
 > **📂 Acceso a Resultados Brutos:**
-> Para cada caso de estudio, encontrará un panel de control al final de la sección que le permitirá visualizar los **reportes interactivos y PDFs** generados automáticamente.
+> Para cada caso de estudio, encontrará un panel de control al final de la sección que le permitirá visualizar los **reportes interactivos y PDFs** generados automáticamente por el pipeline.
 
 ---
 
@@ -73,43 +73,43 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 
 <div align="center">
   
-  <table style="border: none; background-color: transparent;">
+  <table style="border: none; border-collapse: collapse; background-color: transparent;">
     
     <tr>
-      <td align="center" style="border: none; padding: 5px;">
+      <td align="center" style="padding: 4px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-          <img src="https://img.shields.io/badge/VOLCANO_PLOT_INTERACTIVO-siRNA_01-D32F2F?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano 01">
+          <img src="https://img.shields.io/badge/VOLCANO_PLOT_INTERACTIVO-siRNA_01-D32F2F?style=for-the-badge&logo=plotly&logoColor=white&labelColor=D32F2F" alt="Volcano 01">
         </a>
       </td>
-      <td align="center" style="border: none; padding: 5px;">
+      <td align="center" style="padding: 4px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-          <img src="https://img.shields.io/badge/VOLCANO_PLOT_INTERACTIVO-siRNA_02-D32F2F?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano 02">
+          <img src="https://img.shields.io/badge/VOLCANO_PLOT_INTERACTIVO-siRNA_02-D32F2F?style=for-the-badge&logo=plotly&logoColor=white&labelColor=D32F2F" alt="Volcano 02">
         </a>
       </td>
     </tr>
 
     <tr>
-      <td align="center" style="border: none; padding: 5px;">
+      <td align="center" style="padding: 4px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
-          <img src="https://img.shields.io/badge/DASHBOARD_FUNCIONAL_WEB-siRNA_01-2E8B57?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Dashboard 01">
+          <img src="https://img.shields.io/badge/DASHBOARD_FUNCIONAL_WEB-siRNA_01-27AE60?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=27AE60" alt="Dashboard 01">
         </a>
       </td>
-      <td align="center" style="border: none; padding: 5px;">
+      <td align="center" style="padding: 4px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
-          <img src="https://img.shields.io/badge/DASHBOARD_FUNCIONAL_WEB-siRNA_02-2E8B57?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Dashboard 02">
+          <img src="https://img.shields.io/badge/DASHBOARD_FUNCIONAL_WEB-siRNA_02-27AE60?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=27AE60" alt="Dashboard 02">
         </a>
       </td>
     </tr>
 
     <tr>
-      <td align="center" style="border: none; padding: 5px;">
+      <td align="center" style="padding: 4px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/REPORTE_gPROFILER_COMPLETO-siRNA_01-8E44AD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Report 01">
+          <img src="https://img.shields.io/badge/REPORTE_gPROFILER_COMPLETO-siRNA_01-8E44AD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=8E44AD" alt="Report 01">
         </a>
       </td>
-      <td align="center" style="border: none; padding: 5px;">
+      <td align="center" style="padding: 4px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/REPORTE_gPROFILER_COMPLETO-siRNA_02-8E44AD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Report 02">
+          <img src="https://img.shields.io/badge/REPORTE_gPROFILER_COMPLETO-siRNA_02-8E44AD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=8E44AD" alt="Report 02">
         </a>
       </td>
     </tr>
@@ -118,47 +118,46 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 
   <br>
 
-  <table style="border: none; background-color: transparent;">
+  <table style="border: none; border-collapse: collapse; background-color: transparent;">
+    
+    <tr><td colspan="3" align="center" style="padding-bottom: 5px; font-weight: bold; color: #555; font-size: 0.85em; letter-spacing: 1px;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 01)</td></tr>
+    
     <tr>
-      <td colspan="3" align="center" style="border: none; padding-bottom: 5px; font-weight: bold; color: #444; font-size: 0.9em;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 01)</td>
-    </tr>
-    <tr>
-      <td align="center" style="border: none; padding: 2px;">
+      <td align="center" style="padding: 2px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_01_vs_Control.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/BIOLOGICAL_PROCESS-BP-F1C40F?style=for-the-badge&logo=microgenetics&logoColor=black&labelColor=F1C40F&logoWidth=0" alt="BP 01">
+          <img src="https://img.shields.io/badge/BP-BIOLOGICAL_PROCESS-F39C12?style=for-the-badge&labelColor=F39C12&logoColor=white" alt="BP 01">
         </a>
       </td>
-      <td align="center" style="border: none; padding: 2px;">
+      <td align="center" style="padding: 2px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_01_vs_Control.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/CELLULAR_COMPONENT-CC-F1C40F?style=for-the-badge&logo=microgenetics&logoColor=black&labelColor=F1C40F&logoWidth=0" alt="CC 01">
+          <img src="https://img.shields.io/badge/CC-CELLULAR_COMPONENT-F39C12?style=for-the-badge&labelColor=F39C12&logoColor=white" alt="CC 01">
         </a>
       </td>
-      <td align="center" style="border: none; padding: 2px;">
+      <td align="center" style="padding: 2px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/MOLECULAR_FUNCTION-MF-F1C40F?style=for-the-badge&logo=microgenetics&logoColor=black&labelColor=F1C40F&logoWidth=0" alt="MF 01">
+          <img src="https://img.shields.io/badge/MF-MOLECULAR_FUNCTION-F39C12?style=for-the-badge&labelColor=F39C12&logoColor=white" alt="MF 01">
         </a>
       </td>
     </tr>
 
-    <tr><td colspan="3" style="border:none; height: 10px;"></td></tr>
+    <tr><td colspan="3" style="height: 15px;"></td></tr>
 
+    <tr><td colspan="3" align="center" style="padding-bottom: 5px; font-weight: bold; color: #555; font-size: 0.85em; letter-spacing: 1px;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 02)</td></tr>
+    
     <tr>
-      <td colspan="3" align="center" style="border: none; padding-bottom: 5px; font-weight: bold; color: #444; font-size: 0.9em;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 02)</td>
-    </tr>
-    <tr>
-      <td align="center" style="border: none; padding: 2px;">
+      <td align="center" style="padding: 2px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_02_vs_Control.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/BIOLOGICAL_PROCESS-BP-F1C40F?style=for-the-badge&logo=microgenetics&logoColor=black&labelColor=F1C40F&logoWidth=0" alt="BP 02">
+          <img src="https://img.shields.io/badge/BP-BIOLOGICAL_PROCESS-F39C12?style=for-the-badge&labelColor=F39C12&logoColor=white" alt="BP 02">
         </a>
       </td>
-      <td align="center" style="border: none; padding: 2px;">
+      <td align="center" style="padding: 2px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_02_vs_Control.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/CELLULAR_COMPONENT-CC-F1C40F?style=for-the-badge&logo=microgenetics&logoColor=black&labelColor=F1C40F&logoWidth=0" alt="CC 02">
+          <img src="https://img.shields.io/badge/CC-CELLULAR_COMPONENT-F39C12?style=for-the-badge&labelColor=F39C12&logoColor=white" alt="CC 02">
         </a>
       </td>
-      <td align="center" style="border: none; padding: 2px;">
+      <td align="center" style="padding: 2px;">
         <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_02_vs_Control.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/MOLECULAR_FUNCTION-MF-F1C40F?style=for-the-badge&logo=microgenetics&logoColor=black&labelColor=F1C40F&logoWidth=0" alt="MF 02">
+          <img src="https://img.shields.io/badge/MF-MOLECULAR_FUNCTION-F39C12?style=for-the-badge&labelColor=F39C12&logoColor=white" alt="MF 02">
         </a>
       </td>
     </tr>
