@@ -72,41 +72,42 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <br>
 
 <div align="center">
-  <h4 style="margin-bottom: 10px;">📥 Ver Resultados Generados por el Pipeline</h4>
+  <h4 style="margin-bottom: 15px;">📥 Ver Resultados Generados por el Pipeline</h4>
   
-  <p style="font-size: 0.9em; color: #666; margin-bottom: 5px;">📊 <b>Exploración de Expresión Diferencial (Volcano Plots)</b></p>
+  <p style="font-size: 0.9em; color: #666; margin-bottom: 5px;">🌋 <b>Exploración de Expresión Diferencial (Volcano Plots)</b></p>
   
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-    <img src="https://img.shields.io/badge/Volcano_siRNA_01-Ver_Gráfico-FF5733?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano 01">
+    <img src="https://img.shields.io/badge/Volcano_siRNA_01-Ver_Gráfico-D32F2F?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano 01">
   </a>
   
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-    <img src="https://img.shields.io/badge/Volcano_siRNA_02-Ver_Gráfico-FF5733?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano 02">
+    <img src="https://img.shields.io/badge/Volcano_siRNA_02-Ver_Gráfico-D32F2F?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano 02">
   </a>
 
   <br><br>
 
-  <p style="font-size: 0.9em; color: #666; margin-bottom: 5px;">🧬 <b>Análisis Funcional y Reportes PDF</b></p>
-
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_Dexamethasone_vs_Control.html" target="_blank">
-    <img src="https://img.shields.io/badge/🧬_Dashboard_Funcional-SEA_&_GSEA-2E8B57?style=for-the-badge&logo=html5&logoColor=white" alt="Functional Dashboard">
-  </a>
-  
-  <br>
-
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Pathview_Atlas.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/🗺️_Pathview_Atlas-Mapas_KEGG_(PDF)-007BFF?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Pathview Atlas">
-  </a>
-  
-  <br>
+  <p style="font-size: 0.9em; color: #666; margin-bottom: 5px;">📄 <b>Reportes Completos Transcriptómica (PDF)</b></p>
 
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/📑_Reporte_siRNA_01-g:Profiler_(PDF)-800080?style=for-the-badge&logo=overleaf&logoColor=white" alt="Reporte 01">
+    <img src="https://img.shields.io/badge/Reporte_PDF_siRNA_01-Descargar-8E24AA?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF 01">
   </a>
 
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/📑_Reporte_siRNA_02-g:Profiler_(PDF)-800080?style=for-the-badge&logo=overleaf&logoColor=white" alt="Reporte 02">
+    <img src="https://img.shields.io/badge/Reporte_PDF_siRNA_02-Descargar-8E24AA?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF 02">
   </a>
+
+  <br><br>
+
+  <p style="font-size: 0.9em; color: #666; margin-bottom: 5px;">🌐 <b>Dashboards Interactivos Funcionales</b></p>
+
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
+    <img src="https://img.shields.io/badge/Dashboard_siRNA_01-Ver_Web-2E8B57?style=for-the-badge&logo=html5&logoColor=white" alt="HTML 01">
+  </a>
+  
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
+    <img src="https://img.shields.io/badge/Dashboard_siRNA_02-Ver_Web-2E8B57?style=for-the-badge&logo=html5&logoColor=white" alt="HTML 02">
+  </a>
+
 </div>
 
 </div>
