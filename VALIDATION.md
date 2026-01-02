@@ -74,17 +74,31 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <div align="center">
   <h4 style="margin-bottom: 10px;">📥 Ver Resultados Generados por el Pipeline</h4>
   
-  <a href="./Rutas/Caso1/Volcano_Dashboard.html">
-    <img src="https://img.shields.io/badge/📊_Volcano_Plot-Interactivo_(HTML)-FF5733?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano">
+  <p style="font-size: 0.9em; color: #666; margin-bottom: 5px;">📊 <b>Exploración de Expresión Diferencial (Volcano Plots)</b></p>
+  
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
+    <img src="https://img.shields.io/badge/Volcano_siRNA_01-Ver_Gráfico-FF5733?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano 01">
   </a>
-  <a href="./Rutas/Caso1/Functional_Dashboard.html">
-    <img src="https://img.shields.io/badge/🧬_SEA_&_GSEA-Dashboard_(HTML)-2E8B57?style=for-the-badge&logo=html5&logoColor=white" alt="Functional Dashboard">
+  
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
+    <img src="https://img.shields.io/badge/Volcano_siRNA_02-Ver_Gráfico-FF5733?style=for-the-badge&logo=plotly&logoColor=white" alt="Volcano 02">
   </a>
+
+  <br><br>
+
+  <p style="font-size: 0.9em; color: #666; margin-bottom: 5px;">🧬 <b>Análisis Funcional y Reportes PDF</b></p>
+
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_Dexamethasone_vs_Control.html" target="_blank">
+    <img src="https://img.shields.io/badge/🧬_Dashboard_Funcional-SEA_&_GSEA-2E8B57?style=for-the-badge&logo=html5&logoColor=white" alt="Functional Dashboard">
+  </a>
+  
   <br>
-  <a href="./Rutas/Caso1/Pathview_Atlas.pdf">
+
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Pathview_Atlas.pdf" target="_blank">
     <img src="https://img.shields.io/badge/🗺️_Pathview_Atlas-Mapas_KEGG_(PDF)-007BFF?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Pathview Atlas">
   </a>
-  <a href="./Rutas/Caso1/Comprehensive_Report.pdf">
+
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Comprehensive_Report.pdf" target="_blank">
     <img src="https://img.shields.io/badge/📑_Reporte_Final-g:Profiler_Analysis_(PDF)-800080?style=for-the-badge&logo=overleaf&logoColor=white" alt="Full Report">
   </a>
 </div>
