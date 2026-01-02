@@ -1,7 +1,6 @@
-{
-  "project_setup": {
+"project_setup": {
     "base_dir": "Celegans_Cadmium_Project",
-    "host_bind_dir": "/mnt/beegfs/home/segardia",
+    "host_bind_dir": "/path/to/your/home/directory",
     "aligner": "star",
     "counting_method": "featureCounts",
     "sequencing_type": "paired-end",
@@ -25,7 +24,7 @@
   },
   "source_data": {
     "fastq_list_strategy": "automatic",
-    "fastq_list_file": "/mnt/beegfs/home/segardia/Celegans_Cadmium_Project/PRJNA784101_fastq_urls.txt",
+    "fastq_list_file": "/path/to/your/fastq_list.txt",
     "genome_urls": [
       "https://ftp.ensembl.org/pub/release-112/fasta/caenorhabditis_elegans/dna/Caenorhabditis_elegans.WBcel235.dna.toplevel.fa.gz",
       "https://ftp.ensembl.org/pub/release-112/gtf/caenorhabditis_elegans/Caenorhabditis_elegans.WBcel235.112.gtf.gz"
@@ -57,7 +56,7 @@
     }
   },
   "deseq2_experiment": {
-    "metadata_path": "Metadata_Archivos/metadata_celegans.csv",
+    "metadata_path": "Metadata/metadata.csv",
     "design_formula": "~ condition",
     "control_group": "control",
     "grouping_variable": "condition"
@@ -74,14 +73,15 @@
     "r_pdf_report_script_path": "R_CODES/04_Comprehensive_Report_Builder.R"
   },
   "container_images": {
-    "fastqc": "/mnt/beegfs/containers/nfcore/fastqc-0.12.1--hdfd78af_0.img",
-    "trimmomatic": "/mnt/beegfs/containers/nfcore/trimmomatic-0.39--hdfd78af_2.img",
-    "star": "/mnt/beegfs/containers/nfcore/quay.io-nf-core-htslib_samtools_star_gawk-311d422a50e6d829.img",
-    "stringtie": "/mnt/beegfs/containers/nfcore/stringtie-2.2.3--h43eeafb_0.img",
-    "hisat2": "/mnt/beegfs/containers/nfcore/depot.galaxyproject.org-singularity-hisat2-2.2.1--h1b792b2_3.img",
-    "featurecounts": "/mnt/beegfs/containers/nfcore/subread-2.0.6--he4a0461_2.img",
-    "r_deseq2": "/mnt/beegfs/home/segardia/r_custom_env.sif",
-    "multiqc": "/mnt/beegfs/containers/nfcore/multiqc-1.29--pyhdfd78af_0.img"
+    "fastqc": "/path/to/containers/fastqc.img",
+    "trimmomatic": "/path/to/containers/trimmomatic.img",
+    "star": "/path/to/containers/star.img",
+    "stringtie": "/path/to/containers/stringtie.img",
+    "hisat2": "/path/to/containers/hisat2.img",
+    "featurecounts": "/path/to/containers/subread.img",
+    "r_deseq2": "/path/to/containers/r_custom_env.sif",
+    "multiqc": "/path/to/containers/multiqc.img",
+
   },
   "functional_analysis": {
     "run_kegg": true,
