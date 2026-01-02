@@ -1,7 +1,7 @@
 {
   "project_setup": {
     "base_dir": "TEST_DROSOPHILA_MYOBLASTS",
-    "host_bind_dir": "/mnt/beegfs/home/segardia",
+    "host_bind_dir": "/path/to/your/home/directory",
     "aligner": "both",
     "counting_method": "featureCounts",
     "sequencing_type": "single-end",
@@ -25,7 +25,7 @@
   },
   "source_data": {
     "fastq_list_strategy": "automatic",
-    "fastq_list_file": "/mnt/beegfs/home/segardia/TEST_DROSOPHILA_MYOBLASTS/PRJNA1027342_fastq_urls.txt",
+    "fastq_list_file": "/path/to/your/fastq_list.txt",
     "genome_urls": [
       "https://ftp.ensembl.org/pub/release-111/fasta/drosophila_melanogaster/dna/Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa.gz",
       "https://ftp.ensembl.org/pub/release-111/gtf/drosophila_melanogaster/Drosophila_melanogaster.BDGP6.46.111.gtf.gz"
@@ -68,14 +68,14 @@
     "strip_gene_version": true
   },
   "container_images": {
-    "fastqc": "/mnt/beegfs/containers/nfcore/fastqc-0.12.1--hdfd78af_0.img",
-    "trimmomatic": "/mnt/beegfs/containers/nfcore/trimmomatic-0.39--hdfd78af_2.img",
-    "star": "/mnt/beegfs/containers/nfcore/quay.io-nf-core-htslib_samtools_star_gawk-311d422a50e6d829.img",
-    "stringtie": "/mnt/beegfs/containers/nfcore/stringtie-2.2.3--h43eeafb_0.img",
-    "hisat2": "/mnt/beegfs/containers/nfcore/depot.galaxyproject.org-singularity-hisat2-2.2.1--h1b792b2_3.img",
-    "featurecounts": "/mnt/beegfs/containers/nfcore/subread-2.0.6--he4a0461_2.img",
-    "r_deseq2": "/mnt/beegfs/home/segardia/r_custom_env.sif",
-    "multiqc": "/mnt/beegfs/containers/nfcore/multiqc-1.29--pyhdfd78af_0.img"
+    "fastqc": "/path/to/containers/fastqc.img",
+    "trimmomatic": "/path/to/containers/trimmomatic.img",
+    "star": "/path/to/containers/star.img",
+    "stringtie": "/path/to/containers/stringtie.img",
+    "hisat2": "/path/to/containers/hisat2.img",
+    "featurecounts": "/path/to/containers/subread.img",
+    "r_deseq2": "/path/to/containers/r_custom_env.sif",
+    "multiqc": "/path/to/containers/multiqc.img",
   },
   "scripts": {
     "r_exploratory_script_path": "R_CODES/01_EDA_QC.R",
