@@ -2,12 +2,12 @@
 
 [⬅️ **Volver al Repositorio Principal (README.md)**](./README.md)
 
-Este documento registra la ejecución del pipeline en **escenarios biológicos reales**. Cada caso de estudio representa una configuración distinta del archivo de control JSON, diseñada para validar la versatilidad del software (desde la descarga de datos públicos hasta el análisis local) y su precisión biológica.
+Este documento documenta la ejecución del pipeline en **escenarios biológicos reales**. Cada caso de estudio representa una configuración distinta del archivo de control JSON, diseñada para validar la versatilidad del software (desde la descarga de datos públicos hasta el análisis local) y su precisión biológica.
 
 A continuación, se detallan los resultados obtenidos, contrastando las expectativas biológicas con los datos de salida generados por el pipeline.
 
 > **📂 Acceso a Resultados Brutos:**
-> Al final de cada sección encontrará una **botonera interactiva** que le permitirá visualizar los reportes web y descargar los informes PDF generados automáticamente.
+> Para cada caso de estudio, encontrará una botonera al final de la sección que le permitirá visualizar los **reportes interactivos y PDFs** generados automáticamente por el pipeline.
 
 ---
 
@@ -88,6 +88,30 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
   </a>
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
     <img src="https://img.shields.io/badge/Dashboard_SEA/GSEA_Interactivo-siRNA_02-2E8B57?style=for-the-badge&logo=html5&logoColor=white">
+  </a>
+
+  <br>
+
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_01_vs_Control.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Visual_GO:_BP-siRNA_01-FF8C00?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+  </a>
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_01_vs_Control.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Visual_GO:_CC-siRNA_01-FF8C00?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+  </a>
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Visual_GO:_MF-siRNA_01-FF8C00?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+  </a>
+
+  <br>
+
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_02_vs_Control.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Visual_GO:_BP-siRNA_02-FFA500?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+  </a>
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_02_vs_Control.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Visual_GO:_CC-siRNA_02-FFA500?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+  </a>
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_02_vs_Control.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Visual_GO:_MF-siRNA_02-FFA500?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
   </a>
 
   <br>
