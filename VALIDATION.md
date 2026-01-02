@@ -72,55 +72,60 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <br>
 
 <div align="center">
-  <h4 style="margin-bottom: 15px; color: #444;">📥 Panel de Visualización de Resultados</h4>
+  <h3 style="margin-bottom: 20px; font-weight: bold; color: #2c3e50;">🚀 RESULTADOS DEL PIPELINE</h3>
   
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-    <img src="https://img.shields.io/badge/Interactive_Volcano_Plot-siRNA_01-D32F2F?style=for-the-badge&logo=plotly&logoColor=white">
+    <img src="https://img.shields.io/badge/VOLCANO_PLOT_INTERACTIVO-siRNA_01-D32F2F?style=for-the-badge&logo=plotly&logoColor=white&labelColor=D32F2F" alt="Volcano 01">
   </a>
+  &nbsp;&nbsp;
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-    <img src="https://img.shields.io/badge/Interactive_Volcano_Plot-siRNA_02-D32F2F?style=for-the-badge&logo=plotly&logoColor=white">
+    <img src="https://img.shields.io/badge/VOLCANO_PLOT_INTERACTIVO-siRNA_02-D32F2F?style=for-the-badge&logo=plotly&logoColor=white&labelColor=D32F2F" alt="Volcano 02">
   </a>
   
-  <br>
+  <br><br>
 
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
-    <img src="https://img.shields.io/badge/Dashboard_SEA/GSEA_Interactivo-siRNA_01-2E8B57?style=for-the-badge&logo=html5&logoColor=white">
+    <img src="https://img.shields.io/badge/DASHBOARD_FUNCIONAL_WEB-siRNA_01-2E8B57?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=2E8B57" alt="Dashboard 01">
   </a>
+  &nbsp;&nbsp;
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
-    <img src="https://img.shields.io/badge/Dashboard_SEA/GSEA_Interactivo-siRNA_02-2E8B57?style=for-the-badge&logo=html5&logoColor=white">
+    <img src="https://img.shields.io/badge/DASHBOARD_FUNCIONAL_WEB-siRNA_02-2E8B57?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=2E8B57" alt="Dashboard 02">
   </a>
 
-  <br>
+  <br><br>
 
+  <p style="font-weight: bold; margin-bottom: 5px; color: #555;">🧬 Visualización Gene Ontology (siRNA 01)</p>
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_01_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Visual_GO:_BP-siRNA_01-FF8C00?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+    <img src="https://img.shields.io/badge/BIOLOGICAL_PROCESS-BP-FF8C00?style=for-the-badge&logo=microgenetics&logoColor=white&labelColor=FF8C00">
   </a>
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_01_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Visual_GO:_CC-siRNA_01-FF8C00?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+    <img src="https://img.shields.io/badge/CELLULAR_COMPONENT-CC-FF8C00?style=for-the-badge&logo=microgenetics&logoColor=white&labelColor=FF8C00">
   </a>
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Visual_GO:_MF-siRNA_01-FF8C00?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+    <img src="https://img.shields.io/badge/MOLECULAR_FUNCTION-MF-FF8C00?style=for-the-badge&logo=microgenetics&logoColor=white&labelColor=FF8C00">
   </a>
 
-  <br>
+  <br><br>
 
+  <p style="font-weight: bold; margin-bottom: 5px; color: #555;">🧬 Visualización Gene Ontology (siRNA 02)</p>
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_02_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Visual_GO:_BP-siRNA_02-FFA500?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+    <img src="https://img.shields.io/badge/BIOLOGICAL_PROCESS-BP-E67E22?style=for-the-badge&logo=microgenetics&logoColor=white&labelColor=E67E22">
   </a>
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_02_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Visual_GO:_CC-siRNA_02-FFA500?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+    <img src="https://img.shields.io/badge/CELLULAR_COMPONENT-CC-E67E22?style=for-the-badge&logo=microgenetics&logoColor=white&labelColor=E67E22">
   </a>
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_02_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Visual_GO:_MF-siRNA_02-FFA500?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+    <img src="https://img.shields.io/badge/MOLECULAR_FUNCTION-MF-E67E22?style=for-the-badge&logo=microgenetics&logoColor=white&labelColor=E67E22">
   </a>
 
-  <br>
+  <br><br>
 
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Reporte_PDF_Completo_gProfiler-siRNA_01-8E24AA?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+    <img src="https://img.shields.io/badge/REPORTE_TECNICO_FINAL-siRNA_01-8E44AD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=8E44AD">
   </a>
+  &nbsp;&nbsp;
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Reporte_PDF_Completo_gProfiler-siRNA_02-8E24AA?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+    <img src="https://img.shields.io/badge/REPORTE_TECNICO_FINAL-siRNA_02-8E44AD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=8E44AD">
   </a>
 
 </div>
