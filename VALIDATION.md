@@ -2,12 +2,12 @@
 
 [⬅️ **Volver al Repositorio Principal (README.md)**](./README.md)
 
-Este documento documenta la ejecución del pipeline en **escenarios biológicos reales**. Cada caso de estudio representa una configuración distinta del archivo de control JSON, diseñada para validar la versatilidad del software (desde la descarga de datos públicos hasta el análisis local) y su precisión biológica.
+Este documento registra la ejecución del pipeline en **escenarios biológicos reales**. Cada caso de estudio representa una configuración distinta del archivo de control JSON, diseñada para validar la versatilidad del software (desde la descarga de datos públicos hasta el análisis local) y su precisión biológica.
 
 A continuación, se detallan los resultados obtenidos, contrastando las expectativas biológicas con los datos de salida generados por el pipeline.
 
 > **📂 Acceso a Resultados Brutos:**
-> Para cada caso de estudio, encontrará una botonera al final de la sección que le permitirá visualizar los **reportes interactivos y PDFs** generados automáticamente por el pipeline.
+> Al final de cada sección encontrará una **botonera interactiva** que le permitirá visualizar los reportes web y descargar los informes PDF generados automáticamente.
 
 ---
 
@@ -72,7 +72,7 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <br>
 
 <div align="center">
-  <h4 style="margin-bottom: 5px;">📥 Ver Resultados Generados</h4>
+  <h4 style="margin-bottom: 15px; color: #444;">📥 Panel de Visualización de Resultados</h4>
   
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
     <img src="https://img.shields.io/badge/Interactive_Volcano_Plot-siRNA_01-D32F2F?style=for-the-badge&logo=plotly&logoColor=white">
