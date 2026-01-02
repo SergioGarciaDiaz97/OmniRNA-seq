@@ -43,7 +43,9 @@ cleanup() {
 trap cleanup EXIT TERM INT
 
 # Definición de rutas clave
-HOME_BEEGFS="/mnt/beegfs/home/segardia"
+# [IMPORTANTE] Cambia esta ruta por tu directorio HOME real antes de ejecutar
+HOME_BEEGFS="/path/to/your/home/directory" 
+# Ejemplo: HOME_BEEGFS="/mnt/beegfs/home/usuario"
 
 # Configuración de temporales para Apptainer (Vital para evitar discos llenos)
 export APPTAINER_TMPDIR="${HOME_BEEGFS}/apptainer_tmp/${SLURM_JOB_ID}"
