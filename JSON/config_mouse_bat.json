@@ -2,7 +2,7 @@
   "project_setup": {
     "base_dir": "TEST_MOUSE_BAT",
     "aligner": "star",
-    "host_bind_dir": "/mnt/beegfs/home/segardia",
+    "host_bind_dir": "/path/to/your/home/directory",
     "counting_method": "featurecounts",
     "sequencing_type": "single-end",
     "quantification_options": {
@@ -20,7 +20,7 @@
   },
   "source_data": {
     "fastq_list_strategy": "automatic",
-    "fastq_list_file": "/mnt/beegfs/home/segardia/TEST_MOUSE_BAT/PRJNA448887_fastq_urls.txt",
+    "fastq_list_file": "/path/to/your/data/PRJNA448887_fastq_urls.txt",
     "genome_urls": [
       "https://ftp.ensembl.org/pub/release-111/fasta/mus_musculus/dna/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz",
       "https://ftp.ensembl.org/pub/release-111/gtf/mus_musculus/Mus_musculus.GRCm39.111.gtf.gz"
@@ -65,14 +65,14 @@
     "strip_gene_version": true
   },
   "container_images": {
-    "fastqc": "/mnt/beegfs/containers/nfcore/fastqc-0.12.1--hdfd78af_0.img",
-    "trimmomatic": "/mnt/beegfs/containers/nfcore/trimmomatic-0.39--hdfd78af_2.img",
-    "star": "/mnt/beegfs/containers/nfcore/quay.io-nf-core-htslib_samtools_star_gawk-311d422a50e6d829.img",
-    "hisat2": "/mnt/beegfs/containers/nfcore/depot.galaxyproject.org-singularity-hisat2-2.2.1--h1b792b2_3.img",
-    "stringtie": "/mnt/beegfs/containers/nfcore/stringtie-2.2.3--h43eeafb_0.img",
-    "featurecounts": "/mnt/beegfs/containers/nfcore/subread-2.0.6--he4a0461_2.img",
-    "r_deseq2": "/mnt/beegfs/home/segardia/r_custom_env.sif",
-    "multiqc": "/mnt/beegfs/containers/nfcore/multiqc-1.29--pyhdfd78af_0.img"
+    "fastqc": "/path/to/containers/fastqc.img",
+    "trimmomatic": "/path/to/containers/trimmomatic.img",
+    "star": "/path/to/containers/star.img",
+    "hisat2": "/path/to/containers/hisat2.img",
+    "stringtie": "/path/to/containers/stringtie.img",
+    "featurecounts": "/path/to/containers/subread.img",
+    "r_deseq2": "/path/to/containers/r_custom_env.sif",
+    "multiqc": "/path/to/containers/multiqc.img"
   },
   "scripts": {
     "r_exploratory_script_path": "R_CODES/01_EDA_QC.R",
