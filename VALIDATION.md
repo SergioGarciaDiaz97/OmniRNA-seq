@@ -97,9 +97,15 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Pathview_Atlas.pdf" target="_blank">
     <img src="https://img.shields.io/badge/🗺️_Pathview_Atlas-Mapas_KEGG_(PDF)-007BFF?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Pathview Atlas">
   </a>
+  
+  <br>
 
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Comprehensive_Report.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/📑_Reporte_Final-g:Profiler_Analysis_(PDF)-800080?style=for-the-badge&logo=overleaf&logoColor=white" alt="Full Report">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/📑_Reporte_siRNA_01-g:Profiler_(PDF)-800080?style=for-the-badge&logo=overleaf&logoColor=white" alt="Reporte 01">
+  </a>
+
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/📑_Reporte_siRNA_02-g:Profiler_(PDF)-800080?style=for-the-badge&logo=overleaf&logoColor=white" alt="Reporte 02">
   </a>
 </div>
 
