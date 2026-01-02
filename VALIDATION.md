@@ -1,6 +1,6 @@
 # 🧪 Informe de Validación Experimental: OmniRNA-seq
 
-[⬅️ **Volver al Repositorio Principal**](./README.md)
+[⬅️ **Volver al Repositorio Principal (README.md)**](./README.md)
 
 Este documento documenta la ejecución del pipeline en **escenarios biológicos reales**. Cada caso de estudio representa una configuración distinta del archivo de control JSON, diseñada para validar la versatilidad del software (desde la descarga de datos públicos hasta el análisis local) y su precisión biológica.
 
