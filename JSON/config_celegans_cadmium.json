@@ -1,4 +1,5 @@
-"project_setup": {
+{
+  "project_setup": {
     "base_dir": "Celegans_Cadmium_Project",
     "host_bind_dir": "/path/to/your/home/directory",
     "aligner": "star",
@@ -56,7 +57,7 @@
     }
   },
   "deseq2_experiment": {
-    "metadata_path": "Metadata/metadata.csv",
+    "metadata_path": "Metadata_Archivos/metadata_celegans.csv",
     "design_formula": "~ condition",
     "control_group": "control",
     "grouping_variable": "condition"
@@ -81,7 +82,6 @@
     "featurecounts": "/path/to/containers/subread.img",
     "r_deseq2": "/path/to/containers/r_custom_env.sif",
     "multiqc": "/path/to/containers/multiqc.img",
-
   },
   "functional_analysis": {
     "run_kegg": true,
