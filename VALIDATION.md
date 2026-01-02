@@ -18,7 +18,7 @@ A continuación, se detallan los resultados obtenidos, contrastando las expectat
 ### 🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21
 **Validación Técnica Definitiva (End-to-End)**
 
-* **🆔 Estudio:** GSE179868 (Koltowska et al., *Nature Cell Biology*, 2021).
+* **🆔 Estudio:** GSE179868 (Koltowska et al., *Nature Cell Biology*, 2021) [[🔗 DOI: 10.1038/s41556-021-00784-w]](https://doi.org/10.1038/s41556-021-00784-w).
 * **🧬 Organismo:** *Homo sapiens* (hg38).
 * **⚙️ Estrategia:** `fastq_list_strategy: "manual"`. Flujo completo: Trimmomatic ➔ STAR ➔ FeatureCounts.
 * **🎯 Objetivo:** Validar la precisión en la detección de paradas del ciclo celular y estrés ribosomal inducidos por el knockdown (KD) de DDX21.
