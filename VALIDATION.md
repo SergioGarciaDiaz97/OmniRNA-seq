@@ -1,20 +1,8 @@
 ## 📊 Resultados Interactivos y Reportes Generados
 
-La validación experimental se completa con un conjunto de **artefactos visuales e interactivos** generados automáticamente por *OmniRNA-seq*.  
-Estos outputs permiten explorar los datos desde distintos niveles de abstracción, combinando **estadística**, **visualización interactiva** e **interpretación funcional**.
-
-Los resultados se estructuran en cuatro capas complementarias:
-
-- **Análisis estadístico diferencial** (Volcano Plots interactivos)
-- **Exploración transcriptómica integrada** (Dashboards HTML)
-- **Documentación reproducible** (Reportes PDF completos)
-- **Interpretación funcional** (Gene Ontology y rutas KEGG con Pathview)
-
 ---
 
 ### 🔴 Volcano Plots (Interactivos)
-
-Los volcano plots interactivos permiten inspeccionar de forma dinámica la relación entre magnitud del cambio de expresión (*log2FC*) y significación estadística (*−log10 adj-p*), facilitando la identificación de genes clave implicados en el arresto del ciclo celular y el estrés ribosomal.
 
 <div align="center">
 <table style="border:none;border-collapse:collapse;">
@@ -36,18 +24,13 @@ Los volcano plots interactivos permiten inspeccionar de forma dinámica la relac
 </table>
 </div>
 
+<p align="center"><em>
+Volcano plots interactivos que evidencian la represión coordinada de genes mitóticos y replicativos tras el KD de DDX21.
+</em></p>
+
 ---
 
-### 🟢 Dashboards Transcriptómicos Integrados
-
-Los dashboards HTML constituyen el **núcleo exploratorio** del pipeline.  
-Cada dashboard integra en una única interfaz:
-
-- Listados completos de **genes diferencialmente expresados (DEGs)**
-- Estadística detallada (log2FC, p-value, adjusted p-value)
-- Visualizaciones interactivas y rankings
-- **Interpretación funcional automatizada**
-- **Visualización de rutas biológicas mediante Pathview**, permitiendo mapear los cambios de expresión directamente sobre rutas KEGG relevantes (replicación del ADN, checkpoint mitótico, etc.)
+### 🟢 Dashboards Transcriptómicos
 
 <div align="center">
 <table style="border:none;border-collapse:collapse;">
@@ -56,31 +39,26 @@ Cada dashboard integra en una única interfaz:
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
 <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.png" width="340">
 </a>
-<br><sub><b>Dashboard Funcional — siRNA 01</b></sub>
+<br><sub><b>siRNA 01 — Dashboard Funcional</b></sub>
 </td>
 
 <td align="center" width="50%">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
 <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.png" width="340">
 </a>
-<br><sub><b>Dashboard Funcional — siRNA 02</b></sub>
+<br><sub><b>siRNA 02 — Dashboard Funcional</b></sub>
 </td>
 </tr>
 </table>
 </div>
 
+<p align="center"><em>
+Dashboards HTML con exploración integral de DEGs, estadística y anotación funcional.
+</em></p>
+
 ---
 
-### 🟣 Reportes Transcriptómicos Completos (PDF)
-
-Los reportes PDF proporcionan una **documentación estática, reproducible y portable** del análisis, adecuada para revisión externa, archivo o material suplementario.
-
-Cada informe incluye:
-- Resumen estadístico global del contraste
-- Top DEGs y métricas asociadas
-- Enriquecimiento funcional (GO y rutas)
-- Figuras clave generadas automáticamente
-- Interpretación biológica coherente con el estudio de referencia
+### 🟣 Reportes Transcriptómicos (PDF)
 
 <div align="center">
 <table style="border:none;border-collapse:collapse;">
@@ -106,24 +84,28 @@ Cada informe incluye:
 
 ### 🧬 Enriquecimiento Funcional — Gene Ontology
 
-El análisis funcional confirma que los efectos transcriptómicos del KD de **DDX21** convergen en procesos altamente coherentes con la biología esperada.
-
 #### siRNA 01
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp1.png" width="320">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc1.png" width="320">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="320">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp1.png" width="300">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc1.png" width="300">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="300">
 </div>
+
+<p align="center"><em>
+Procesos biológicos, componentes celulares y funciones moleculares alteradas tras KD de DDX21 (siRNA 01).
+</em></p>
+
+---
 
 #### siRNA 02
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp2.png" width="320">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc2.png" width="320">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.png" width="320">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp2.png" width="300">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc2.png" width="300">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.png" width="300">
 </div>
 
 <p align="center"><em>
-La concordancia funcional entre ambos siRNAs refuerza la robustez del pipeline y la validez biológica de los resultados.
+Confirmación independiente del colapso mitótico y replicativo observado en el silenciamiento de DDX21 (siRNA 02).
 </em></p>
