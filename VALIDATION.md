@@ -83,20 +83,22 @@ La ejecución local del pipeline reprodujo fielmente la biología descrita en el
 
 ### 🔴 Volcano Plots (Interactivos)
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
-    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="340" style="border: none; background: none;">
-    </a>
-    <br><sub><b>siRNA 01 vs Control</b></sub>
-  </div>
-  <div style="text-align: center;">
-    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="340" style="border: none; background: none;">
-    </a>
-    <br><sub><b>siRNA 02 vs Control</b></sub>
-  </div>
-</div>
+<table style="border:none; border-collapse:collapse; width:100%; background-color: transparent;">
+  <tr style="border:none; background-color: transparent;">
+    <td align="center" width="50%" style="border:none; padding: 10px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="250" alt="Volcano 01">
+      </a>
+      <br><sub style="color:#666">siRNA 01 vs Control</sub>
+    </td>
+    <td align="center" width="50%" style="border:none; padding: 10px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="250" alt="Volcano 02">
+      </a>
+      <br><sub style="color:#666">siRNA 02 vs Control</sub>
+    </td>
+  </tr>
+</table>
 
 <p align="center"><em>
 Volcano plots interactivos que evidencian la represión coordinada de genes mitóticos y replicativos tras el KD de DDX21.
@@ -106,20 +108,22 @@ Volcano plots interactivos que evidencian la represión coordinada de genes mit�
 
 ### 🟢 Dashboards Transcriptómicos
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
-    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.png" width="340" style="border: none; background: none;">
-    </a>
-    <br><sub><b>siRNA 01 — Dashboard Funcional</b></sub>
-  </div>
-  <div style="text-align: center;">
-    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.png" width="340" style="border: none; background: none;">
-    </a>
-    <br><sub><b>siRNA 02 — Dashboard Funcional</b></sub>
-  </div>
-</div>
+<table style="border:none; border-collapse:collapse; width:100%; background-color: transparent;">
+  <tr style="border:none; background-color: transparent;">
+    <td align="center" width="50%" style="border:none; padding: 10px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.png" width="250" alt="Dashboard 01">
+      </a>
+      <br><sub style="color:#666">Dashboard Funcional (01)</sub>
+    </td>
+    <td align="center" width="50%" style="border:none; padding: 10px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.png" width="250" alt="Dashboard 02">
+      </a>
+      <br><sub style="color:#666">Dashboard Funcional (02)</sub>
+    </td>
+  </tr>
+</table>
 
 <p align="center"><em>
 Dashboards HTML con exploración integral de DEGs, estadística y anotación funcional, incluye Pathviews.
@@ -129,20 +133,22 @@ Dashboards HTML con exploración integral de DEGs, estadística y anotación fun
 
 ### 🟣 Reportes Transcriptómicos (PDF)
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
-    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf1.png" width="300" style="border: none; background: none;">
-    </a>
-    <br><sub><b>Reporte Completo — siRNA 01</b></sub>
-  </div>
-  <div style="text-align: center;">
-    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf2.png" width="300" style="border: none; background: none;">
-    </a>
-    <br><sub><b>Reporte Completo — siRNA 02</b></sub>
-  </div>
-</div>
+<table style="border:none; border-collapse:collapse; width:100%; background-color: transparent;">
+  <tr style="border:none; background-color: transparent;">
+    <td align="center" width="50%" style="border:none; padding: 10px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf1.png" width="250" alt="Reporte 01">
+      </a>
+      <br><sub style="color:#666">Reporte PDF Completo (01)</sub>
+    </td>
+    <td align="center" width="50%" style="border:none; padding: 10px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf2.png" width="250" alt="Reporte 02">
+      </a>
+      <br><sub style="color:#666">Reporte PDF Completo (02)</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -150,28 +156,52 @@ Dashboards HTML con exploración integral de DEGs, estadística y anotación fun
 
 #### siRNA 01
 
-<div align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp1.png" width="300" style="border: none; background: none;">
-  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc1.png" width="300" style="border: none; background: none;">
-  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="300" style="border: none; background: none;">
-</div>
-
-<p align="center"><em>
-Procesos biológicos, componentes celulares y funciones moleculares alteradas tras KD de DDX21 (siRNA 01).
-</em></p>
+<table style="border:none; border-collapse:collapse; width:100%; background-color: transparent;">
+  <tr style="border:none; background-color: transparent;">
+    <td align="center" style="border:none; padding: 5px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_01_vs_Control.pdf" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp1.png" width="180">
+      </a>
+    </td>
+    <td align="center" style="border:none; padding: 5px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_01_vs_Control.pdf" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc1.png" width="180">
+      </a>
+    </td>
+    <td align="center" style="border:none; padding: 5px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="180">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
 #### siRNA 02
 
-<div align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp2.png" width="300" style="border: none; background: none;">
-  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc2.png" width="300" style="border: none; background: none;">
-  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.png" width="300" style="border: none; background: none;">
-</div>
+<table style="border:none; border-collapse:collapse; width:100%; background-color: transparent;">
+  <tr style="border:none; background-color: transparent;">
+    <td align="center" style="border:none; padding: 5px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_02_vs_Control.pdf" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp2.png" width="180">
+      </a>
+    </td>
+    <td align="center" style="border:none; padding: 5px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_02_vs_Control.pdf" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc2.png" width="180">
+      </a>
+    </td>
+    <td align="center" style="border:none; padding: 5px;">
+      <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_02_vs_Control.pdf" target="_blank">
+        <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.png" width="180">
+      </a>
+    </td>
+  </tr>
+</table>
 
 <p align="center"><em>
-Confirmación independiente del colapso mitótico y replicativo observado en el silenciamiento de DDX21 (siRNA 02).
+Visualización detallada de Procesos Biológicos (BP), Componentes Celulares (CC) y Funciones Moleculares (MF).
 </em></p>
 
 </div>
