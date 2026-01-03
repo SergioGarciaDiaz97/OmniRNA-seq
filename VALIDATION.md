@@ -28,7 +28,14 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 
 <details open>
 
-<summary>$\Large \color{#000080}{\textbf{A. Contexto y Expectativas (Estudio de Referencia)}$</summary>
+<summary>
+  <strong>
+    <span style="color:#000080; font-size:1.25em;">
+      A. Contexto y Expectativas (Estudio de Referencia)
+    </span>
+  </strong>
+</summary>
+
 <br>
 
 El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal. Su ausencia desencadena una cascada de señalización específica que culmina en el arresto del ciclo celular. A continuación, se detalla la **firma molecular esperada** basada en los hallazgos biológicos descritos en la literatura:
