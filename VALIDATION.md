@@ -75,38 +75,38 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 
 <table style="border: none; border-collapse: collapse; background-color: transparent;">
 <tr>
-<td align="center" style="border: none; padding: 5px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-<img src="assets/volcanoplot_int1.PNG" width="280" alt="Volcano 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/volcanoplot_int1.PNG" width="190" alt="Volcano 01">
 </a>
 </td>
-<td align="center" style="border: none; padding: 5px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-<img src="assets/volcanoplot_int2.PNG" width="280" alt="Volcano 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/volcanoplot_int2.PNG" width="190" alt="Volcano 02">
 </a>
 </td>
 </tr>
 <tr>
-<td align="center" style="border: none; padding: 5px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
-<img src="assets/dashboard1.PNG" width="280" alt="Dashboard 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/dashboard1.PNG" width="190" alt="Dashboard 01">
 </a>
 </td>
-<td align="center" style="border: none; padding: 5px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
-<img src="assets/dashboard2.PNG" width="280" alt="Dashboard 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/dashboard2.PNG" width="190" alt="Dashboard 02">
 </a>
 </td>
 </tr>
 <tr>
-<td align="center" style="border: none; padding: 5px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="assets/gProf1.PNG" width="280" alt="Report 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/gProf1.PNG" width="190" alt="Report 01">
 </a>
 </td>
-<td align="center" style="border: none; padding: 5px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="assets/gProf2.PNG" width="280" alt="Report 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/gProf2.PNG" width="190" alt="Report 02">
 </a>
 </td>
 </tr>
@@ -115,40 +115,40 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <br>
 
 <table style="border: none; border-collapse: collapse; background-color: transparent;">
-<tr><td colspan="3" align="center" style="border: none; padding-bottom: 8px; font-weight: bold; color: #555; font-size: 0.9em; letter-spacing: 1px;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 01)</td></tr>
+<tr><td colspan="3" align="center" style="border: none; padding-bottom: 5px; font-weight: bold; color: #555; font-size: 0.85em; letter-spacing: 1px;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 01)</td></tr>
 <tr>
-<td align="center" style="border: none; padding: 3px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="assets/bp1.PNG" width="220" alt="BP 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/bp1.PNG" width="150" alt="BP 01">
 </a>
 </td>
-<td align="center" style="border: none; padding: 3px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="assets/cc1.PNG" width="220" alt="CC 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/cc1.PNG" width="150" alt="CC 01">
 </a>
 </td>
-<td align="center" style="border: none; padding: 3px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="assets/mg1.PNG" width="220" alt="MF 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/mg1.PNG" width="150" alt="MF 01">
 </a>
 </td>
 </tr>
-<tr><td colspan="3" style="border: none; height: 20px;"></td></tr>
-<tr><td colspan="3" align="center" style="border: none; padding-bottom: 8px; font-weight: bold; color: #555; font-size: 0.9em; letter-spacing: 1px;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 02)</td></tr>
+<tr><td colspan="3" style="border: none; height: 10px;"></td></tr>
+<tr><td colspan="3" align="center" style="border: none; padding-bottom: 5px; font-weight: bold; color: #555; font-size: 0.85em; letter-spacing: 1px;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 02)</td></tr>
 <tr>
-<td align="center" style="border: none; padding: 3px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="assets/bp2.PNG" width="220" alt="BP 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/bp2.PNG" width="150" alt="BP 02">
 </a>
 </td>
-<td align="center" style="border: none; padding: 3px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="assets/cc2.PNG" width="220" alt="CC 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/cc2.PNG" width="150" alt="CC 02">
 </a>
 </td>
-<td align="center" style="border: none; padding: 3px;">
+<td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="assets/mf2.PNG" width="220" alt="MF 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/Resultados/Modo_local/assets/mf2.PNG" width="150" alt="MF 02">
 </a>
 </td>
 </tr>
