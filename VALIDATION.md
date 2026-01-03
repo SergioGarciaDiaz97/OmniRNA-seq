@@ -4,7 +4,7 @@
 
 Este documento documenta la ejecución del pipeline en **escenarios biológicos reales**. Cada caso de estudio representa una configuración distinta del archivo de control JSON, diseñada para validar la versatilidad del software y su precisión biológica.
 
-> **📂 Acceso a Resultados Brutos**  
+> **📂 Acceso a Resultados Brutos**  
 > Al final de cada sección encontrará enlaces directos a los **reportes interactivos HTML y documentos PDF** generados automáticamente por el pipeline.
 
 ---
@@ -13,18 +13,18 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 
 <div style="background-color:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:22px;margin-bottom:24px;">
 
-### 🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21  
+### 🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21  
 **Validación Técnica End-to-End**
 
-- **🆔 Estudio:** GSE179868 (Koltowska et al., *Nature Cell Biology*, 2021)  
-  🔗 https://doi.org/10.1038/s41556-021-00784-w
+- **🆔 Estudio:** GSE179868 (Koltowska et al., *Nature Cell Biology*, 2021)  
+  🔗 https://doi.org/10.1038/s41556-021-00784-w
 - **🧬 Organismo:** *Homo sapiens* (hg38)
-- **⚙️ Estrategia:** `fastq_list_strategy: "manual"`  
-  Trimmomatic ➔ STAR ➔ FeatureCounts
+- **⚙️ Estrategia:** `fastq_list_strategy: "manual"`  
+  Trimmomatic ➔ STAR ➔ FeatureCounts
 - **🎯 Objetivo:** Validar la detección de arresto del ciclo celular y estrés ribosomal inducidos por KD de DDX21
-- **⚗️ Diseño Experimental:**  
-  Contrastes estadísticos robustos  
-  `siRNA_01_vs_Control` y `siRNA_02_vs_Control`
+- **⚗️ Diseño Experimental:**  
+  Contrastes estadísticos robustos  
+  `siRNA_01_vs_Control` y `siRNA_02_vs_Control`
 
 ---
 
@@ -34,10 +34,10 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 
 El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal y el control del ciclo celular.
 
-- **Mecanismo esperado:**  
-  Estrés ribosomal ➔ activación p53/p21 ➔ arresto en G2/M
-- **Genes esperados DOWN:**  
-  *NDC80, PLK1, AURKB, CDC6, FEN1, PCNA*
+- **Mecanismo esperado:**  
+  Estrés ribosomal ➔ activación p53/p21 ➔ arresto en G2/M
+- **Genes esperados DOWN:**  
+  *NDC80, PLK1, AURKB, CDC6, FEN1, PCNA*
 
 </details>
 
@@ -52,7 +52,7 @@ La ejecución local del pipeline reprodujo fielmente la biología descrita en el
 <details>
 <summary><em>1. Colapso de la Maquinaria Mitótica</em></summary>
 
-- **NDC80:** log2FC = -1.89 | padj = 3.02e-61  
+- **NDC80:** log2FC = -1.89 | padj = 3.02e-61  
 - **AURKB / PLK1:** Represión coordinada (arresto G2/M)
 
 </details>
@@ -60,8 +60,8 @@ La ejecución local del pipeline reprodujo fielmente la biología descrita en el
 <details>
 <summary><em>2. Inhibición de Replicación y Reparación del ADN</em></summary>
 
-- **FEN1:** log2FC = -2.21 | padj = 8.19e-42  
-- **PCNA:** log2FC = -1.77 | padj = 5.35e-35  
+- **FEN1:** log2FC = -2.21 | padj = 8.19e-42  
+- **PCNA:** log2FC = -1.77 | padj = 5.35e-35  
 - **MCM4:** Inhibición de la helicasa replicativa
 
 </details>
@@ -69,7 +69,7 @@ La ejecución local del pipeline reprodujo fielmente la biología descrita en el
 <details>
 <summary><em>3. Enriquecimiento Funcional</em></summary>
 
-- **DNA Replication (KEGG:03030):** p = 4.97e-21  
+- **DNA Replication (KEGG:03030):** p = 4.97e-21  
 - **Mitotic Spindle Checkpoint:** p = 3.14e-16
 
 </details>
@@ -83,24 +83,19 @@ La ejecución local del pipeline reprodujo fielmente la biología descrita en el
 
 ### 🔴 Volcano Plots (Interactivos)
 
-<div align="center">
-<table style="border:none;border-collapse:collapse;">
-<tr>
-<td align="center" width="50%">
-<a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="340">
-</a>
-<br><sub><b>siRNA 01 vs Control</b></sub>
-</td>
-
-<td align="center" width="50%">
-<a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="340">
-</a>
-<br><sub><b>siRNA 02 vs Control</b></sub>
-</td>
-</tr>
-</table>
+<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="340" style="border: none; background: none;">
+    </a>
+    <br><sub><b>siRNA 01 vs Control</b></sub>
+  </div>
+  <div style="text-align: center;">
+    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="340" style="border: none; background: none;">
+    </a>
+    <br><sub><b>siRNA 02 vs Control</b></sub>
+  </div>
 </div>
 
 <p align="center"><em>
@@ -111,24 +106,19 @@ Volcano plots interactivos que evidencian la represión coordinada de genes mit�
 
 ### 🟢 Dashboards Transcriptómicos
 
-<div align="center">
-<table style="border:none;border-collapse:collapse;">
-<tr>
-<td align="center" width="50%">
-<a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.png" width="340">
-</a>
-<br><sub><b>siRNA 01 — Dashboard Funcional</b></sub>
-</td>
-
-<td align="center" width="50%">
-<a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.png" width="340">
-</a>
-<br><sub><b>siRNA 02 — Dashboard Funcional</b></sub>
-</td>
-</tr>
-</table>
+<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.png" width="340" style="border: none; background: none;">
+    </a>
+    <br><sub><b>siRNA 01 — Dashboard Funcional</b></sub>
+  </div>
+  <div style="text-align: center;">
+    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.png" width="340" style="border: none; background: none;">
+    </a>
+    <br><sub><b>siRNA 02 — Dashboard Funcional</b></sub>
+  </div>
 </div>
 
 <p align="center"><em>
@@ -139,24 +129,19 @@ Dashboards HTML con exploración integral de DEGs, estadística y anotación fun
 
 ### 🟣 Reportes Transcriptómicos (PDF)
 
-<div align="center">
-<table style="border:none;border-collapse:collapse;">
-<tr>
-<td align="center" width="50%">
-<a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf1.png" width="300">
-</a>
-<br><sub><b>Reporte Completo — siRNA 01</b></sub>
-</td>
-
-<td align="center" width="50%">
-<a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf2.png" width="300">
-</a>
-<br><sub><b>Reporte Completo — siRNA 02</b></sub>
-</td>
-</tr>
-</table>
+<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf1.png" width="300" style="border: none; background: none;">
+    </a>
+    <br><sub><b>Reporte Completo — siRNA 01</b></sub>
+  </div>
+  <div style="text-align: center;">
+    <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf2.png" width="300" style="border: none; background: none;">
+    </a>
+    <br><sub><b>Reporte Completo — siRNA 02</b></sub>
+  </div>
 </div>
 
 ---
@@ -165,10 +150,10 @@ Dashboards HTML con exploración integral de DEGs, estadística y anotación fun
 
 #### siRNA 01
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp1.png" width="300">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc1.png" width="300">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="300">
+<div align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp1.png" width="300" style="border: none; background: none;">
+  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc1.png" width="300" style="border: none; background: none;">
+  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="300" style="border: none; background: none;">
 </div>
 
 <p align="center"><em>
@@ -179,12 +164,14 @@ Procesos biológicos, componentes celulares y funciones moleculares alteradas tr
 
 #### siRNA 02
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp2.png" width="300">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc2.png" width="300">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.png" width="300">
+<div align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp2.png" width="300" style="border: none; background: none;">
+  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc2.png" width="300" style="border: none; background: none;">
+  <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.png" width="300" style="border: none; background: none;">
 </div>
 
 <p align="center"><em>
 Confirmación independiente del colapso mitótico y replicativo observado en el silenciamiento de DDX21 (siRNA 02).
 </em></p>
+
+</div>
