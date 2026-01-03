@@ -59,7 +59,7 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 <summary>
   <strong>
     <span style="color:green; font-size:1.45em;">
-      A. Contexto y Expectativas (Estudio de Referencia)
+      B. Resultados obtenidos
     </span>
   </strong>
 </summary>
