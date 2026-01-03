@@ -77,36 +77,36 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <tr>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.PNG" width="190" alt="Volcano 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="190" alt="Volcano 01">
 </a>
 </td>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.PNG" width="190" alt="Volcano 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="190" alt="Volcano 02">
 </a>
 </td>
 </tr>
 <tr>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.PNG" width="190" alt="Dashboard 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.png" width="190" alt="Dashboard 01">
 </a>
 </td>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.PNG" width="190" alt="Dashboard 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.png" width="190" alt="Dashboard 02">
 </a>
 </td>
 </tr>
 <tr>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf1.PNG" width="190" alt="Report 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf1.png" width="190" alt="Report 01">
 </a>
 </td>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf2.PNG" width="190" alt="Report 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf2.png" width="190" alt="Report 02">
 </a>
 </td>
 </tr>
@@ -119,17 +119,17 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <tr>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp1.PNG" width="150" alt="BP 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp1.png" width="150" alt="BP 01">
 </a>
 </td>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc1.PNG" width="150" alt="CC 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc1.png" width="150" alt="CC 01">
 </a>
 </td>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.PNG" width="150" alt="MF 01">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="150" alt="MF 01">
 </a>
 </td>
 </tr>
@@ -138,17 +138,17 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <tr>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp2.PNG" width="150" alt="BP 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp2.png" width="150" alt="BP 02">
 </a>
 </td>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc2.PNG" width="150" alt="CC 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc2.png" width="150" alt="CC 02">
 </a>
 </td>
 <td align="center" style="border: none; padding: 2px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_02_vs_Control.pdf" target="_blank">
-<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.PNG" width="150" alt="MF 02">
+<img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.png" width="150" alt="MF 02">
 </a>
 </td>
 </tr>
