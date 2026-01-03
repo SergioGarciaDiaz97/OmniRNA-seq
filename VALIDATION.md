@@ -12,7 +12,7 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 
 <div style="background-color:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:22px;margin-bottom:24px;">
 
-### 🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21  
+### <span style="color:navy;">🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21</span>
 **Validación Técnica End-to-End**
 
 - **🆔 Estudio:** GSE179868 (Koltowska et al., *Nature Cell Biology*, 2021)  
@@ -26,10 +26,10 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 ---
 
 <details open>
-<summary><strong>A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
+<summary><strong style="color:green; font-size:22px;">A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
 <br>
 
-El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal. Su ausencia desencadena una cascada de señalización específica que culmina en el arresto del ciclo celular. A continuación, se detalla la **firma molecular esperada** basada en los hallazgos biológicos descritos en la literatura. Entre ellos destacan:
+El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal. Su ausencia desencadena una cascada de señalización específica que culmina en el arresto del ciclo celular. A continuación, se detalla la **firma molecular esperada** basada en los hallazgos biológicos descritos en la literatura:
 
 | Sistema Biológico | Estado | Genes Afectados (LogFC) | Hallazgo Biológico (Interpretación) |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 ---
 
 <details>
-<summary><strong>B. Resultados Obtenidos (Validación del Pipeline)</strong></summary>
+<summary><strong style="color:green; font-size:22px;">B. Resultados Obtenidos (Validación del Pipeline)</strong></summary>
 <br>
 
 El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó con éxito la firma transcriptómica de arresto celular. A continuación se presentan los valores obtenidos para cada réplica (siRNA-01 y siRNA-02):
@@ -88,6 +88,9 @@ El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó co
 #### 📝 Interpretación Biológica de los Resultados
 
 Los datos revelan una **respuesta celular altamente coordinada y masiva** ante la pérdida de DDX21. El pipeline detectó con precisión el evento iniciador: la **activación del eje p53-p21** (subida de *CDKN1A* y *MDM2*), que funciona como el gatillo del arresto celular. Esta señal provoca un efecto cascada de represión sobre dos pilares vitales: 
+
+
+
 1. **Fase S:** El colapso absoluto de la replicación del ADN, evidenciado por la bajada de licencias de origen (*CDC6, CDT1*) y el desmantelamiento de la helicasa (*MCM10*) y polimerasas (*POLE*).
 2. **Fase M:** Un desmantelamiento estructural de la mitosis, caracterizado por la **"masacre de kinesinas"** (represión de múltiples *KIFs*) y la pérdida de integridad en el centrómero (*CENPA, NDC80*). 
 
@@ -162,7 +165,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
   </a>
   &nbsp;
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
-    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf1.png" width="240">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="240">
   </a>
 </p>
 
