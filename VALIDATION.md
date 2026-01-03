@@ -72,7 +72,7 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 <br>
 
 <div align="center">
-  
+
 <table style="border: none; border-collapse: collapse; background-color: transparent;">
 <tr>
 <td align="center" style="border: none; padding: 5px;">
@@ -86,7 +86,6 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 </a>
 </td>
 </tr>
-
 <tr>
 <td align="center" style="border: none; padding: 5px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
@@ -99,7 +98,6 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 </a>
 </td>
 </tr>
-
 <tr>
 <td align="center" style="border: none; padding: 5px;">
 <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
@@ -135,9 +133,7 @@ El módulo de interpretación biológica automatizado confirmó las rutas patol�
 </a>
 </td>
 </tr>
-
 <tr><td colspan="3" style="border: none; height: 20px;"></td></tr>
-
 <tr><td colspan="3" align="center" style="border: none; padding-bottom: 8px; font-weight: bold; color: #555; font-size: 0.9em; letter-spacing: 1px;">VISUALIZACIÓN GENE ONTOLOGY (siRNA 02)</td></tr>
 <tr>
 <td align="center" style="border: none; padding: 3px;">
