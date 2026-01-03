@@ -162,7 +162,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
   </a>
   &nbsp;
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
-    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mg1.png" width="240">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf1.png" width="240">
   </a>
 </p>
 
