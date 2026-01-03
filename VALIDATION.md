@@ -9,6 +9,7 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 ---
 
 ## 💻 $\color{#8B0000}{\text{A. Modo Local (Simulación High-Performance)}}$
+<br>
 
 <div style="background-color:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:22px;margin-bottom:24px;">
 <summary>$\Large \color{#000080}{\textbf{🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21}}$</summary>
@@ -86,7 +87,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 ---
 
 <details>
-<summary><span style="color:#000080; font-size:24px; font-weight:bold;">📊 Resultados Interactivos y Reportes Generados</span></summary>
+<summary>$\Large \color{#000080}{\textbf{📊 Resultados Interactivos y Reportes Generados}}$</summary>
 <br>
 
 ### <span style="color:#000080;">🔴 Volcano Plots (Interactivos)</span>
