@@ -11,9 +11,9 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 ## 💻 $\color{#8B0000}{\text{A. Modo Local (Simulación High-Performance)}}$
 
 <div style="background-color:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:22px;margin-bottom:24px;">
-
-### <span style="color:#000080; font-size:28px;">🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21</span>
-**Validación Técnica End-to-End**
+<summary>$\Large \color{#000080}{\textbf{🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21}}$</summary>
+  
+**Validación Técnica**
 
 - **🆔 Estudio:** GSE179868 (Koltowska et al., *Nature Cell Biology*, 2021)  
   🔗 https://doi.org/10.1038/s41556-021-00784-w
