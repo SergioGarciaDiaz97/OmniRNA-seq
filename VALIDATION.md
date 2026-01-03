@@ -27,18 +27,24 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 
 ---
 
-<details>
+<details open>
 <summary><strong>A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
 <br>
 
-El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal. Su ausencia desencadena una cascada de señalización específica que culmina en el arresto del ciclo celular. A continuación, se detalla la **firma molecular esperada** basada en los hallazgos biológicos descritos en la literatura:
+El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal. Su ausencia desencadena una cascada de señalización específica que culmina en el arresto del ciclo celular.
 
-| Sistema Biológico | Estado Esperado | Mecanismo Molecular Descrito (Literatura) |
-| :--- | :--- | :--- |
-| **🚨 Eje p53/p21** | **ACTIVADO** ⬆️ | El estrés ribosomal impide la degradación de p53 por MDM2. La acumulación de p53 induce la expresión de **p21** (*CDKN1A*), que actúa como inhibidor universal de las quinasas dependientes de ciclina (CDKs), frenando el ciclo. |
-| **📉 Biogénesis Ribosomal** | **SUPRIMIDO** ⬇️ | DDX21 es necesaria para el procesamiento del rRNA 47S. Su pérdida provoca un fallo en la maduración de los ribosomas y una caída transcripcional de los genes ribosomales y nucleolares. |
-| **🔄 Maquinaria Mitótica** | **COLAPSADA** ⬇️ | Como consecuencia del arresto en fases previas (G1/S), la célula reprime la expresión de genes esenciales para la mitosis, incluyendo **Aurora Kinase B** (*AURKB*), **PLK1** y múltiples kinesinas motoras (*KIFs*), impidiendo la división celular. |
-| **🧬 Replicación del ADN** | **BLOQUEADA** ⬇️ | La activación del checkpoint impide la formación de los complejos de pre-replicación (*CDC6*, *CDT1*) y la actividad de las helicasas replicativas (*MCMs*), bloqueando la entrada en fase S. |
+A continuación, se presenta la **validación mecanicista** obtenida con el pipeline OmniRNA-seq. La tabla detalla la firma molecular detectada, comparando los valores de expresión (**Log2FC**) entre las dos réplicas biológicas (**siRNA-01** / **siRNA-02**) para confirmar la robustez del fenotipo:
+
+| Sistema Biológico | Estado | Genes Afectados (Log2FC)<br>*(siRNA-01 / siRNA-02)* | Hallazgo Biológico (Interpretación del Mecanismo) |
+| :--- | :--- | :--- | :--- |
+| **🚨 EL GATILLO (p53/p21)** | **ACTIVADO** ⬆️ | **`CDKN1A` (p21)** (+1.18 / +1.29)<br>**`MDM2`** (+1.04 / +1.16)<br>**`FAS`** (+1.36 / -)<br>**`BTG2`** (+1.09 / -) | **La Causa Raíz:** El estrés ribosomal activa p53, que a su vez dispara **p21**. p21 es el inhibidor universal de las quinasas del ciclo ("freno de mano") que provoca el colapso posterior. |
+| **🏁 Inicio de Replicación** | **BLOQUEADO** ⬇️ | **`CDC6`** (-2.63 / -2.49)<br>**`CDT1`** (-2.48 / -2.36)<br>**`ORC1`** (-2.13 / -1.84)<br>**`ORC6`** (-2.10 / -1.80) | **Licencia Denegada:** Represión profunda (>4 veces) de los componentes del complejo pre-replicativo. Sin `CDC6` ni `CDT1`, la célula no puede marcar dónde empezar a copiar el ADN. El proceso ni siquiera arranca. |
+| **🧱 Suministro de "Ladrillos"** | **CORTADO** ⬇️ | **`RRM2`** (-2.58 / -2.25)<br>**`TK1`** (-1.09 / -1.45)<br>**`TYMS`** (No sig.) | **Sin Materiales:** `RRM2` es la enzima limitante que fabrica los nucleótidos. Al estar tan baja, la célula se queda sin "tinta" para copiar el genoma. Es un cuello de botella brutal. |
+| **⚙️ El Motor de Copiado** | **APAGADO** ⬇️ | **`MCM10`** (-2.84 / -2.43)<br>**`MCM2-7`** (~ -1.80 / -1.70)<br>**`PCNA`** (-1.77 / -1.37)<br>**`POLE`** (-1.82 / -2.22) | **Helicasa Detenida:** El complejo MCM es el motor que abre la doble hélice. `PCNA` es la abrazadera que sujeta la polimerasa. Todo el equipo de replicación ha sido desmantelado. |
+| **🔧 Reparación del ADN** | **SUPRIMIDA** ⬇️ | **`BRCA1`** (-2.14 / -1.77)<br>**`BRCA2`** (-2.53 / -1.94)<br>**`RAD51`** (-1.68 / -2.08)<br>**`FANCD2`** (-1.26 / -1.68) | **Fallo en Homología:** Es paradójico pero lógico. Como la célula no replica, apaga la maquinaria de Reparación por Recombinación Homóloga (HR). Esto induce un estado de fragilidad genómica ("brittleness"). |
+| **🏗️ Estructura Mitótica** | **COLAPSADA** ⬇️ | **`AURKB`** (-2.24 / -2.10)<br>**`PLK1`** (-1.81 / -1.76)<br>**`CDK1`** (-2.61 / -2.09)<br>**`BUB1`** (-1.72 / -1.43) | **Sin División:** Aurora B y PLK1 son los reguladores maestros de la mitosis. Su ausencia total confirma que las células no están entrando en fase M. |
+| **🚂 Motores Moleculares (Kinesinas)** | **MASACRADOS** ⬇️ | **`KIFC1`** (-2.63 / -2.04)<br>**`KIF11`** (-1.84 / -1.75)<br>**`KIF18A`** (-2.53 / -2.44)<br>**`KIF14/15`** (~ -1.60 / -1.60) | **Transporte Parado:** Las Kinesinas (`KIF`) mueven los cromosomas. Se observa la represión coordinada de más de 15 kinesinas, impidiendo la formación del huso mitótico. |
+| **🎯 Centrómero y Cinetocoro** | **DESMANTELADO** ⬇️ | **`CENPA`** (-2.29 / -1.69)<br>**`CENPE`** (-1.59 / -1.29)<br>**`CENPF`** (-1.67 / -1.60)<br>**`NDC80`** (-1.89 / -1.58) | **Pérdida de Identidad:** `CENPA` define el centro del cromosoma y `NDC80` es el gancho del microtúbulo. Su caída indica una pérdida de la integridad cromosómica estructural. |
 
 </details>
 
@@ -48,33 +54,9 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 <summary><strong>B. Resultados Obtenidos (Validación del Pipeline)</strong></summary>
 <br>
 
-El análisis de los datos generados por **OmniRNA-seq** muestra una recapitulación precisa del fenotipo descrito. La siguiente tabla compara los niveles de expresión (**Log2 Fold Change**) obtenidos en las dos réplicas biológicas independientes (**siRNA-01** y **siRNA-02**), demostrando la robustez técnica del pipeline:
-
-| Sistema Biológico | Gen Clave | **siRNA-01** (Log2FC) | **siRNA-02** (Log2FC) | Interpretación del Hallazgo |
-| :--- | :--- | :--- | :--- | :--- |
-| **🚨 El Gatillo (p53)** | **`CDKN1A` (p21)** | **+1.178** | **+1.287** | 🔴 **STOP ACTIVADO.** La señal es idéntica y robusta en ambos. Bloqueo total. |
-| | **`MDM2`** | **+1.043** | **+1.159** | ⬆️ p53 está estabilizado y activo. |
-| | **`FAS`** | **+1.355** | **-** | ⚠️ El siRNA-01 activa apoptosis; el 02 es puramente citostático (parada). |
-| **🏁 Replicación** | **`CDC6`** | **-2.631** | **-2.490** | 📉 **Colapso Total.** Sin esto, la replicación **no puede ni empezar**. |
-| | **`CDT1`** | **-2.476** | **-2.358** | 📉 El complejo pre-replicativo está totalmente ausente. |
-| | **`RRM2`** | **-2.584** | **-2.254** | 📉 **Cuello de botella.** Falta la materia prima (nucleótidos) para el ADN. |
-| **⚙️ Helicasa** | **`MCM10`** | **-2.840** | **-2.433** | 📉 Bajada masiva. Esencial para abrir la doble hélice. |
-| | **`PCNA`** | **-1.774** | **-1.372** | 📉 Sin la abrazadera, la polimerasa se cae del ADN. |
-| **🔧 Reparación** | **`BRCA1`** | **-2.142** | **-1.766** | 📉 **Fragilidad Genómica.** Sensibilidad extrema a daños. |
-| | **`RAD51`** | **-1.683** | **-2.077** | 📉 Mecanismo de Recombinación Homóloga anulado. |
-| **🏗️ Mitosis** | **`AURKB`** | **-2.243** | **-2.095** | 📉 **Fallo Mitótico.** Caída idéntica (>2 log) en ambos. |
-| | **`PLK1`** | **-1.813** | **-1.760** | 📉 La quinasa que inicia la división está apagada. |
-| | **`CDK1`** | **-2.611** | **-2.088** | 📉 El motor principal del ciclo está detenido. |
-| **🚂 Motores** | **`KIFC1`** | **-2.633** | **-2.040** | 📉 Los polos del huso no se pueden juntar. |
-| | **`KIF11`** | **-1.836** | **-1.751** | 📉 El huso bipolar no se puede formar (Eg5). |
-| **🎯 Centrómero** | **`CENPA`** | **-2.294** | **-1.689** | 📉 Pérdida estructural del sitio de unión del cromosoma. |
-| | **`NDC80`** | **-1.886** | **-1.581** | 📉 El "gancho" del microtúbulo no está. |
-
 #### 📝 Interpretación Biológica de los Resultados
 
-Los datos revelan una **respuesta celular bifásica** y altamente conservada ante la pérdida de DDX21. En primer lugar, se observa una activación transcripcional robusta del eje **p53-p21** (*MDM2, CDKN1A*), que actúa como el evento iniciador del arresto del ciclo celular. Esta señal de "freno" provoca, en consecuencia, un **colapso transcripcional masivo** de toda la maquinaria necesaria para la proliferación: desde los factores de "licencia" de la replicación en fase S (*CDC6, CDT1, MCMs*) hasta los componentes estructurales y motores de la mitosis (*AURKB, PLK1, Kinesinas*). La consistencia cuantitativa de los valores Log2FC entre ambas réplicas (siRNA-01 y siRNA-02) valida la precisión del pipeline para caracterizar fenotipos complejos de parada del crecimiento.
-
-</details>
+Los datos generados por **OmniRNA-seq** revelan una respuesta celular bifásica y altamente conservada ante la pérdida de DDX21. En primer lugar, se observa una **activación transcripcional robusta del eje p53-p21** (*MDM2, CDKN1A*), que actúa como el evento iniciador ("gatillo") del arresto del ciclo celular. Esta señal de freno provoca, en consecuencia, un **colapso transcripcional masivo** de toda la maquinaria necesaria para la proliferación: desde los factores de "licencia" de la replicación en fase S (*CDC6, CDT1, MCMs*) hasta los componentes estructurales y motores de la mitosis (*AURKB, PLK1, Kinesinas*). La consistencia cuantitativa de los valores Log2FC entre ambas réplicas (siRNA-01 y siRNA-02) valida la precisión del pipeline para caracterizar fenotipos complejos de parada del crecimiento.
 
 </details>
 
