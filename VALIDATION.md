@@ -56,7 +56,13 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 ---
 
 <details>
-<summary><span style="color:#008000; font-size:24px; font-weight:bold;">B. Resultados Obtenidos (Validación del Pipeline)</span></summary>
+<summary>
+  <strong>
+    <span style="color:green; font-size:1.45em;">
+      A. Contexto y Expectativas (Estudio de Referencia)
+    </span>
+  </strong>
+</summary>
 <br>
 
 El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó con éxito la firma transcriptómica de arresto celular. A continuación se presentan los valores obtenidos para cada réplica (siRNA-01 y siRNA-02):
