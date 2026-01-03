@@ -80,73 +80,83 @@ La ejecución local del pipeline reprodujo fielmente la biología descrita en el
 
 ## 📊 Resultados Interactivos y Reportes Generados
 ---
-<div align="center" style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
 
-  <div style="text-align:center;">
+<div align="center" style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+
+  <!-- Columna izquierda: Volcano + Dashboards -->
+  <div style="text-align: center; min-width: 320px; max-width: 380px;">
+
+  ### 🔴 Volcano Plots (Interactivos)
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+
     <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="320">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="320" style="border: none; background: none;">
     </a>
-    <br>
-    <sub><b>siRNA 01 vs Control</b></sub>
-  </div>
+    <sub><b>siRNA 01 vs Control — Volcano interactivo</b></sub>
 
-  <div style="text-align:center;">
     <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="320">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="320" style="border: none; background: none;">
     </a>
-    <br>
-    <sub><b>siRNA 02 vs Control</b></sub>
+    <sub><b>siRNA 02 vs Control — Volcano interactivo</b></sub>
+
   </div>
 
-</div>
+  <p align="center"><em>
+  Volcano plots interactivos que evidencian la represión coordinada de genes mitóticos y replicativos tras el KD de DDX21.
+  </em></p>
 
-<p align="center"><em>
-Volcano plots interactivos que evidencian la represión coordinada de genes mitóticos y replicativos tras el KD de DDX21.
-</em></p>
+  ---
 
----
+  ### 🟢 Dashboards Transcriptómicos
 
-### 🟢 Dashboards Transcriptómicos
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
     <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.png" width="340" style="border: none; background: none;">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard1.png" width="320" style="border: none; background: none;">
     </a>
-    <br><sub><b>siRNA 01 — Dashboard Funcional</b></sub>
-  </div>
-  <div style="text-align: center;">
+    <sub><b>siRNA 01 — Dashboard funcional interactivo</b></sub>
+
     <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.png" width="340" style="border: none; background: none;">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard2.png" width="320" style="border: none; background: none;">
     </a>
-    <br><sub><b>siRNA 02 — Dashboard Funcional</b></sub>
+    <sub><b>siRNA 02 — Dashboard funcional interactivo</b></sub>
+
   </div>
-</div>
 
-<p align="center"><em>
-Dashboards HTML con exploración integral de DEGs, estadística y anotación funcional, incluye Pathviews.
-</em></p>
+  <p align="center"><em>
+  Dashboards HTML con exploración integral de DEGs, estadística y anotación funcional, incluye Pathviews.
+  </em></p>
 
----
+  </div>
 
-### 🟣 Reportes Transcriptómicos (PDF)
+  <!-- Columna derecha: PDFs gProfiler -->
+  <div style="text-align: center; min-width: 320px; max-width: 380px;">
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
+  ### 🟣 Reportes Transcriptómicos (PDF)
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+
     <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
       <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf1.png" width="300" style="border: none; background: none;">
     </a>
-    <br><sub><b>Reporte Completo — siRNA 01</b></sub>
-  </div>
-  <div style="text-align: center;">
+    <sub><b>Reporte completo — siRNA 01 (enriquecimiento basado en gProfiler)</b></sub>
+
     <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
       <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf2.png" width="300" style="border: none; background: none;">
     </a>
-    <br><sub><b>Reporte Completo — siRNA 02</b></sub>
+    <sub><b>Reporte completo — siRNA 02 (enriquecimiento basado en gProfiler)</b></sub>
+
   </div>
+
+  <p align="center"><em>
+  Informes PDF generados automáticamente con análisis de enriquecimiento funcional realizado con gProfiler/gprofiler2.
+  </em></p>
+
+  </div>
+
 </div>
 
----
 
 ### 🧬 Enriquecimiento Funcional — Gene Ontology
 
