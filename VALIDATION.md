@@ -32,12 +32,18 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 <summary><strong>A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
 <br>
 
-El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal y el control del ciclo celular.
+El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal. Su ausencia desencadena una cascada de señalización específica que culmina en el arresto del ciclo celular. A continuación, se detalla la **firma molecular esperada** basada en los datos transcriptómicos del estudio original en células humanas (HUVEC):
 
-- **Mecanismo esperado:**  
-  Estrés ribosomal ➔ activación p53/p21 ➔ arresto en G2/M
-- **Genes esperados DOWN:**  
-  *NDC80, PLK1, AURKB, CDC6, FEN1, PCNA*
+| Sistema Biológico | Estado | Genes Afectados (LogFC) | Hallazgo Biológico (Mecanismo) |
+| :--- | :--- | :--- | :--- |
+| **🚨 EL GATILLO (p53/p21)** | **ACTIVADO** ⬆️ | **`CDKN1A` (p21)** (+1.12)<br>**`MDM2`** (+0.97)<br>**`FAS`** (+1.01)<br>**`BTG2`** (+0.90) | **La Causa Raíz:** El estrés ribosomal activa p53, que a su vez dispara **p21**. p21 es el inhibidor universal de las quinasas del ciclo ("freno de mano") que provoca el colapso posterior. |
+| **🏁 Inicio de Replicación** | **BLOQUEADO** ⬇️ | **`CDC6`** (-2.61)<br>**`CDT1`** (-2.41)<br>**`ORC1`** (-1.90)<br>**`ORC6`** (-2.11) | **Licencia Denegada:** Estos genes forman el "complejo de pre-replicación". Sin `CDC6` ni `CDT1`, la célula no puede marcar dónde empezar a copiar el ADN. El proceso ni siquiera arranca. |
+| **🧱 Suministro de "Ladrillos"** | **CORTADO** ⬇️ | **`RRM2`** (-2.49)<br>**`TYMS`** (-0.96)<br>**`TK1`** (-1.34) | **Sin Materiales:** `RRM2` es la enzima limitante que fabrica los nucleótidos. Al estar tan baja, la célula se queda sin "tinta" para copiar el genoma. Es un cuello de botella brutal. |
+| **⚙️ El Motor de Copiado** | **APAGADO** ⬇️ | **`MCM10`** (-2.64)<br>**`MCM2-7`** (~ -2.0)<br>**`PCNA`** (-1.58)<br>**`POLE`** (-1.90) | **Helicasa Detenida:** El complejo MCM es el motor que abre la doble hélice. `PCNA` es la abrazadera que sujeta la polimerasa. Todo el equipo de replicación ha sido desmantelado. |
+| **🔧 Reparación del ADN** | **SUPRIMIDA** ⬇️ | **`BRCA1`** (-1.96)<br>**`BRCA2`** (-2.28)<br>**`RAD51`** (-2.07)<br>**`FANCD2`** (-1.50) | **Fallo en Homología:** Como la célula no replica, apaga la maquinaria de Reparación por Recombinación Homóloga (HR). Esto induce un estado de fragilidad genómica ("brittleness"). |
+| **🏗️ Estructura Mitótica** | **COLAPSADA** ⬇️ | **`AURKB`** (-2.29)<br>**`PLK1`** (-1.80)<br>**`CDK1`** (-2.35)<br>**`BUB1`** (-1.68) | **Sin División:** Aurora B y PLK1 son los reguladores maestros de la mitosis. Su ausencia total confirma que las células no están entrando en fase M. |
+| **🚂 Motores Moleculares** | **MASACRADOS** ⬇️ | **`KIFC1`** (-2.44)<br>**`KIF11`** (-1.89)<br>**`KIF18A/B`** (~ -2.0)<br>**`KIF14/15`** | **Transporte Parado:** Las Kinesinas (`KIF`) mueven los cromosomas. Se observa la represión coordinada de más de 15 kinesinas, impidiendo la formación del huso mitótico. |
+| **🎯 Centrómero y Cinetocoro** | **DESMANTELADO** ⬇️ | **`CENPA`** (-2.05)<br>**`CENPE`** (-1.57)<br>**`CENPF`** (-1.74)<br>**`NDC80`** (-1.81) | **Pérdida de Identidad:** `CENPA` define el centro del cromosoma y `NDC80` es el gancho del microtúbulo. Su caída indica una pérdida de la integridad cromosómica estructural. |
 
 </details>
 
