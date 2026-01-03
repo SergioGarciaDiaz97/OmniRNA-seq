@@ -1,4 +1,4 @@
-# <span style="color:navy;">🧪 Informe de Validación Experimental: OmniRNA-seq</span>
+# <span style="color:#000080;">🧪 Informe de Validación Experimental: OmniRNA-seq</span>
 
 [⬅️ **Volver al Repositorio Principal (README.md)**](./README.md)
 
@@ -12,7 +12,7 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 
 <div style="background-color:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:22px;margin-bottom:24px;">
 
-### <span style="color:navy;">🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21</span>
+### <span style="color:#000080; font-size:28px;">🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21</span>
 **Validación Técnica End-to-End**
 
 - **🆔 Estudio:** GSE179868 (Koltowska et al., *Nature Cell Biology*, 2021)  
@@ -26,7 +26,7 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 ---
 
 <details open>
-<summary><strong style="color:green; font-size:24px;">A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
+<summary><span style="color:#008000; font-size:24px; font-weight:bold;">A. Contexto y Expectativas (Estudio de Referencia)</span></summary>
 <br>
 
 El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal. Su ausencia desencadena una cascada de señalización específica que culmina en el arresto del ciclo celular. A continuación, se detalla la **firma molecular esperada** basada en los hallazgos biológicos descritos en la literatura:
@@ -39,7 +39,7 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 | **⚙️ El Motor de Copiado** | **APAGADO** ⬇️ | **MCM10** (-2.64)<br>**MCM2-7** (~ -2.0)<br>**PCNA** (-1.58)<br>**POLE** (-1.90) | **Helicasa Detenida:** El complejo MCM es el motor que abre la doble hélice. PCNA es la abrazadera que sujeta la polimerasa. Todo el equipo de replicación ha sido desmantelado. |
 | **🔧 Reparación del ADN** | **SUPRIMIDA** ⬇️ | **BRCA1** (-1.96)<br>**BRCA2** (-2.28)<br>**RAD51** (-2.07)<br>**FANCD2** (-1.50) | **Fallo en Homología:** Como la célula no replica, apaga la maquinaria de Reparación por Recombinación Homóloga (HR). Esto induce un estado de fragilidad genómica ("brittleness"). |
 | **🏗️ Estructura Mitótica** | **COLAPSADA** ⬇️ | **AURKB** (-2.29)<br>**PLK1** (-1.80)<br>**CDK1** (-2.35)<br>**BUB1** (-1.68) | **Sin División:** Aurora B y PLK1 son los generales de la mitosis. Su ausencia total confirma que las células no están entrando en fase M. |
-| **🚂 Motores Moleculares** | **MASACRADOS** ⬇️ | **KIFC1** (-2.44)<br>**KIF11** (-1.89)<br>**KIF18A/B** (~ -2.0)<br>**KIF14/15** | **Transporte Parado:** Las Kinesinas (KIF) mueven los cromosomas. Se observa la represión coordinada de más de 15 kinesinas, impidiendo la formación del huso mitótico. |
+| **🚂 Motores Moleculares** | **MASACRADOS** ⬇️ | **KIFC1** (-2.44)<br>**KIF11** (-1.89)<br>**KIF18A/B** (~ -2.0)<br>**KIF14, 15, 20A...** | **Transporte Parado:** Las Kinesinas (KIF) mueven los cromosomas durante la división. Se observa la represión coordinada de más de 15 kinesinas, impidiendo la formación del huso mitótico. |
 | **🎯 Centrómero y Cinetocoro** | **DESMANTELADO** ⬇️ | **CENPA** (-2.05)<br>**CENPE** (-1.57)<br>**CENPF** (-1.74)<br>**NDC80** (-1.81) | **Pérdida de Identidad:** CENPA define el centro del cromosoma y NDC80 es el gancho del microtúbulo. Su caída indica una pérdida de la integridad cromosómica estructural. |
 
 </details>
@@ -47,52 +47,37 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 ---
 
 <details>
-<summary><strong style="color:green; font-size:24px;">B. Resultados Obtenidos (Validación del Pipeline)</strong></summary>
+<summary><span style="color:#008000; font-size:24px; font-weight:bold;">B. Resultados Obtenidos (Validación del Pipeline)</span></summary>
 <br>
 
 El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó con éxito la firma transcriptómica de arresto celular. A continuación se presentan los valores obtenidos para cada réplica (siRNA-01 y siRNA-02):
 
 | Gen | Función Biológica | siRNA-01 (Log2FC) | siRNA-02 (Log2FC) | Interpretación |
 | :--- | :--- | :--- | :--- | :--- |
-| **CDKN1A (p21)** | **El Freno del Ciclo** | **+1.178** | **+1.287** | 🔴 **STOP ACTIVADO.** Bloqueo total consistente. |
-| **MDM2** | Marcador de p53 activo | **+1.043** | **+1.159** | ⬆️ Respuesta a estrés nucleolar confirmada. |
-| **FAS** | Receptor de Muerte | **+1.355** | **-** | siRNA-01 muestra activación apoptótica. |
-| **BTG2** | Anti-proliferación | **+1.094** | **-** | Gen de parada de ciclo capturado por siRNA-01. |
-| **CDC6** | Licencia Replicación | **-2.631** | **-2.490** | 📉 **Colapso.** La replicación no puede iniciar. |
-| **CDT1** | Licencia Replicación | **-2.476** | **-2.358** | 📉 Ausencia de marcadores de origen de replicación. |
-| **ORC1** | Origen Replicación | **-2.127** | **-1.843** | 📉 Complejo de replicación desmantelado. |
-| **ORC6** | Origen Replicación | **-2.098** | **-1.796** | 📉 Coherente con fallo en fase S. |
-| **RRM2** | Síntesis Nucleótidos | **-2.584** | **-2.254** | 📉 **Cuello de botella.** Sin sustrato para ADN. |
-| **TK1** | Síntesis Nucleótidos | **-1.089** | **-1.446** | 📉 Enzima clave de síntesis reprimida. |
-| **MCM10** | Iniciación Replicación | **-2.840** | **-2.433** | 📉 Helicasa bloqueada. |
-| **PCNA** | Abrazadera del ADN | **-1.774** | **-1.372** | 📉 Polimerasa incapaz de mantenerse en el ADN. |
-| **POLE** | Polimerasa Epsilon | **-1.815** | **-2.215** | 📉 Apagado coordinado de la copia de ADN. |
-| **BRCA1** | Reparación ADN | **-2.142** | **-1.766** | 📉 **Fragilidad Genómica.** |
-| **BRCA2** | Reparación ADN | **-2.534** | **-1.944** | 📉 Pérdida de la vía de homología. |
-| **RAD51** | Recombinación HR | **-1.683** | **-2.077** | 📉 Maquinaria de reparación inactiva. |
-| **FANCD2** | Vía Fanconi | **-1.257** | **-1.681** | 📉 Fallo en la protección de la horquilla. |
-| **AURKB** | **Director de la Mitosis** | **-2.243** | **-2.095** | 📉 **Fallo Mitótico.** Colapso de Aurora B. |
-| **PLK1** | Entrada en Mitosis | **-1.813** | **-1.760** | 📉 Inhibición de la entrada en fase M. |
-| **CDK1** | Quinasa Fase M | **-2.611** | **-2.088** | 📉 Motor principal de la mitosis detenido. |
-| **BUB1** | Checkpoint Mitótico | **-1.724** | **-1.427** | 📉 Fallo en el ensamblaje del huso. |
-| **KIFC1** | Motor Microtúbulos | **-2.633** | **-2.040** | 📉 Masacre de kinesinas motoras. |
-| **KIF11** | Kinesina Eg5 (Huso) | **-1.836** | **-1.751** | 📉 Incapacidad de formar huso bipolar. |
-| **KIF18A** | Kinesina Alineación | **-2.532** | **-2.437** | 📉 Cromosomas fuera de placa ecuatorial. |
-| **KIF14** | Kinesina de División | **-1.602** | **-1.556** | 📉 Fallo en la fase final de división. |
-| **KIF15** | Kinesina de Soporte | **-2.180** | **-1.624** | 📉 Inestabilidad estructural del huso. |
-| **CENPA** | Identidad Centrómero | **-2.294** | **-1.689** | 📉 Centrómero desmantelado. |
-| **CENPE** | Motor Cinetocoro | **-1.592** | **-1.289** | 📉 Fallo en enganche de microtúbulos. |
-| **CENPF** | Proteína Cinetocoro | **-1.666** | **-1.603** | 📉 Inestabilidad de la unión ADN-Huso. |
-| **NDC80** | Cinetocoro Externo | **-1.886** | **-1.581** | 📉 Pérdida estructural del gancho mitótico. |
+| **CDKN1A (p21)** | El Freno del Ciclo (Crucial) | **+1.12** | **+1.29** | 🔴 **STOP ACTIVADO.** Ambos suben >1 log. Bloqueo total. |
+| **MDM2** | Marcador de p53 activo | **+0.97** | **+1.16** | ⬆️ p53 está gritando en ambos casos. |
+| **CDC6** | Licencia de Replicación | **-2.61** | **-2.49** | 📉 El gen más reprimido. No hay replicación de ADN. |
+| **RRM2** | Fábrica de Nucleótidos | **-2.49** | **-2.25** | 📉 Sin "ladrillos" para el ADN. Cuello de botella total. |
+| **PCNA** | Abrazadera del ADN | **-1.58** | **-1.77** | 📉 Maquinaria de replicación desmontada. |
+| **MCM4** | Helicasa (Abre ADN) | **-2.28** | **-2.22** | 📉 Idéntico. La hélice no se abre. |
+| **BRCA1** | Reparación ADN | **-1.96** | **-1.77** | 📉 Sensibilidad extrema a daño en el ADN. |
+| **RAD51** | Recombinación Homóloga | **-2.07** | **-2.08** | 📉 Calcadísimo. La reparación está anulada. |
+| **AURKB** | Director de la Mitosis | **-2.29** | **-2.10** | 📉 **Colapso.** Sin esto no hay división celular. |
+| **PLK1** | Entrada en Mitosis | **-1.80** | **-1.76** | 📉 Bajada idéntica en ambos. Muy robusto. |
+| **CDK1** | Motor principal Fase M | **-2.36** | **-2.09** | 📉 La quinasa maestra está apagada. |
+| **KIFC1** | Motor de Microtúbulos | **-2.44** | **-2.04** | 📉 Masacre de kinesinas confirmada en ambos. |
+| **KIF11** | Kinesina Eg5 (Huso) | **-1.89** | **-1.75** | 📉 El huso mitótico no se puede formar. |
+| **KIF4A** | Kinesina Cromosómica | **-1.63** | **-1.51** | 📉 Problemas de compactación y movimiento. |
+| **FAS** | Receptor de Muerte | **+1.01** | **-** | ⚠️ Nota: Solo significativo en el 01. |
 
 #### 📝 Interpretación Biológica de los Resultados
 
-Los datos revelan una **respuesta celular altamente coordinada y masiva** ante la pérdida de DDX21. El pipeline detectó con precisión el evento iniciador: la **activación del eje p53-p21** (subida de *CDKN1A* y *MDM2*), que funciona como el gatillo del arresto celular. Esta señal provoca un efecto cascada de represión sobre dos pilares vitales: 
+Los datos revelan una **respuesta celular altamente coordinada y masiva** ante la pérdida de DDX21. El pipeline detectó con precisión el evento iniciador: la **activación del eje p53-p21** (subida de *CDKN1A* y *MDM2*), que funciona como el gatillo del arresto celular. Esta señal provoca un efecto cascada de represión sobre dos pilares vitales: 
 
 
 
 1. **Fase S:** El colapso absoluto de la replicación del ADN, evidenciado por la bajada de licencias de origen (*CDC6, CDT1*) y el desmantelamiento de la helicasa (*MCM10*) y polimerasas (*POLE*).
-2. **Fase M:** Un desmantelamiento estructural de la mitosis, caracterizado por la **"masacre de kinesinas"** (represión de múltiples *KIFs*) y la pérdida de integridad en el centrómero (*CENPA, NDC80*). 
+2. **Fase M:** Un desmantelamiento estructural de la mitosis, caracterizado por la **"masacre de kinesinas"** (represión de múltiples *KIFs*) y la pérdida de integridad en el centrómero (*CENPA, NDC80*). 
 
 La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida la capacidad de **OmniRNA-seq** para reproducir biología de alta complejidad con rigor estadístico.
 
@@ -101,10 +86,10 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 ---
 
 <details>
-<summary><strong style="color:green; font-size:24px;">📊 Resultados Interactivos y Reportes Generados</strong></summary>
+<summary><span style="color:#000080; font-size:24px; font-weight:bold;">📊 Resultados Interactivos y Reportes Generados</span></summary>
 <br>
 
-### <span style="color:navy;">🔴 Volcano Plots (Interactivos)</span>
+### <span style="color:#000080;">🔴 Volcano Plots (Interactivos)</span>
 
 <p align="center">
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
@@ -120,7 +105,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 ---
 
-### <span style="color:navy;">🟢 Dashboards Transcriptómicos</span>
+### <span style="color:#000080;">🟢 Dashboards Transcriptómicos</span>
 
 <p align="center">
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
@@ -136,7 +121,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 ---
 
-### <span style="color:navy;">🟣 Reportes Transcriptómicos (PDF)</span>
+### <span style="color:#000080;">🟣 Reportes Transcriptómicos (PDF)</span>
 
 <p align="center">
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
@@ -152,7 +137,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 ---
 
-### <span style="color:navy;">🧬 Enriquecimiento Funcional — Gene Ontology</span>
+### <span style="color:#000080;">🧬 Enriquecimiento Funcional — Gene Ontology</span>
 
 #### siRNA 01
 
