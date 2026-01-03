@@ -81,21 +81,24 @@ La ejecución local del pipeline reprodujo fielmente la biología descrita en el
 ## 📊 Resultados Interactivos y Reportes Generados
 ---
 
-### 🔴 Volcano Plots (Interactivos)
+<div align="center" style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
+  <div style="text-align:center;">
     <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="340" style="border: none; background: none;">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int1.png" width="320">
     </a>
-    <br><sub><b>siRNA 01 vs Control</b></sub>
+    <br>
+    <sub><b>siRNA 01 vs Control</b></sub>
   </div>
-  <div style="text-align: center;">
+
+  <div style="text-align:center;">
     <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
-      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="340" style="border: none; background: none;">
+      <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_int2.png" width="320">
     </a>
-    <br><sub><b>siRNA 02 vs Control</b></sub>
+    <br>
+    <sub><b>siRNA 02 vs Control</b></sub>
   </div>
+
 </div>
 
 <p align="center"><em>
