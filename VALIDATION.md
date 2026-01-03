@@ -80,7 +80,6 @@ La ejecución local del pipeline reprodujo fielmente la biología descrita en el
 
 ## 📊 Resultados Interactivos y Reportes Generados
 ---
-
 <div align="center" style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
 
   <div style="text-align:center;">
