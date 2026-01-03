@@ -1,4 +1,4 @@
-# 🧪 Informe de Validación Experimental: OmniRNA-seq
+# <span style="color:navy;">🧪 Informe de Validación Experimental: OmniRNA-seq</span>
 
 [⬅️ **Volver al Repositorio Principal (README.md)**](./README.md)
 
@@ -26,7 +26,7 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 ---
 
 <details open>
-<summary><strong style="color:green; font-size:22px;">A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
+<summary><strong style="color:green; font-size:24px;">A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
 <br>
 
 El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis ribosomal. Su ausencia desencadena una cascada de señalización específica que culmina en el arresto del ciclo celular. A continuación, se detalla la **firma molecular esperada** basada en los hallazgos biológicos descritos en la literatura:
@@ -47,7 +47,7 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 ---
 
 <details>
-<summary><strong style="color:green; font-size:22px;">B. Resultados Obtenidos (Validación del Pipeline)</strong></summary>
+<summary><strong style="color:green; font-size:24px;">B. Resultados Obtenidos (Validación del Pipeline)</strong></summary>
 <br>
 
 El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó con éxito la firma transcriptómica de arresto celular. A continuación se presentan los valores obtenidos para cada réplica (siRNA-01 y siRNA-02):
@@ -100,10 +100,11 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 ---
 
-## 📊 Resultados Interactivos y Reportes Generados
----
+<details>
+<summary><strong style="color:green; font-size:24px;">📊 Resultados Interactivos y Reportes Generados</strong></summary>
+<br>
 
-### 🔴 Volcano Plots (Interactivos)
+### <span style="color:navy;">🔴 Volcano Plots (Interactivos)</span>
 
 <p align="center">
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
@@ -119,7 +120,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 ---
 
-### 🟢 Dashboards Transcriptómicos
+### <span style="color:navy;">🟢 Dashboards Transcriptómicos</span>
 
 <p align="center">
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
@@ -135,7 +136,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 ---
 
-### 🟣 Reportes Transcriptómicos (PDF)
+### <span style="color:navy;">🟣 Reportes Transcriptómicos (PDF)</span>
 
 <p align="center">
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
@@ -151,7 +152,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 ---
 
-### 🧬 Enriquecimiento Funcional — Gene Ontology
+### <span style="color:navy;">🧬 Enriquecimiento Funcional — Gene Ontology</span>
 
 #### siRNA 01
 
@@ -184,5 +185,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf2.png" width="240">
   </a>
 </p>
+
+</details>
 
 </div>
