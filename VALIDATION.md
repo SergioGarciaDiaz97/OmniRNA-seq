@@ -25,12 +25,11 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 - **⚗️ Diseño Experimental:** Contrastes estadísticos robustos: `siRNA_01_vs_Control` y `siRNA_02_vs_Control`.
 
 ---
-
 <details open>
 
 <summary>
   <strong>
-    <span style="color:#000080; font-size:1.25em;">
+    <span style="color:green; font-size:1.45em;">
       A. Contexto y Expectativas (Estudio de Referencia)
     </span>
   </strong>
@@ -52,6 +51,7 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 | **🎯 Centrómero y Cinetocoro** | **DESMANTELADO** ⬇️ | **CENPA** (-2.05)<br>**CENPE** (-1.57)<br>**CENPF** (-1.74)<br>**NDC80** (-1.81) | **Pérdida de Identidad:** CENPA define el centro del cromosoma y NDC80 es el gancho del microtúbulo. Su caída indica una pérdida de la integridad cromosómica estructural. |
 
 </details>
+
 
 ---
 
