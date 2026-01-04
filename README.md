@@ -34,7 +34,7 @@ _Haz clic en cualquier apartado para ir directamente a la sección._
 8. [Estructura Global de Resultados](#estructura-global-de-resultados-output-tree)
 9. [Autoría y Colaboraciones](#autoría-impacto-y-colaboración)
 ---
-
+<br>
 <a id="instalacion"></a>
 
 ## 🛠️ $\color{#8B0000}{\text{0. Instalación y Despliegue}}$
@@ -68,7 +68,8 @@ Sustituya la ruta de ejemplo por la ruta real de su usuario en el cluster.
 # ✅ POR SU RUTA REAL (Ejemplo):
 HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
 ```
----
+
+<br>
 <a id="organizacion"></a>
 ## 📂 $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
 Para que funcione el pipeline es necesario alojar los diferentes archivos en las carpetas indicadas a continuación.
@@ -102,8 +103,8 @@ OmniRNA-seq/
 **Flujo lógico:**  
 `Python (data engineering) → R (estadística/biológica) → PDFs publicables`
 
----
 
+<br>
 <a id="modos"></a> 
 ## 🚀 $\color{#8B0000}{\text{2. Modos de Ejecución (Orquestación Inteligente):}}$
 
@@ -172,10 +173,8 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 Gracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster por exceder el tiempo de pared (walltime), basta con re-lanzar el comando original; el sistema detectará los pasos completados y los archivos válidos, saltando directamente a la etapa pendiente.
 </div>
 
+
 <br>
-
----
-
 <a id="launcher"></a>
 ## 🎛️ $\color{#8B0000}{\text{3. Punto de entrada: Launcher maestro.sh}}$
 
@@ -210,7 +209,7 @@ reproducible y eficiente.
 
 </details>
 <br>
----
+
 <a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
 
 ## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
@@ -296,7 +295,7 @@ Generación de gráficos de publicación y dashboards interactivos.
 
 </details>
 <br>
----
+
 <a id="centro-de-control-de-configuración-json"></a>
 
 ## ⚙️ $\color{#8B0000}{\text{5. Centro de Control de Configuración (📁 JSON/)}}$
@@ -383,6 +382,7 @@ Gestiona la interoperabilidad entre bases de datos:
 </details>
 
 <details>
+<br>
 <summary>$\Large \color{#000080}{\text{6. Container Images: Reproducibilidad Binaria}}$</summary>
 <br>
 
@@ -467,7 +467,7 @@ Este archivo actúa como la **llave maestra** que conecta los archivos crudos co
 > El pipeline incluye un módulo de seguridad que genera un archivo `metadata_corregido.csv`. Este proceso detecta y corrige caracteres inválidos en los nombres de las muestras (ej. reemplaza guiones `-` por puntos `.`) para asegurar la compatibilidad total con **R**.
 > 
 <br>
----
+
 <a id="arquitectura-del-sistema"></a>
 
 ## 🏗️ $\color{#8B0000}{\text{7. Arquitectura del Sistema}}$
@@ -525,7 +525,7 @@ Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro
 
 </details>
 <br>
----
+
 <a id="estructura-global-de-resultados-output-tree"></a>
 
 ## 📂 $\color{#8B0000}{\text{8. Estructura Global de Resultados (Output Tree)}}$
@@ -625,7 +625,7 @@ Finalmente Python vuelve a intervenir para generar el reporte de **MULTIQC**, qu
 
 </details>
 <br>
----
+
 <a id="autoría-impacto-y-colaboración"></a>
 
 
