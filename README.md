@@ -12,8 +12,8 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
   <p>
     La robustez de este software ha sido auditada mediante la replicación de <strong>10 Casos de Estudio Reales</strong> (1 Simulación Local + 9 Análisis Públicos), contrastando nuestros resultados con publicaciones de alto impacto (<em>Nature, Cell, PLoS</em>).
   </p>
-  <p style="font-size: 1.1em; font-weight: bold;">
-    👉 <a href="./VALIDATION.md">**Haga click aquí para ver el indorme detallado de validación (VALIDATION.md)**</a>
+  <p style="font-size: 1.1em;">
+    👉 <a href="./VALIDATION.md" style="font-weight: bold; color: #000080; text-decoration: none;">HAGA CLIC AQUÍ PARA VER EL INFORME DETALLADO DE VALIDACIÓN (VALIDATION.md)</a>
   </p>
   <small><em>* Incluye gráficos comparativos, p-values replicados y análisis de rutas biológicas.</em></small>
 </div>
