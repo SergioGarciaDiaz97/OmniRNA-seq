@@ -51,7 +51,7 @@ Siga estos **2 pasos** para inicializar el ecosistema (haga clic en los títulos
 
 Clonar el repositorio descargará la estructura de directorios completa (`JSON/`, `R_CODES/`, `src/`, etc.) necesaria para la ejecución.
 
-```bash
+```
 git clone [https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git](https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git)
 cd OmniRNA-seq
 ```
