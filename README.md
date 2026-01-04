@@ -21,9 +21,9 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 ---
 <br>
 
-
 ## 📚 Índice
 _Haz clic en cualquier apartado para ir directamente a la sección._
+
 0. [Instalación y Despliegue](#instalacion)
 1. [Organización del Proyecto](#organizacion)
 2. [Modos de Ejecución](#modos)
@@ -35,7 +35,7 @@ _Haz clic en cualquier apartado para ir directamente a la sección._
 8. [Estructura Global de Resultados](#estructura-global-de-resultados-output-tree)
 9. [Autoría y Colaboraciones](#autoría-impacto-y-colaboración)
 ---
-
+<br>
 <a id="instalacion"></a>
 ## 🛠️ $\color{#8B0000}{\text{0. Instalación y Despliegue:}}$
 
