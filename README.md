@@ -19,7 +19,24 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 </div>
 
 ---
+<br>
 
+
+## 📚 Índice
+_Haz clic en cualquier apartado para ir directamente a la sección._
+0. [Instalación y Despliegue](#instalacion)
+1. [Organización del Proyecto](#organizacion)
+2. [Modos de Ejecución](#modos)
+3. [Launcher Maestro](#launcher)
+4. [Dependencias y Contenedores](#dependencias-y-entorno-de-ejecución-contenedores)
+5. [Centro de Configuración JSON](#centro-de-control-de-configuración-json)
+6. [Requisitos de Metadatos](#requisitos-de-metadatos-metadata_archivos)
+7. [Arquitectura del Sistema](#arquitectura-del-sistema)
+8. [Estructura Global de Resultados](#estructura-global-de-resultados-output-tree)
+9. [Autoría y Colaboraciones](#autoría-impacto-y-colaboración)
+---
+
+<a id="instalacion"></a>
 ## 🛠️ $\color{#8B0000}{\text{0. Instalación y Despliegue:}}$
 
 OmniRNA-seq está diseñado para entornos ***HPC***. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
@@ -52,18 +69,6 @@ Sustituya la ruta de ejemplo por la ruta real de su usuario en el cluster.
 HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
 ```
 
-## 📚 Índice
-_Haz clic en cualquier apartado para ir directamente a la sección._
-1. [Organización del Proyecto](#organizacion)
-2. [Modos de Ejecución](#modos)
-3. [Launcher Maestro](#launcher)
-4. [Dependencias y Contenedores](#dependencias-y-entorno-de-ejecución-contenedores)
-5. [Centro de Configuración JSON](#centro-de-control-de-configuración-json)
-6. [Requisitos de Metadatos](#requisitos-de-metadatos-metadata_archivos)
-7. [Arquitectura del Sistema](#arquitectura-del-sistema)
-8. [Estructura Global de Resultados](#estructura-global-de-resultados-output-tree)
-9. [Autoría y Colaboraciones](#autoría-impacto-y-colaboración)
----
 
 <a id="organizacion"></a>
 ## 📂 $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
