@@ -103,8 +103,8 @@ OmniRNA-seq/
 **Flujo lógico:**  
 `Python (data engineering) → R (estadística/biológica) → PDFs publicables`
 
-
 <br>
+
 <a id="modos"></a> 
 ## 🚀 $\color{#8B0000}{\text{2. Modos de Ejecución (Orquestación Inteligente):}}$
 
@@ -172,9 +172,8 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 <b>Resiliencia Automática:</b><br>
 Gracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster por exceder el tiempo de pared (walltime), basta con re-lanzar el comando original; el sistema detectará los pasos completados y los archivos válidos, saltando directamente a la etapa pendiente.
 </div>
-
-
 <br>
+
 <a id="launcher"></a>
 ## 🎛️ $\color{#8B0000}{\text{3. Punto de entrada: Launcher maestro.sh}}$
 
@@ -444,7 +443,7 @@ El pipeline (`run_enrichment_plots`) genera automáticamente una suite gráfica 
 
 </details>
 <br>
----
+
 <a id="requisitos-de-metadatos-metadata_archivos"></a>
 
 ## 📄 $\color{#8B0000}{\text{6. Requisitos de Metadatos (MetadataArchivos/)}}$
