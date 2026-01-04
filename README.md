@@ -8,12 +8,12 @@ OmniRNA-seq es un ecosistema bioinformático integral para el análisis automati
 El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación validados para una amplia gama de modelos biológicos, incluyendo ***Homo sapiens***, ***Mus musculus***, ***Saccharomyces cerevisiae***, ***Arabidopsis thaliana***, ***Danio rerio***, ***Caenorhabditis elegans*** y ***Drosophila melanogaster***.
 <br>
 <div style="background-color: #f0fff4; border-left: 5px solid #2E8B57; padding: 15px; margin: 20px 0; border-radius: 5px;">
-  <h3 style="margin-top: 0; color: #2E8B57;">🧪 Validación Científica (Benchmark)</h3>
+  <h3 style="margin-top: 0; color: #2E8B57;">🧪 Validación Científica</h3>
   <p>
     La robustez de este software ha sido auditada mediante la replicación de <strong>10 Casos de Estudio Reales</strong> (1 Simulación Local + 9 Análisis Públicos), contrastando nuestros resultados con publicaciones de alto impacto (<em>Nature, Cell, PLoS</em>).
   </p>
   <p style="font-size: 1.1em; font-weight: bold;">
-    👉 <a href="./VALIDATION.md">HAGA CLIC AQUÍ PARA VER EL INFORME DETALLADO DE VALIDACIÓN (VALIDATION.md)</a>
+    👉 <a href="./VALIDATION.md">**Haga click aquí para ver el indorme detallado de validación (VALIDATION.md)**</a>
   </p>
   <small><em>* Incluye gráficos comparativos, p-values replicados y análisis de rutas biológicas.</em></small>
 </div>
