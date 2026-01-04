@@ -36,7 +36,7 @@ _Haz clic en cualquier apartado para ir directamente a la sección._
 ---
 <br>
 <a id="instalacion"></a>
-
+---
 ## 🛠️ $\color{#8B0000}{\text{0. Instalación y Despliegue}}$
 
 OmniRNA-seq está diseñado bajo una filosofía **"Zero-Config"** para entornos HPC. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
@@ -68,8 +68,7 @@ Sustituya la ruta de ejemplo por la ruta real de su usuario en el cluster.
 # ✅ POR SU RUTA REAL (Ejemplo):
 HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
 ```
-
-
+---
 <a id="organizacion"></a>
 ## 📂 $\color{#8B0000}{\text{1. Organización del Proyecto (Separation of Concerns)}}$
 Para que funcione el pipeline es necesario alojar los diferentes archivos en las carpetas indicadas a continuación.
