@@ -35,6 +35,7 @@ _Haz clic en cualquier apartado para ir directamente a la sección._
 9. [Autoría y Colaboraciones](#autoría-impacto-y-colaboración)
 ---
 <br>
+
 <a id="instalacion"></a>
 
 ## 🛠️ $\color{#8B0000}{\text{0. Instalación y Despliegue}}$
