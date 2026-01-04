@@ -20,40 +20,22 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 
 ---
 
-🛠️ Instalación y Despliegue
-OmniRNA-seq está diseñado bajo una filosofía "Zero-Config" para entornos HPC. A diferencia de otros pipelines, no requiere la instalación manual de entornos Conda, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
+## 🛠️ **Instalación y Despliegue**
 
-🏗️ Guía de Instalación Rápida
+OmniRNA-seq está diseñado bajo una filosofía **"Zero-Config"** para entornos HPC. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
+
+### 🏗️ **Guía de Instalación Rápida**
+
 Siga estos 3 pasos para inicializar el ecosistema:
 
-1. Descarga del Ecosistema
-Clonar el repositorio descargará la estructura de directorios completa (JSON/, R_CODES/, src/, etc.) necesaria para la ejecución.
+#### 1. Descarga del Ecosistema
 
-Bash
+Clonar el repositorio descargará la estructura de directorios completa (`JSON/`, `R_CODES/`, `src/`, etc.) necesaria para la ejecución.
 
-git clone https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git
+```bash
+git clone [https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git](https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git)
 cd OmniRNA-seq
-2. ⚠️ Configuración de Rutas (VITAL)
-Para que el sistema funcione en su infraestructura, es obligatorio definir su directorio de trabajo en el script lanzador.
-
-Abra el archivo RNA_SEQ_LETS_TRY.sh con un editor de texto.
-
-Busque la variable HOME_BEEGFS (aprox. línea 45).
-
-Sustituya la ruta de ejemplo por la ruta real de su usuario en el Cluster.
-
-Bash
-
-# --- DENTRO DE RNA_SEQ_LETS_TRY.sh ---
-
-# ❌ CAMBIAR ESTO:
-# HOME_BEEGFS="/path/to/your/home/directory"
-
-# ✅ POR SU RUTA REAL (Ejemplo):
-HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
-
 ```
-
 ```
 
 
