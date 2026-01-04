@@ -18,6 +18,7 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
   <small><em>* Incluye gráficos comparativos, p-values replicados y análisis de rutas biológicas.</em></small>
 </div>
 
+<br>
 
 ## 📚 Índice
 _Haz clic en cualquier apartado para ir directamente a la sección._
