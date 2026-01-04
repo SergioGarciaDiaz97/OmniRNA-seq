@@ -20,28 +20,38 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 
 ---
 
-## 🛠️ Instalación y Despliegue
+🛠️ Instalación y Despliegue
+OmniRNA-seq está diseñado bajo una filosofía "Zero-Config" para entornos HPC. A diferencia de otros pipelines, no requiere la instalación manual de entornos Conda, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
 
-OmniRNA-seq utiliza una arquitectura de tres niveles para garantizar la máxima reproducibilidad en clústeres HPC: gestión de versiones (**Git**), orquestación de dependencias (**Conda**) e inmutabilidad de herramientas bioinformáticas (**Apptainer/Singularity**).
+🏗️ Guía de Instalación Rápida
+Siga estos 3 pasos para inicializar el ecosistema:
 
-### 🏗️ Guía de Instalación Rápida
+1. Descarga del Ecosistema
+Clonar el repositorio descargará la estructura de directorios completa (JSON/, R_CODES/, src/, etc.) necesaria para la ejecución.
 
-Ejecute la siguiente secuencia de comandos para inicializar el ecosistema completo en su nodo de acceso:
+Bash
 
-```bash
-# 1. Clonación del repositorio maestro
-git clone [https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git](https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git)
+git clone https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git
 cd OmniRNA-seq
+2. ⚠️ Configuración de Rutas (VITAL)
+Para que el sistema funcione en su infraestructura, es obligatorio definir su directorio de trabajo en el script lanzador.
 
-# 2. Inicialización del entorno de orquestación (Conda)
-# Configura Python 3.10+ y las dependencias de ingeniería de datos
-conda env create -f environment.yml
-conda activate omnirna_env
+Abra el archivo RNA_SEQ_LETS_TRY.sh con un editor de texto.
 
-# 3. Aprovisionamiento de contenedores inmutables
-# Descarga automáticamente las imágenes .sif (STAR, DESeq2, FastQC, etc.)
-chmod +x download_containers.sh
-./download_containers.sh
+Busque la variable HOME_BEEGFS (aprox. línea 45).
+
+Sustituya la ruta de ejemplo por la ruta real de su usuario en el Cluster.
+
+Bash
+
+# --- DENTRO DE RNA_SEQ_LETS_TRY.sh ---
+
+# ❌ CAMBIAR ESTO:
+# HOME_BEEGFS="/path/to/your/home/directory"
+
+# ✅ POR SU RUTA REAL (Ejemplo):
+HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
+
 ```
 
 
