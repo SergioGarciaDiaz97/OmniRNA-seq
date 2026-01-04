@@ -54,6 +54,8 @@ HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
 
 ```
 
+```
+
 
 ## 📚 Índice
 _Haz clic en cualquier apartado para ir directamente a la sección._
