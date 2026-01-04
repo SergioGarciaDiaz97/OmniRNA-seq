@@ -42,11 +42,11 @@ _Haz clic en cualquier apartado para ir directamente a la sección._
 
 OmniRNA-seq está diseñado bajo una filosofía **"Zero-Config"** para entornos HPC. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
 
-### $\color{#2E8B57}{\text{🏗️ Guía de Instalación Rápida}}$
+### $\color{#000080}{\text{🏗️ Guía de Instalación Rápida}}$
 
 Siga estos 3 pasos para inicializar el ecosistema:
 
-## 1. Descarga del Ecosistema
+### $\color{#2E8B57}{\text{1. Descarga del Ecosistema}}$
 
 Clonar el repositorio descargará la estructura de directorios completa (`JSON/`, `R_CODES/`, `src/`, etc.) necesaria para la ejecución.
 
@@ -54,7 +54,9 @@ Clonar el repositorio descargará la estructura de directorios completa (`JSON/`
 git clone [https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git](https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git)
 cd OmniRNA-seq
 ```
-## 2. ⚠️ Configuración de Rutas (VITAL)
+
+### $\color{#2E8B57}{\text{2. ⚠️ Configuración de Rutas}}$
+
 Para que el sistema funcione en su infraestructura, es **obligatorio** definir su directorio de trabajo en el script lanzador.  
 Abra el archivo `RNA_SEQ_LETS_TRY.sh` con un editor de texto.  
 Busque la variable `HOME_BEEGFS` (aprox. línea 45).  
