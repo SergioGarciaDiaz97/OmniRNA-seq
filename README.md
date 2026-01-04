@@ -172,7 +172,9 @@ Gracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones i
 </div>
 
 <br>
+
 ---
+
 <a id="launcher"></a>
 ## 🎛️ $\color{#8B0000}{\text{3. Punto de entrada: Launcher maestro.sh}}$
 
