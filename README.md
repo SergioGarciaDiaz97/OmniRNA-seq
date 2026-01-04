@@ -28,7 +28,7 @@ OmniRNA-seq está diseñado para entornos ***HPC***. A diferencia de otros pipel
 
 Siga estos 3 pasos para inicializar el ecosistema:
 
-#### 1. Descarga del Ecosistema
+## 1. Descarga del Ecosistema
 
 Clonar el repositorio descargará la estructura de directorios completa (`JSON/`, `R_CODES/`, `src/`, etc.) necesaria para la ejecución.
 
