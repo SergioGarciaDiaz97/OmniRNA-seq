@@ -46,6 +46,7 @@ OmniRNA-seq está diseñado bajo una filosofía **"Zero-Config"** para entornos 
 
 Siga estos 3 pasos para inicializar el ecosistema:
 
+<details>
 ### $\color{#2E8B57}{\text{1. Descarga del Ecosistema}}$
 
 Clonar el repositorio descargará la estructura de directorios completa (`JSON/`, `R_CODES/`, `src/`, etc.) necesaria para la ejecución.
@@ -54,8 +55,11 @@ Clonar el repositorio descargará la estructura de directorios completa (`JSON/`
 git clone [https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git](https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git)
 cd OmniRNA-seq
 ```
+</details>
 
-### $\color{#2E8B57}{\text{2. ⚠️ Configuración de Rutas}}$
+<details>
+  
+### $\color{#2E8B57}{\text{2. Configuración de Rutas}}$
 
 Para que el sistema funcione en su infraestructura, es **obligatorio** definir su directorio de trabajo en el script lanzador.  
 Abra el archivo `RNA_SEQ_LETS_TRY.sh` con un editor de texto.  
@@ -71,6 +75,7 @@ Sustituya la ruta de ejemplo por la ruta real de su usuario en el cluster.
 # ✅ POR SU RUTA REAL (Ejemplo):
 HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
 ```
+</details>
 <br>
 
 <a id="organizacion"></a>
