@@ -19,7 +19,6 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 </div>
 
 
-
 ## 📚 Índice
 _Haz clic en cualquier apartado para ir directamente a la sección._
 
@@ -36,7 +35,7 @@ _Haz clic en cualquier apartado para ir directamente a la sección._
 ---
 <br>
 <a id="instalacion"></a>
----
+
 ## 🛠️ $\color{#8B0000}{\text{0. Instalación y Despliegue}}$
 
 OmniRNA-seq está diseñado bajo una filosofía **"Zero-Config"** para entornos HPC. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
@@ -172,8 +171,8 @@ sbatch RNA_SEQ_LETS_TRY.sh JSON/config.json
 Gracias a su arquitectura modular, OmniRNA-seq es capaz de retomar ejecuciones interrumpidas. Si un job es cancelado por el clúster por exceder el tiempo de pared (walltime), basta con re-lanzar el comando original; el sistema detectará los pasos completados y los archivos válidos, saltando directamente a la etapa pendiente.
 </div>
 
-<br><br>
-
+<br>
+---
 <a id="launcher"></a>
 ## 🎛️ $\color{#8B0000}{\text{3. Punto de entrada: Launcher maestro.sh}}$
 
@@ -207,9 +206,8 @@ reproducible y eficiente.
   optimizando el uso de almacenamiento en infraestructuras compartidas.
 
 </details>
-
 <br>
-
+---
 <a id="dependencias-y-entorno-de-ejecución-contenedores"></a>
 
 ## 📦 $\color{#8B0000}{\text{4. Dependencias y Entorno de Ejecución (Contenedores)}}$
@@ -294,8 +292,8 @@ Generación de gráficos de publicación y dashboards interactivos.
 * **Reportes:** `rmarkdown`, `knitr`
 
 </details>
-
 <br>
+---
 <a id="centro-de-control-de-configuración-json"></a>
 
 ## ⚙️ $\color{#8B0000}{\text{5. Centro de Control de Configuración (📁 JSON/)}}$
@@ -442,9 +440,8 @@ El pipeline (`run_enrichment_plots`) genera automáticamente una suite gráfica 
 **📄 Reporte Final (`run_final_pdf_reports`)**: Ejecuta g:Profiler (multifuente GO/KEGG/REAC) y compila el `Informe_Transcriptomica_Completo.pdf` (TOC, Volcano Plots y tablas paginadas).
 
 </details>
-
 <br>
-
+---
 <a id="requisitos-de-metadatos-metadata_archivos"></a>
 
 ## 📄 $\color{#8B0000}{\text{6. Requisitos de Metadatos (MetadataArchivos/)}}$
@@ -466,8 +463,8 @@ Este archivo actúa como la **llave maestra** que conecta los archivos crudos co
 >
 > El pipeline incluye un módulo de seguridad que genera un archivo `metadata_corregido.csv`. Este proceso detecta y corrige caracteres inválidos en los nombres de las muestras (ej. reemplaza guiones `-` por puntos `.`) para asegurar la compatibilidad total con **R**.
 > 
-
 <br>
+---
 <a id="arquitectura-del-sistema"></a>
 
 ## 🏗️ $\color{#8B0000}{\text{7. Arquitectura del Sistema}}$
@@ -525,7 +522,7 @@ Esta capa transforma los datos crudos en conocimiento biológico mediante cuatro
 
 </details>
 <br>
-
+---
 <a id="estructura-global-de-resultados-output-tree"></a>
 
 ## 📂 $\color{#8B0000}{\text{8. Estructura Global de Resultados (Output Tree)}}$
@@ -624,9 +621,8 @@ Una vez generadas las matrices, entran en acción los módulos de R:
 Finalmente Python vuelve a intervenir para generar el reporte de **MULTIQC**, que unifica las métricas de calidad de todas las herramientas (FastQC, Trimmomatic, STAR, HISAT2 y featureCounts), permitiendo al investigador validar la robustez técnica de la ejecución y justificar estadísticamente cualquier decisión de exclusión de muestras antes de la interpretación biológica.
 
 </details>
-
 <br>
-
+---
 <a id="autoría-impacto-y-colaboración"></a>
 
 
