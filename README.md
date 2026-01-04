@@ -62,7 +62,6 @@ cd OmniRNA-seq
 
 # ✅ POR SU RUTA REAL (Ejemplo):
 HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
-
 ```
 </details>
 <br>
