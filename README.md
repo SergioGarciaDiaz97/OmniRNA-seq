@@ -18,7 +18,6 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
   <small><em>* Incluye gráficos comparativos, p-values replicados y análisis de rutas biológicas.</em></small>
 </div>
 
-<br>
 
 ## 📚 Índice
 _Haz clic en cualquier apartado para ir directamente a la sección._
@@ -40,7 +39,7 @@ _Haz clic en cualquier apartado para ir directamente a la sección._
 
 ## 🛠️ $\color{#8B0000}{\text{0. Instalación y Despliegue}}$
 
-OmniRNA-seq está diseñado bajo una filosofía **"Zero-Config"** para entornos HPC. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
+OmniRNA-seq está diseñado para entornos HPC. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
 
 ### $\color{#000080}{\text{🏗️ Guía de Instalación Rápida}}$
 
