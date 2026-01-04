@@ -72,7 +72,8 @@ echo "🐳 Usando motor de contenedor: $APPTAINER_CMD"
 # --- 4. Dependencias de Python ---
 # Aseguramos que las librerías necesarias para el orquestador estén presentes
 echo "🐍 [PYTHON] Verificando dependencias mínimas..."
-python3 -m pip install --user --quiet pandas requests argparse
+#  beautifulsoup4 y lxml para el experiment_profiler.py
+python3 -m pip install --user --quiet pandas requests argparse beautifulsoup4 lxml
 
 # --- 5. Ejecución del Script Maestro ---
 echo "🚀 [START] Iniciando el orquestador del pipeline..."
