@@ -22,7 +22,7 @@ El sistema es agnóstico al organismo, con soporte nativo y flujos de anotación
 
 ## 🛠️ **Instalación y Despliegue**
 
-OmniRNA-seq está diseñado bajo una filosofía **"Zero-Config"** para entornos HPC. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
+OmniRNA-seq está diseñado para entornos ***HPC***. A diferencia de otros pipelines, **no requiere la instalación manual de entornos Conda**, ya que el orquestador gestiona automáticamente sus dependencias ligeras (Python) en el espacio de usuario y delega el procesamiento pesado a contenedores inmutables (Apptainer).
 
 ### 🏗️ **Guía de Instalación Rápida**
 
@@ -35,7 +35,6 @@ Clonar el repositorio descargará la estructura de directorios completa (`JSON/`
 ```bash
 git clone [https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git](https://github.com/SergioGarciaDiaz97/OmniRNA-seq.git)
 cd OmniRNA-seq
-```
 ```
 
 
