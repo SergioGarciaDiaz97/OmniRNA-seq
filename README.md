@@ -58,8 +58,10 @@ cd OmniRNA-seq
 </details>
 
 <details><summary>$\Large \color{#2E8B57}{\textbf{2. Configuración de Rutas}}$</summary>Para que el sistema funcione en su infraestructura, es obligatorio definir su directorio de trabajo en el script lanzador.Abra el archivo RNA_SEQ_LETS_TRY.sh con un editor de texto.Busque la variable HOME_BEEGFS (aprox. línea 45).Sustituya la ruta de ejemplo por la ruta real de su usuario en el Cluster.Ejemplo dentro de RNA_SEQ_LETS_TRY.sh:
-```text  
-Bash# ❌ CAMBIAR ESTO:
+  
+```
+bash
+# ❌ CAMBIAR ESTO:
 # HOME_BEEGFS="/path/to/your/home/directory"
 # ✅ POR SU RUTA REAL (Ejemplo):
 HOME_BEEGFS="/mnt/beegfs/home/su_usuario_aqui"
