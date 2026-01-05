@@ -190,6 +190,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 </div>
 ---
+
 <br>
 ## 🗺️ $\color{#8B0000}{\text{B. Modo Explorer}}$
 
