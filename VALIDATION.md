@@ -207,7 +207,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 ---
 
 <details>
-<summary><strong>📕 A. Contexto y Expectativas (Estudio de Referencia) - <i>Click para desplegar</i></strong></summary>
+<summary><strong>📕 A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
 <br>
 
 El análisis de expresión diferencial capturó con éxito la firma transcriptómica de infección por SARS-CoV-2 en líneas celulares pulmonares (Calu-3 y A549). A continuación se presentan los principales genes modulados con sus valores Log2FC:
