@@ -230,23 +230,23 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 | ----------------------------- | --------- | ------------------------- | --------------------------------------- | ------------------------------------------------------------------------------- |
 | 🚨 Interferón Tipo I          | Activo    | IFNB1 (+8.70)               | IFNB1 (+8.70)                           | Tormenta IFNβ extrema. Maestro antiviral. ppl-ai-file-upload.s3.amazonaws​      |
 | 🛡️ Interferón Tipo III       | Activo    | IFNL2 (+7.88) IFNL3 (+7.47) IFNL1 (+7.24)               | IFNL2 (+7.88) IFNL3 (+7.47) IFNL1 (+7.24) | Defensa mucosal IFN-λ. Firma COVID clásica. ppl-ai-file-upload.s3.amazonaws​    |
-| 🔥 Citocinas Proinflamatorias | Activo    | TNF (+6.96) IL6 (+5.94) IL1A (+3.20)               | TNF (+6.96) IL6 (+5.94) IL1A (+3.20)    | Tormenta citocinas sistémica. ppl-ai-file-upload.s3.amazonaws​                  |
-| 🧲 Reclutamiento Inmune       | Activo    | CXCL10 (+5.88) CSF2 (+6.46) ICAM1 (+2.40)       | CXCL10 (+5.88) CSF2 (+6.46) ICAM1 (+2.40) | Infiltrado T-cells/macrófagos. ppl-ai-file-upload.s3.amazonaws​                 |
-| 🎯 Vigilancia NK              | Activo    | ULBP1 (+2.90) PTX3 (+2.80)           | ULBP1 (+2.90) PTX3 (+2.80)               | Citotoxicidad NK activada. ppl-ai-file-upload.s3.amazonaws​                     |
+| 🔥 Citocinas Proinflamatorias | Activo    | TNF (+6.96) IL6 (+5.94) IL1A (+5.15)               | TNF (+6.96) IL6 (+5.94) IL1A (+)    | Tormenta citocinas sistémica. ppl-ai-file-upload.s3.amazonaws​                  |
+| 🧲 Reclutamiento Inmune       | Activo    | CXCL10 (+5.88) CSF2 (+6.46) ICAM1 (+3.61)       | CXCL10 (+5.88) CSF2 (+6.46) ICAM1 () | Infiltrado T-cells/macrófagos. ppl-ai-file-upload.s3.amazonaws​                 |
+| 🎯 Vigilancia NK              | Activo    | ULBP1 (+2.99) PTX3 (+3.49)           | ULBP1 (+) PTX3 (+)               | Citotoxicidad NK activada. ppl-ai-file-upload.s3.amazonaws​                     |
 | 🛡️ Bloqueo Viral             | Activo    | CH25H (+6.57)                   | CH25H (+6.57)                           | Oxisteroles alteran membranas virales. ppl-ai-file-upload.s3.amazonaws​         |
-| 🔒 Barrera Epitelial          | Reprimido | CLDN2 (-3.47) TJP1 (-2.35)               | CLDN2 (-3.47) TJP1 (-2.35)               | Ruptura tight junctions. Edema pulmonar. ppl-ai-file-upload.s3.amazonaws​       |
-| 🧬 Identidad Epitelial        | Reprimido | SCGN (-3.10) KRT7 (-2.30) MUC1 (-2.20)                  | SCGN (-3.10) KRT7 (-2.30) MUC1 (-2.20)  | Desdiferenciación + pérdida mucina protectora. ppl-ai-file-upload.s3.amazonaws​ |
+| 🔒 Barrera Epitelial          | Reprimido | CLDN2 (-3.47)              | CLDN2 (-3.47)            | Ruptura tight junctions. Edema pulmonar. ppl-ai-file-upload.s3.amazonaws​       |
+| 🧬 Identidad Epitelial        | Reprimido | SCGN (-3.10)                | SCGN (-3.10) | Desdiferenciación + pérdida mucina protectora. ppl-ai-file-upload.s3.amazonaws​ |
 | 📡 Señalización GPCR          | Reprimido | NPBWR1 (-2.82) KCNK2 (-2.44)                  | NPBWR1 (-2.82) KCNK2 (-2.44)             | Comunicación/homeostasis iónica colapsada. ppl-ai-file-upload.s3.amazonaws​     |
 | 🧪 Metabolismo Basal          | Reprimido | METTL7A (-2.75) DDC (-2.39)                | METTL7A (-2.75) DDC (-2.39)              | Detox + rutas aminas reprogramadas. ppl-ai-file-upload.s3.amazonaws​            |
 | 🏗️ Citoesqueleto/Estructura  | Reprimido | NEB (-2.71) ANXA13 (-2.43)                  | NEB (-2.71) ANXA13 (-2.43)               | Arquitectura celular destruida. ppl-ai-file-upload.s3.amazonaws​                |
-| 🧱 Membrana/Microdominios     | Reprimido | TM4SF4 (-2.45) CAV1 (-2.95)                 | TM4SF4 (-2.45) CAV1 (-2.95)              | Reorganización favorece virus. ppl-ai-file-upload.s3.amazonaws​                 |
+| 🧱 Membrana/Microdominios     | Reprimido | TM4SF4 (-2.45)                 | TM4SF4 (-2.45)               | Reorganización favorece virus. ppl-ai-file-upload.s3.amazonaws​                 |
 | 🚚 Transporte Vesicular       | Reprimido | SYT12 (-2.45) EPN3 (-2.19)                | SYT12 (-2.45) EPN3 (-2.19)               | Endocitosis/secreción bloqueada. ppl-ai-file-upload.s3.amazonaws​               |
 | 🧬 Procesamiento RNA          | Reprimido | SNRNP25 (-2.06) MXD3 (-2.30)                | SNRNP25 (-2.06) MXD3 (-2.30)             | Splicing + proliferación suprimidos. ppl-ai-file-upload.s3.amazonaws​           |
 | 💻 Regulación Epigenética     | Reprimido | C1QTNF9B-AS1 (-2.12)           | C1QTNF9B-AS1 (-2.12)                    | lncRNA alterados. ppl-ai-file-upload.s3.amazonaws​                              |
-| 🛢️ Lipidos/Colesterol        | Reprimido | ABCG5 (-2.09) FABP5 (-4.20)                   | ABCG5 (-2.09) FABP5 (-4.20)              | Transporte lipídico colapsado. ppl-ai-file-upload.s3.amazonaws​                 |
+| 🛢️ Lipidos/Colesterol        | Reprimido | ABCG5 (-2.09)                 | ABCG5 (-2.09)           | Transporte lipídico colapsado. ppl-ai-file-upload.s3.amazonaws​                 |
 | 🧬 Reparación ADN             | Reprimido | H2AFX (-2.05)                    | H2AFX (-2.05)                           | Vulnerabilidad genómica aumentada. ppl-ai-file-upload.s3.amazonaws​             |
 | 🧬 Organización Nuclear       | Reprimido | LRRC45 (-2.31)                | LRRC45 (-2.31)                          | Centrosomas/núcleo desorganizados. ppl-ai-file-upload.s3.amazonaws​             |
-| 🧬 Diferenciación Wnt         | Reprimido | SOSTDC1 (-2.19)               | SOSTDC1 (-2.19)                         | Remodelado tisular inhibido. ppl-ai-file-upload.s3.amazonaws​                   |
+| 🧬 Diferenciación Wnt         | Reprimido | SOSTDC1 (-2.19)               | SOSTDC1 (-)                         | Remodelado tisular inhibido.                |
 
 
 
