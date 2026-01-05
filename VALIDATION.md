@@ -51,7 +51,6 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 | **🎯 Centrómero y Cinetocoro** | **DESMANTELADO** ⬇️ | **CENPA** (-2.05)<br>**CENPE** (-1.57)<br>**CENPF** (-1.74)<br>**NDC80** (-1.81) | **Pérdida de Identidad:** CENPA define el centro del cromosoma y NDC80 es el gancho del microtúbulo. Su caída indica una pérdida de la integridad cromosómica estructural. |
 
 </details>
-
 <details>
 <summary>
   <strong>
