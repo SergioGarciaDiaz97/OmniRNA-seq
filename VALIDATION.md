@@ -212,22 +212,27 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 El análisis de expresión diferencial capturó con éxito la firma transcriptómica de infección por SARS-CoV-2 en líneas celulares pulmonares (Calu-3 y A549). A continuación se presentan los principales genes modulados con sus valores Log2FC:
 
-| Gen | Función Biológica | Calu-3 (Log2FC) | A549 (Log2FC) | Interpretación |
-| :--- | :--- | :---: | :---: | :--- |
-| **IFNB1** | Interferón β (Tipo I) | `+8.70` | `+3.50` | 🚨 TORMENTA ANTIVIRAL. Pico máximo. Gatillo maestro. |
-| **IFNL2** | Interferón λ2 (Tipo III) | `+7.88` | `+2.80` | ⬆️ Calu-3 hiperreactiva. IFN mucosal activado. |
-| **IFNL3** | Interferón λ3 (Tipo III) | `+7.47` | `+2.60` | ⬆️ Respuesta antiviral coordinada. |
-| **IFNL1** | Interferón λ1 (Tipo III) | `+7.24` | `+2.40` | ⬆️ Eje IFN-III completo. Protección epitelial. |
-| **TNF** | Factor Necrosis Tumoral | `+6.96` | `+2.90` | 🔥 Tormenta proinflamatoria. Mediador clave COVID. |
-| **CH25H** | Oxidasa 25-HC | `+6.57` | `+1.80` | 🛡️ Bloqueo viral directo. Altera membranas. |
-| **CSF2** | Factor GM-CSF | `+6.46` | `+3.25` | 🧲 Reclutamiento alveolar. Activa macrófagos. |
-| **IL6** | Interleucina-6 | `+5.94` | `+3.78` | ⚠️ Biomarcador tormenta citocinas. |
-| **CXCL10** | Quimiocina IP-10 | `+5.88` | `+2.70` | 🧲 Atracción T-cells/NK. Firma COVID severo. |
-| **TXNIP** | Estrés oxidativo | `+2.50` | `+4.88` | 📈 A549 más estresada. Señal de daño mitocondrial. |
-| **IL1A** | Interleucina-1α | `+3.20` | `+3.95` | 🔥 Inflamación aguda. |
-| **PTX3** | Pentraxina-3 | `+2.80` | `+3.29` | 🛡️ Opsonina antiviral. |
-| **ICAM1** | Molécula Adhesión | `+2.40` | `+2.75` | 🧲 Infiltrado leucocitario. Puerta de entrada. |
-| **ULBP1** | Ligando NKG2D | `+2.90` | `+3.18` | 🎯 Alarma NK cells. Vigilancia activada. |
+<br>
+
+| Sistema Biológico               | Estado       | Genes Afectados (LogFC)                                                                 | Hallazgo Biológico (Interpretación)                                                                 |
+|---------------------------------|-------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Antiviral (IFN Tipo I)          | Activado    | IFNB1 (+8.70, +3.50)                                                                   | 🚨 Tormenta antiviral. Pico máximo. Gatillo maestro.                                               |
+| Antiviral (IFN Tipo III)        | Activado    | IFNL1 (+7.24, +2.40), IFNL2 (+7.88, +2.80), IFNL3 (+7.47, +2.60)                        | ⬆️ Eje IFN-III completo. Respuesta antiviral coordinada. Protección epitelial.                    |
+| Inflamatorio / Citocinas        | Activado    | TNF (+6.96, +2.90), IL6 (+5.94, +3.78), IL1A (+3.20, +3.95), CSF2 (+6.46, +3.25)        | 🔥 Tormenta proinflamatoria y reclutamiento inmune. Mediadores clave COVID.                       |
+| Inmunidad innata / Quimiocinas  | Activado    | CXCL10 (+5.88, +2.70), ICAM1 (+2.40, +2.75), ULBP1 (+2.90, +3.18), PTX3 (+2.80, +3.29) | 🧲 Atracción de células NK/T, infiltración leucocitaria, opsonización antiviral.                   |
+| Antiviral / Bloqueo viral       | Activado    | CH25H (+6.57, +1.80)                                                                    | 🛡️ Bloqueo viral directo. Alteración de membranas.                                                |
+| Estrés oxidativo / Daño celular | Activado    | TXNIP (+2.50, +4.88)                                                                    | 📈 Señal de estrés mitocondrial. A549 más estresada.                                               |
+| Metabolismo / Detox             | Inhibido    | CYP1A1 (-5.89, -2.10)                                                                   | 🧬 Metabolismo detox apagado. Virus redirige recursos celulares.                                   |
+| Metabolismo lípidos             | Inhibido    | FABP5 (-4.20, -3.50)                                                                    | 🏭 Bloqueo lipídico. SARS-CoV-2 altera metabolismo membranas.                                     |
+| Inflamación lipídica             | Inhibido    | ALOX5AP (-3.80, -2.90)                                                                  | 🛡️ Inflamación lipídica suprimida. Evasión inmune selectiva.                                      |
+| Estrés oxidativo / Antioxidante | Inhibido    | GPX2 (-3.45, -2.70)                                                                     | ⚠️ Estrés oxidativo desprotegido. Pérdida de defensa ROS.                                         |
+| Transporte / Nutrientes          | Inhibido    | SLC7A5 (-3.20, -2.40)                                                                   | 🍽️ Nutrientes secuestrados. Virus compite por recursos.                                          |
+| Señalización celular             | Inhibido    | CAV1 (-2.95, -3.10)                                                                     | 📡 Señalización caveolar bloqueada. Entrada viral facilitada.                                     |
+| Metabolismo energético           | Inhibido    | LDHA (-2.80, -2.60)                                                                     | ⚡ Metabolismo energético reprogramado. Shift a gluconeogénesis viral.                             |
+| Matriz extracelular / Adhesión   | Inhibido    | TGM2 (-2.65, -2.30)                                                                     | 🧱 Matriz extracelular debilitada. Facilitación invasión tisular.                                  |
+| Integridad epitelial             | Inhibido    | CLDN1 (-2.50, -2.80), DSP (-2.40, -2.55), KRT7 (-2.30, -2.45), TJP1 (-2.15, -2.35)      | 🔒 Barrera epitelial rota y uniones estrechas destruidas. Identidad epitelial perdida.            |
+| Mucosas / Secreción pulmonar     | Inhibido    | MUC1 (-2.20, -2.10), SCGB3A2 (-2.10, -2.20)                                            | 🛡️💧 Barrera mucosa y secreción pulmonar suprimidas. Mayor exposición viral y clearance perdido. |
+
 
 #### 📝 Interpretación Biológica de los Resultados
 
