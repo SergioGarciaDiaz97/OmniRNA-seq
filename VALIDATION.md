@@ -259,7 +259,7 @@ El estudio demuestra que la infección viral induce una activación masiva de la
 </summary>
 
 
-El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó con éxito una firma transcriptómica característica de **respuesta antiviral exacerbada y colapso funcional del epitelio y del metabolismo celular**. A continuación se presentan los principales genes modulados; los valores de **Log2FC** correspondientes al estudio COVID se dejan como referencia editable:
+El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó con éxito una firma transcriptómica característica de **respuesta antiviral exacerbada y colapso funcional del epitelio y del metabolismo celular**. A continuación se representan los principales genes modulados con sus valores **Log2FC** para ***A549*** y ***Calu-3***:
 
 | Gen | Función Biológica | Calu-3 (Log2FC) |  A549 (Log2FC) | Interpretación |
 |----|------------------|------------------|------------------|----------------|
