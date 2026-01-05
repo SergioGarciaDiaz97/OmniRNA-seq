@@ -52,9 +52,6 @@ El estudio de referencia demuestra que **DDX21** es crítica para la biogénesis
 
 </details>
 
-
----
-
 <details>
 <summary>
   <strong>
@@ -187,6 +184,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 </details>
 
 </div>
+
 ---
 
 <br>
