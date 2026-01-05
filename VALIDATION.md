@@ -210,7 +210,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 <summary><strong>📕 A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
 <br>
 
-El análisis de expresión diferencial capturó con éxito la firma transcriptómica de infección por SARS-CoV-2 en líneas celulares pulmonares (Calu-3 y A549). A continuación se presentan los principales genes modulados con sus valores Log2FC:
+El estudio demuestra que la infección viral induce una activación masiva de la respuesta inmune innata y antiviral, evidenciada por la sobreexpresión de interferones tipo I y III (IFNB1, IFNL1-3), citocinas proinflamatorias (TNF, IL6, IL1A) y quimiocinas de reclutamiento leucocitario (CXCL10, ICAM1, ULBP1, PTX3), junto con la activación de mecanismos de bloqueo viral directo (CH25H) y estrés oxidativo (TXNIP). Paralelamente, se observa una inhibición coordinada de rutas críticas para el metabolismo celular, la homeostasis antioxidante y la integridad epitelial, incluyendo genes de detoxificación y metabolismo energético (CYP1A1, FABP5, LDHA, GPX2, SLC7A5), señalización y matriz extracelular (CAV1, TGM2) y barreras epiteliales y mucosas (CLDN1, DSP, KRT7, TJP1, MUC1, SCGB3A2). Esta firma molecular refleja un perfil dual, donde la activación de la defensa antiviral se combina con la supresión de funciones celulares esenciales, creando un entorno que favorece la replicación viral mientras intenta contener la infección. A continuación se presentan los principales genes modulados con sus valores Log2FC:
 
 <br>
 
@@ -234,15 +234,5 @@ El análisis de expresión diferencial capturó con éxito la firma transcriptó
 | Mucosas / Secreción pulmonar     | Inhibido    | MUC1 (-2.20, -2.10), SCGB3A2 (-2.10, -2.20)                                            | 🛡️💧 Barrera mucosa y secreción pulmonar suprimidas. Mayor exposición viral y clearance perdido. |
 
 
-#### 📝 Interpretación Biológica de los Resultados
-
-Los datos revelan una respuesta antiviral/inflamatoria altamente coordinada ante SARS-CoV-2, con dos perfiles celulares diferenciados:
-
-1.  **Calu-3 (hiperreactiva):** Tormenta masiva de interferones (**IFNB1 +8.7**, **IFNLs >+7**) + eje proinflamatorio extremo (**TNF +6.96**, **IL6 +5.94**). Refleja un epitelio alveolar altamente competente en detección viral, disparando programas antivirales potentes.
-2.  **A549 (moderada):** Misma firma pero amplitud 2x menor, con mayor énfasis en estrés oxidativo (**TXNIP +4.88**) y reclutamiento (PTX3, ICAM1). Consistente con menor eficiencia replicativa del virus en esta línea.
-
-> **💡 Hallazgo clave:** La desproporción Calu-3 vs A549 (logFC 2-3x mayor) explica diferencias en tropismo pulmonar y gravedad clínica. Los IFN tipo III (λ) dominan en ambas, confirmando su rol protector mucosal en epitelio respiratorio.
-
-La consistencia de la firma `IFN` → `citocinas` → `quimiocinas` valida el modelo experimental y reproduce fielmente la biología de COVID-19 observada *in vivo*.
 
 </details>
