@@ -229,19 +229,19 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 | Sistema Biológico             | Estado    | Blanco-Melo Genes (LogFC) | OmniRNA-seq Genes (LogFC)               | Hallazgo Biológico                                                              |
 | :-----------------------------: | :---------: | :-------------------------: | :---------------------------------------: | :-------------------------------------------------------------------------------: |
 | 🚨 Interferón Tipo I          | Activo    | IFNB1 (+8.70)               | IFNB1 (+10.00)                           | Tormenta IFNβ extrema. Maestro antiviral.        |
-| 🛡️ Interferón Tipo III       | Activo    | IFNL2 (+7.88) IFNL3 (+7.47) IFNL1 (+7.24)               | IFNL2 (+11.37) IFNL3 (+9.84) IFNL1 (+8.18) | Defensa mucosal IFN-λ. Firma COVID clásica.      |
-| 🔥 Citocinas Proinflamatorias | Activo    | TNF (+6.96) IL6 (+5.94) IL1A (+5.15)               | TNF (+7.71) IL6 (+6.06) IL1A (+5.23)    | Tormenta citocinas sistémica.                    |
-| 🧲 Reclutamiento Inmune       | Activo    | CXCL10 (+5.88) CSF2 (+6.46) ICAM1 (+3.61)       | CXCL10 (+6.08) CSF2 (+7.04) ICAM1 (+3.65) | Infiltrado T-cells/macrófagos.                   |
-| 🎯 Vigilancia NK              | Activo    | ULBP1 (+2.99) PTX3 (+3.49)           | ULBP1 (+3.14) PTX3 (+3.61)               | Citotoxicidad NK activada.                       |
+| 🛡️ Interferón Tipo III       | Activo    | IFNL2 (+7.88), IFNL3 (+7.47), IFNL1 (+7.24)               | IFNL2 (+11.37), IFNL3 (+9.84), IFNL1 (+8.18) | Defensa mucosal IFN-λ. Firma COVID clásica.      |
+| 🔥 Citocinas Proinflamatorias | Activo    | TNF (+6.96), IL6 (+5.94), IL1A (+5.15)               | TNF (+7.71), IL6 (+6.06), IL1A (+5.23)    | Tormenta citocinas sistémica.                    |
+| 🧲 Reclutamiento Inmune       | Activo    | CXCL10 (+5.88), CSF2 (+6.46), ICAM1 (+3.61)       | CXCL10 (+6.08), CSF2 (+7.04), ICAM1 (+3.65) | Infiltrado T-cells/macrófagos.                   |
+| 🎯 Vigilancia NK              | Activo    | ULBP1 (+2.99), PTX3 (+3.49)           | ULBP1 (+3.14), PTX3 (+3.61)               | Citotoxicidad NK activada.                       |
 | 🛡️ Bloqueo Viral             | Activo    | CH25H (+6.57)                   | CH25H (+7.82)                           | Oxisteroles alteran membranas virales.           |
 | 🔒 Barrera Epitelial          | Reprimido | CLDN2 (-3.47)              | CLDN2 (-3.59)            | Ruptura tight junctions. Edema pulmonar.         |
 | 🧬 Identidad Epitelial        | Reprimido | SCGN (-3.10)                | SCGN (-3.47) | Desdiferenciación + pérdida mucina protectora.   |
-| 📡 Señalización GPCR          | Reprimido | NPBWR1 (-2.82) KCNK2 (-2.44)                  | NPBWR1 (-5.07) KCNK2 (-3.58)             | Comunicación/homeostasis iónica colapsada.       |
-| 🧪 Metabolismo Basal          | Reprimido | METTL7A (-2.75) DDC (-2.39)                | METTL7A (-3.11) DDC (-2.58)              | Detox + rutas aminas reprogramadas.              |
-| 🏗️ Citoesqueleto/Estructura  | Reprimido | NEB (-2.71) ANXA13 (-2.43)                  | NEB (-2.75) ANXA13 (-2.86)               | Arquitectura celular destruida.                  |
-| 🧱 Membrana/Microdominios     | Reprimido | TM4SF4 (-2.45)                 | TM4SF4 (-2.48)               | Reorganización favorece virus.                   |
-| 🚚 Transporte Vesicular       | Reprimido | SYT12 (-2.45) EPN3 (-2.19)                | SYT12 (-2.64) EPN3 (-2.29)               | Endocitosis/secreción bloqueada.                 |
-| 🧬 Procesamiento RNA          | Reprimido | SNRNP25 (-2.06) MXD3 (-2.30)                | SNRNP25 (-2.13) MXD3 (-2.43)             | Splicing + proliferación suprimidos.             |
+| 📡 Señalización GPCR          | Reprimido | NPBWR1 (-2.82), KCNK2 (-2.44)                  | NPBWR1 (-5.07), KCNK2 (-3.58)             | Comunicación/homeostasis iónica colapsada.       |
+| 🧪 Metabolismo Basal          | Reprimido | METTL7A (-2.75), DDC (-2.39)                | METTL7A (-3.11), DDC (-2.58)              | Detox + rutas aminas reprogramadas.              |
+| 🏗️ Citoesqueleto/Estructura  | Reprimido | NEB (-2.71), ANXA13 (-2.43)                  | NEB (-2.75), ANXA13 (-2.86)               | Arquitectura celular destruida.                  |
+| 🧱 Membrana/Microdominios     | Reprimido | TM4SF4 (-2.45),                 | TM4SF4 (-2.48)               | Reorganización favorece virus.                   |
+| 🚚 Transporte Vesicular       | Reprimido | SYT12 (-2.45), EPN3 (-2.19)                | SYT12 (-2.64), EPN3 (-2.29)               | Endocitosis/secreción bloqueada.                 |
+| 🧬 Procesamiento RNA          | Reprimido | SNRNP25 (-2.06), MXD3 (-2.30)                | SNRNP25 (-2.13), MXD3 (-2.43)             | Splicing + proliferación suprimidos.             |
 | 🛢️ Lipidos/Colesterol        | Reprimido | ABCG5 (-2.09)                 | ABCG5 (-4.97)           | Transporte lipídico colapsado.                   |
 | 🧬 Reparación ADN             | Reprimido | H2AFX (-2.05)                    | H2AFX (-2.13)                           | Vulnerabilidad genómica aumentada.               |
 | 🧬 Organización Nuclear       | Reprimido | LRRC45 (-2.31)                | LRRC45 (-2.45)                          | Centrosomas/núcleo desorganizados.               |
