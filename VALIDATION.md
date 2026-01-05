@@ -224,24 +224,36 @@ El estudio demuestra que la infección viral induce una activación masiva de la
 
 <br>
 
-| Sistema Biológico               | Estado       | Genes Afectados (LogFC)                                                                 | Hallazgo Biológico (Interpretación)                                                                 |
-|---------------------------------|-------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Antiviral (IFN Tipo I)          | Activado    | IFNB1 (+8.70, +3.50)                                                                   | 🚨 Tormenta antiviral. Pico máximo. Gatillo maestro.                                               |
-| Antiviral (IFN Tipo III)        | Activado    | IFNL1 (+7.24, +2.40), IFNL2 (+7.88, +2.80), IFNL3 (+7.47, +2.60)                        | ⬆️ Eje IFN-III completo. Respuesta antiviral coordinada. Protección epitelial.                    |
-| Inflamatorio / Citocinas        | Activado    | TNF (+6.96, +2.90), IL6 (+5.94, +3.78), IL1A (+3.20, +3.95), CSF2 (+6.46, +3.25)        | 🔥 Tormenta proinflamatoria y reclutamiento inmune. Mediadores clave COVID.                       |
-| Inmunidad innata / Quimiocinas  | Activado    | CXCL10 (+5.88, +2.70), ICAM1 (+2.40, +2.75), ULBP1 (+2.90, +3.18), PTX3 (+2.80, +3.29) | 🧲 Atracción de células NK/T, infiltración leucocitaria, opsonización antiviral.                   |
-| Antiviral / Bloqueo viral       | Activado    | CH25H (+6.57, +1.80)                                                                    | 🛡️ Bloqueo viral directo. Alteración de membranas.                                                |
-| Estrés oxidativo / Daño celular | Activado    | TXNIP (+2.50, +4.88)                                                                    | 📈 Señal de estrés mitocondrial. A549 más estresada.                                               |
-| Metabolismo / Detox             | Inhibido    | CYP1A1 (-5.89, -2.10)                                                                   | 🧬 Metabolismo detox apagado. Virus redirige recursos celulares.                                   |
-| Metabolismo lípidos             | Inhibido    | FABP5 (-4.20, -3.50)                                                                    | 🏭 Bloqueo lipídico. SARS-CoV-2 altera metabolismo membranas.                                     |
-| Inflamación lipídica             | Inhibido    | ALOX5AP (-3.80, -2.90)                                                                  | 🛡️ Inflamación lipídica suprimida. Evasión inmune selectiva.                                      |
-| Estrés oxidativo / Antioxidante | Inhibido    | GPX2 (-3.45, -2.70)                                                                     | ⚠️ Estrés oxidativo desprotegido. Pérdida de defensa ROS.                                         |
-| Transporte / Nutrientes          | Inhibido    | SLC7A5 (-3.20, -2.40)                                                                   | 🍽️ Nutrientes secuestrados. Virus compite por recursos.                                          |
-| Señalización celular             | Inhibido    | CAV1 (-2.95, -3.10)                                                                     | 📡 Señalización caveolar bloqueada. Entrada viral facilitada.                                     |
-| Metabolismo energético           | Inhibido    | LDHA (-2.80, -2.60)                                                                     | ⚡ Metabolismo energético reprogramado. Shift a gluconeogénesis viral.                             |
-| Matriz extracelular / Adhesión   | Inhibido    | TGM2 (-2.65, -2.30)                                                                     | 🧱 Matriz extracelular debilitada. Facilitación invasión tisular.                                  |
-| Integridad epitelial             | Inhibido    | CLDN1 (-2.50, -2.80), DSP (-2.40, -2.55), KRT7 (-2.30, -2.45), TJP1 (-2.15, -2.35)      | 🔒 Barrera epitelial rota y uniones estrechas destruidas. Identidad epitelial perdida.            |
-| Mucosas / Secreción pulmonar     | Inhibido    | MUC1 (-2.20, -2.10), SCGB3A2 (-2.10, -2.20)                                            | 🛡️💧 Barrera mucosa y secreción pulmonar suprimidas. Mayor exposición viral y clearance perdido. |
+## 📊 Dinámica de Sistemas – SARS-CoV-2 en Calu-3
+
+| Sistema Biológico | Estado | Genes Afectados (Log2FC) | Hallazgo Biológico (Interpretación) |
+|------------------|--------|--------------------------|-------------------------------------|
+| Antiviral (IFN Tipo I) | Activado | IFNB1 (+8.70) | 🚨 Tormenta antiviral. Pico máximo. Gatillo maestro. |
+| Antiviral (IFN Tipo III) | Activado | IFNL1 (+7.24), IFNL2 (+7.88), IFNL3 (+7.47) | ⬆️ Eje IFN-III completo. Respuesta antiviral coordinada. Protección epitelial. |
+| Inflamatorio / Citocinas | Activado | TNF (+6.96), IL6 (+5.94), IL1A (+3.20), CSF2 (+6.46) | 🔥 Tormenta proinflamatoria y reclutamiento inmune. Mediadores clave COVID. |
+| Inmunidad innata / Quimiocinas | Activado | CXCL10 (+5.88), ICAM1 (+2.40), ULBP1 (+2.90), PTX3 (+2.80) | 🧲 Atracción de células NK/T, infiltración leucocitaria, opsonización antiviral. |
+| Antiviral / Bloqueo viral | Activado | CH25H (+6.57) | 🛡️ Bloqueo viral directo. Alteración de membranas. |
+| Integridad epitelial | Inhibido | CLDN2 (-3.47) | 🔒 Colapso severo de uniones epiteliales. |
+| Diferenciación celular | Inhibido | SCGN (-3.10) | 🧬 Pérdida de identidad celular. |
+| Señalización GPCR | Inhibido | NPBWR1 (-2.82) | 📡 Comunicación celular apagada. |
+| Metabolismo celular | Inhibido | METTL7A (-2.75) | ⚙️ Metabolismo basal reprimido. |
+| Citoesqueleto / estructura | Inhibido | NEB (-2.71) | 🧱 Desorganización estructural extrema. |
+| Membrana / tetraspaninas | Inhibido | TM4SF4 (-2.45) | 🧫 Alteración de arquitectura de membrana. |
+| Vesículas / secreción | Inhibido | SYT12 (-2.45) | 💧 Tráfico vesicular comprometido. |
+| Canales iónicos | Inhibido | KCNK2 (-2.44) | ⚡ Homeostasis iónica alterada. |
+| Epitelio especializado | Inhibido | ANXA13 (-2.43) | 🔻 Función epitelial especializada perdida. |
+| Metabolismo neurotransmisores | Inhibido | DDC (-2.39) | 🧠 Ejes metabólicos secundarios reprimidos. |
+| Regulación transcripcional | Inhibido | LOC389332 (-2.37) | ❓ Represión transcripcional robusta. |
+| Organización nuclear | Inhibido | LRRC45 (-2.31) | 🧬 Arquitectura nuclear alterada. |
+| Control proliferativo | Inhibido | MXD3 (-2.30) | ⛔ Programas de crecimiento reprimidos. |
+| Regulación génica | Inhibido | C9orf116 (-2.24) | 📉 Red regulatoria apagada. |
+| Señalización Wnt | Inhibido | SOSTDC1 (-2.19) | 🧩 Diferenciación y señalización suprimidas. |
+| Endocitosis | Inhibido | EPN3 (-2.19) | 📦 Transporte vesicular bloqueado. |
+| Metabolismo no caracterizado | Inhibido | KIAA1456 (-2.18) | ⚙️ Ruta metabólica reprimida. |
+| Regulación epigenética (lncRNA) | Inhibido | C1QTNF9B-AS1 (-2.12) | 🧬 Control epigenético alterado. |
+| Transporte lipídico | Inhibido | ABCG5 (-2.09) | 🏭 Homeostasis lipídica colapsada. |
+| Splicing | Inhibido | SNRNP25 (-2.06) | ✂️ Procesamiento de RNA comprometido. |
+| Daño en ADN | Inhibido | H2AFX (-2.05) | 🚨 Vulnerabilidad genómica elevada. |
 
 
 
