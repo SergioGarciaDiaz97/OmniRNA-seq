@@ -261,7 +261,7 @@ El estudio demuestra que la infección viral induce una activación masiva de la
 
 El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó con éxito una firma transcriptómica característica de **respuesta antiviral exacerbada y colapso funcional del epitelio y del metabolismo celular**. A continuación se presentan los principales genes modulados; los valores de **Log2FC** correspondientes al estudio COVID se dejan como referencia editable:
 
-| Gen | Función Biológica | COVID-01 (Log2FC) | COVID-02 (Log2FC) | Interpretación |
+| Gen | Función Biológica | Calu-3 (Log2FC) |  A549 (Log2FC) | Interpretación |
 |----|------------------|------------------|------------------|----------------|
 | IFNB1 | Interferón tipo I | — | — | 🚨 Pico máximo de señal antiviral. Gatillo maestro de la respuesta inmune innata. |
 | IFNL1 | Interferón tipo III | — | — | ⬆️ Protección epitelial activada. Respuesta mucosal antiviral. |
