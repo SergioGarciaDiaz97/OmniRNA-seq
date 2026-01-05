@@ -191,9 +191,9 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 </div>
 
 ---
-## 💻 B. Modo Explorer
+## 🗺️ $\color{#8B0000}{\text{B. Modo Explorer}}$
 
-> **🔬 Caso de Estudio 1: Respuesta Transcriptómica al SARS-CoV-2**
+<summary>$\Large \color{#000080}{\textbf{🔬 Caso de Estudio 1: Respuesta Transcriptómica al SARS-CoV-2}}$</summary>
 
 ### 📊 Validación Técnica
 
@@ -206,9 +206,13 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 
 ---
 
-<details>
-<summary><strong>📕 A. Contexto y Expectativas (Estudio de Referencia)</strong></summary>
-<br>
+<summary>
+  <strong>
+    <span style="color:green; font-size:1.45em;">
+      A. Contexto y Expectativas (Estudio de Referencia)
+    </span>
+  </strong>
+</summary>
 
 El estudio demuestra que la infección viral induce una activación masiva de la respuesta inmune innata y antiviral, evidenciada por la sobreexpresión de interferones tipo I y III (IFNB1, IFNL1-3), citocinas proinflamatorias (TNF, IL6, IL1A) y quimiocinas de reclutamiento leucocitario (CXCL10, ICAM1, ULBP1, PTX3), junto con la activación de mecanismos de bloqueo viral directo (CH25H) y estrés oxidativo (TXNIP). Paralelamente, se observa una inhibición coordinada de rutas críticas para el metabolismo celular, la homeostasis antioxidante y la integridad epitelial, incluyendo genes de detoxificación y metabolismo energético (CYP1A1, FABP5, LDHA, GPX2, SLC7A5), señalización y matriz extracelular (CAV1, TGM2) y barreras epiteliales y mucosas (CLDN1, DSP, KRT7, TJP1, MUC1, SCGB3A2). Esta firma molecular refleja un perfil dual, donde la activación de la defensa antiviral se combina con la supresión de funciones celulares esenciales, creando un entorno que favorece la replicación viral mientras intenta contener la infección. A continuación se presentan los principales genes modulados con sus valores Log2FC:
 
