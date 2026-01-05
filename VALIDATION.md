@@ -19,7 +19,7 @@ Este documento documenta la ejecución del pipeline en **escenarios biológicos 
 - **🆔 Estudio:** GSE179868 (Koltowska et al., *Nature Cell Biology*, 2021)  
   🔗 https://doi.org/10.1038/s41556-021-00784-w
 - **🧬 Organismo:** *Homo sapiens* (hg38)
-- **⚙️ Estrategia:** `fastq_list_strategy: "manual"`  
+- **⚙️ Estrategia:** `fastq_list_strategy: "manual"`, execution_mode: **featureCounts**.
   Trimmomatic ➔ STAR ➔ FeatureCounts
 - **🎯 Objetivo:** Validar la detección de arresto del ciclo celular y estrés ribosomal inducidos por KD de DDX21.
 - **⚗️ Diseño Experimental:** Contrastes estadísticos robustos: `siRNA_01_vs_Control` y `siRNA_02_vs_Control`.
@@ -199,9 +199,10 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
   
 **Validación Técnica**
 
-- **🆔 Estudio:** GSE147507 (Blanco-Melo et al., 2020, *Europe PMC*)  
-  🔗 https://doi.org/10.1038/s41556-021-00784-w](https://doi.org/10.1016/j.cell.2020.04.026 
+- **🆔 Estudio:** GSE147507 (Blanco-Melo et al., Cell, 2020).
+  🔗 https://doi.org/10.1016/j.cell.2020.04.026
 - **🧬 Organismo:** *Homo sapiens* (hg38)
-- **⚙️ Estrategia:** `fastq_list_strategy: "manual". **Precomputed Matrix Mode**.
-- **🎯 Objetivo:** 
-- **⚗️ Diseño Experimental:**
+- **⚙️ Estrategia:** `fastq_list_strategy: "manual", execution_mode: **"precomputed_matrix"**.
+Input directo de Conteos ➔ DESeq2 ➔ Análisis Funcional
+- **🎯 Objetivo:** Validar la capacidad del pipeline para procesar matrices de conteo externas y detectar la firma de Tormenta de Citoquinas.
+- **⚗️ Diseño Experimental:** Contraste directo: SARS-CoV-2_vs_Mock (Infectado vs Control).
