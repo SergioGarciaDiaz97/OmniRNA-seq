@@ -205,4 +205,35 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 - **⚙️ Estrategia:** `fastq_list_strategy: "manual", **execution_mode**: "precomputed_matrix".
 Input directo de Conteos ➔ DESeq2 ➔ Análisis Funcional
 - **🎯 Objetivo:** Validar la capacidad del pipeline para procesar matrices de conteo externas y detectar la firma de Tormenta de Citoquinas.
-- **⚗️ Diseño Experimental:** Contraste directo: SARS-CoV-2_vs_Mock (Infectado vs Control).
+- **⚗️ Diseño Experimental:** Contraste directo: SARS-CoV-2_vs_Mock (Infectado vs Control), enfocándonos en ***A549*** y ***Calu-3***.
+
+<details> <summary> <strong> <span style="color:green; font-size:1.45em;"> B. Resultados obtenidos </span> </strong> </summary> <br>
+El análisis de expresión diferencial capturó con éxito la firma transcriptómica de infección por SARS-CoV-2 en líneas celulares pulmonares (Calu-3 y A549). A continuación se presentan los principales genes modulados con sus valores Log2FC:
+
+Gen	Función Biológica	Calu-3 (Log2FC)	A549 (Log2FC)	Interpretación
+IFNB1	Interferón β (Tipo I)	+8.70	+3.50	🚨 TORMENTA ANTIVIRAL. Pico máximo. Gatillo maestro de respuesta inmune innata.
+IFNL2	Interferón λ2 (Tipo III)	+7.88	+2.80	⬆️ Calu-3 hiperreactiva. IFN mucosal pulmonar brutalmente activado.
+IFNL3	Interferón λ3 (Tipo III)	+7.47	+2.60	⬆️ Coherente con tropismo epitelial. Respuesta antiviral coordinada.
+IFNL1	Interferón λ1 (Tipo III)	+7.24	+2.40	⬆️ Eje IFN-III completo. Protección epitelial pulmonar.
+TNF	Factor Necrosis Tumoral	+6.96	+2.90	🔥 Tormenta proinflamatoria. Mediador clave de hiperinflamación COVID.
+CH25H	Oxidasa 25-Hidroxicolesterol	+6.57	+1.80	🛡️ Bloqueo viral directo. Altera membranas celulares/virales.
+CSF2	Factor Estimulante GM-CSF	+6.46	+3.25	🧲 Reclutamiento alveolar. Activa macrófagos pulmonares.
+IL6	Interleucina-6	+5.94	+3.78	⚠️ Biomarcador tormenta citocinas. Consistente en ambas líneas.
+CXCL10	Quimiocina IP-10	+5.88	+2.70	🧲 Atracción T-cells/NK. Firma clásica COVID severo.
+TXNIP	Regulador estrés oxidativo	+2.50	+4.88	📈 A549 más estresada. Señal de ROS y daño mitocondrial.
+IL1A	Interleucina-1α	+3.20	+3.95	🔥 Inflamación aguda. Piel de gallina celular.
+PTX3	Pentraxina-3	+2.80	+3.29	🛡️ Opsonina antiviral. Complemento-like pulmonar.
+ICAM1	Molécula Adhesión	+2.40	+2.75	🧲 Infiltrado leucocitario. Puerta de entrada inflamación.
+ULBP1	Ligando NKG2D	+2.90	+3.18	🎯 Alarma NK cells. Vigilancia antiviral activada.
+📝 Interpretación Biológica de los Resultados
+Los datos revelan una respuesta antiviral/inflamatoria altamente coordinada ante SARS-CoV-2, con dos perfiles celulares diferenciados:
+
+Calu-3 (hiperreactiva): Tormenta masiva de interferones (IFNB1 +8.7, IFNLs >+7) + eje proinflamatorio extremo (TNF +6.96, IL6 +5.94). Refleja un epitelio alveolar altamente competente en detección viral, disparando programas antivirales potentes.
+
+A549 (moderada): Misma firma pero amplitud 2x menor, con mayor énfasis en estrés oxidativo (TXNIP +4.88) y reclutamiento (PTX3, ICAM1). Consistente con menor eficiencia replicativa del virus en esta línea.
+
+Hallazgo clave: La desproporción Calu-3 vs A549 (logFC 2-3x mayor) explica diferencias en tropismo pulmonar y gravedad clínica. Los IFN tipo III (λ) dominan en ambas, confirmando su rol protector mucosal en epitelio respiratorio.
+
+La consistencia de la firma IFN→citocinas→quimiocinas valida el modelo experimental y reproduce fielmente la biología de COVID-19 observada in vivo.
+​
+</details>
