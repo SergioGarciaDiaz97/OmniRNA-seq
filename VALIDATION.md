@@ -189,8 +189,8 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 </details>
 
 </div>
-
 ---
+<br>
 ## 🗺️ $\color{#8B0000}{\text{B. Modo Explorer}}$
 
 <summary>$\Large \color{#000080}{\textbf{🔬 Caso de Estudio 1: Respuesta Transcriptómica al SARS-CoV-2}}$</summary>
