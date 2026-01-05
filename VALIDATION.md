@@ -213,14 +213,14 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 <summary>
   <strong>
     <span style="color:green; font-size:1.45em;">
-      A. Contexto y Expectativas (Estudio de Referencia)
+      Resultados presentes del artículo y obtenidos por OmniRNA-seq
     </span>
   </strong>
 </summary>
 
 <br>
 
-El estudio demuestra que la infección viral induce una activación masiva de la respuesta inmune innata y antiviral, evidenciada por la sobreexpresión de interferones tipo I y III (IFNB1, IFNL1-3), citocinas proinflamatorias (TNF, IL6, IL1A) y quimiocinas de reclutamiento leucocitario (CXCL10, ICAM1, ULBP1, PTX3), junto con la activación de mecanismos de bloqueo viral directo (CH25H) y estrés oxidativo (TXNIP). Paralelamente, se observa una inhibición coordinada de rutas críticas para el metabolismo celular, la homeostasis antioxidante y la integridad epitelial, incluyendo genes de detoxificación y metabolismo energético (CYP1A1, FABP5, LDHA, GPX2, SLC7A5), señalización y matriz extracelular (CAV1, TGM2) y barreras epiteliales y mucosas (CLDN1, DSP, KRT7, TJP1, MUC1, SCGB3A2). Esta firma molecular refleja un perfil dual, donde la activación de la defensa antiviral se combina con la supresión de funciones celulares esenciales, creando un entorno que favorece la replicación viral mientras intenta contener la infección. A continuación se presentan los principales genes modulados con sus valores Log2FC:
+El estudio demuestra que la infección por SARS-CoV-2 desencadena una activación intensa de la respuesta inmune innata y antiviral, dominada por interferones tipo I y III, citocinas proinflamatorias y quimiocinas de reclutamiento leucocitario, junto con mecanismos de bloqueo viral directo. De forma paralela, se observa una represión profunda de programas celulares esenciales, especialmente aquellos relacionados con la integridad epitelial, la organización estructural, la señalización celular y la regulación génica, lo que sugiere un colapso funcional del estado epitelial. En conjunto, la firma transcriptómica refleja un perfil dual en el que una defensa antiviral exacerbada coexiste con la pérdida de identidad y homeostasis celular, característica de infección severa por SARS-CoV-2 en Calu-3.
 
 <br>
 
@@ -261,43 +261,5 @@ El estudio demuestra que la infección viral induce una activación masiva de la
 
 <br>
 
-<details open>
-<summary>
-  <strong>
-    <span style="color:green; font-size:1.45em;">
-      B. Resultados obtenidos
-    </span>
-  </strong>
-</summary>
 
-
-El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó con éxito una firma transcriptómica característica de **respuesta antiviral exacerbada y colapso funcional del epitelio y del metabolismo celular**. A continuación se representan los principales genes modulados con sus valores **Log2FC** para ***A549*** y ***Calu-3***:
-
-| Gen | Función Biológica | Calu-3 (Log2FC) |  A549 (Log2FC) | Interpretación |
-|----|------------------|------------------|------------------|----------------|
-| IFNB1 | Interferón tipo I | — | — | 🚨 Pico máximo de señal antiviral. Gatillo maestro de la respuesta inmune innata. |
-| IFNL1 | Interferón tipo III | — | — | ⬆️ Protección epitelial activada. Respuesta mucosal antiviral. |
-| IFNL2 | Interferón tipo III | — | — | ⬆️ Eje IFN-III hiperactivo. Firma de infección respiratoria severa. |
-| IFNL3 | Interferón tipo III | — | — | ⬆️ Respuesta antiviral coordinada y sostenida. |
-| TNF | Citocina proinflamatoria | — | — | 🔥 Tormenta inflamatoria. Mediador central de daño tisular. |
-| IL6 | Biomarcador inflamación severa | — | — | ⚠️ Firma clásica de tormenta de citoquinas. |
-| CSF2 (GM-CSF) | Activación mieloide | — | — | 🧲 Reclutamiento alveolar y activación de macrófagos. |
-| CXCL10 | Quimiocina IP-10 | — | — | 🧲 Atracción masiva de células T/NK. Indicador de COVID severo. |
-| CH25H | Bloqueo viral directo | — | — | 🛡️ Alteración de membranas virales. Defensa antiviral intracelular. |
-| TXNIP | Estrés oxidativo | — | — | 📈 Daño mitocondrial y estrés celular elevado. |
-| CYP1A1 | Metabolismo detox | — | — | 🧬 Detoxificación suprimida. Recursos celulares redirigidos al virus. |
-| FABP5 | Transporte lipídico | — | — | 🏭 Metabolismo de membranas alterado por infección viral. |
-| ALOX5AP | Inflamación lipídica | — | — | 🛡️ Supresión selectiva de leucotrienos. Evasión inmune. |
-| GPX2 | Defensa antioxidante | — | — | ⚠️ Pérdida de protección frente a ROS. Estrés oxidativo descontrolado. |
-| SLC7A5 | Transporte aminoácidos | — | — | 🍽️ Competencia viral por nutrientes celulares. |
-| LDHA | Metabolismo energético | — | — | ⚡ Reprogramación metabólica inducida por virus. |
-| CAV1 | Señalización caveolar | — | — | 📡 Alteración de rutas de señalización y entrada viral facilitada. |
-| TGM2 | Matriz extracelular | — | — | 🧱 Debilitamiento estructural del tejido. |
-| CLDN1 | Uniones estrechas | — | — | 🔒 Pérdida de integridad epitelial pulmonar. |
-| DSP | Adhesión celular | — | — | 🧬 Desorganización del epitelio respiratorio. |
-| KRT7 | Identidad epitelial | — | — | 🏗️ Desdiferenciación epitelial inducida por infección. |
-| TJP1 | Tight junctions | — | — | 🔓 Colapso de la barrera celular. Filtración tisular. |
-| MUC1 | Barrera mucosa | — | — | 🛡️ Defensa mucosal suprimida. Mayor exposición viral. |
-| SCGB3A2 | Secreción pulmonar | — | — | 💧 Fallo del clearance mucociliar. |
-
-
+## 📊 Dinámica de Sistemas – SARS-CoV-2 en A549
