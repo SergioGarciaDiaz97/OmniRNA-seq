@@ -226,34 +226,28 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 
 ## 📊 Dinámica de Sistemas – SARS-CoV-2 en Calu-3
 
-| Sistema Biológico | Estado | Genes Afectados (Log2FC) | Hallazgo Biológico (Interpretación) |
-|------------------|--------|--------------------------|-------------------------------------|
-| Antiviral (IFN Tipo I) | Activado | IFNB1 (+8.70) | 🚨 Tormenta antiviral. Pico máximo. Gatillo maestro. |
-| Antiviral (IFN Tipo III) | Activado | IFNL1 (+7.24), IFNL2 (+7.88), IFNL3 (+7.47) | ⬆️ Eje IFN-III completo. Respuesta antiviral coordinada. Protección epitelial. |
-| Inflamatorio / Citocinas | Activado | TNF (+6.96), IL6 (+5.94), IL1A (+3.20), CSF2 (+6.46) | 🔥 Tormenta proinflamatoria y reclutamiento inmune. Mediadores clave COVID. |
-| Inmunidad innata / Quimiocinas | Activado | CXCL10 (+5.88), ICAM1 (+2.40), ULBP1 (+2.90), PTX3 (+2.80) | 🧲 Atracción de células NK/T, infiltración leucocitaria, opsonización antiviral. |
-| Antiviral / Bloqueo viral | Activado | CH25H (+6.57) | 🛡️ Bloqueo viral directo. Alteración de membranas. |
-| Integridad epitelial | Inhibido | CLDN2 (-3.47) | 🔒 Colapso severo de uniones epiteliales. |
-| Diferenciación celular | Inhibido | SCGN (-3.10) | 🧬 Pérdida de identidad celular. |
-| Señalización GPCR | Inhibido | NPBWR1 (-2.82) | 📡 Comunicación celular apagada. |
-| Metabolismo celular | Inhibido | METTL7A (-2.75) | ⚙️ Metabolismo basal reprimido. |
-| Citoesqueleto / estructura | Inhibido | NEB (-2.71) | 🧱 Desorganización estructural extrema. |
-| Membrana / tetraspaninas | Inhibido | TM4SF4 (-2.45) | 🧫 Alteración de arquitectura de membrana. |
-| Vesículas / secreción | Inhibido | SYT12 (-2.45) | 💧 Tráfico vesicular comprometido. |
-| Canales iónicos | Inhibido | KCNK2 (-2.44) | ⚡ Homeostasis iónica alterada. |
-| Epitelio especializado | Inhibido | ANXA13 (-2.43) | 🔻 Función epitelial especializada perdida. |
-| Metabolismo neurotransmisores | Inhibido | DDC (-2.39) | 🧠 Ejes metabólicos secundarios reprimidos. |
-| Regulación transcripcional | Inhibido | LOC389332 (-2.37) | ❓ Represión transcripcional robusta. |
-| Organización nuclear | Inhibido | LRRC45 (-2.31) | 🧬 Arquitectura nuclear alterada. |
-| Control proliferativo | Inhibido | MXD3 (-2.30) | ⛔ Programas de crecimiento reprimidos. |
-| Regulación génica | Inhibido | C9orf116 (-2.24) | 📉 Red regulatoria apagada. |
-| Señalización Wnt | Inhibido | SOSTDC1 (-2.19) | 🧩 Diferenciación y señalización suprimidas. |
-| Endocitosis | Inhibido | EPN3 (-2.19) | 📦 Transporte vesicular bloqueado. |
-| Metabolismo no caracterizado | Inhibido | KIAA1456 (-2.18) | ⚙️ Ruta metabólica reprimida. |
-| Regulación epigenética (lncRNA) | Inhibido | C1QTNF9B-AS1 (-2.12) | 🧬 Control epigenético alterado. |
-| Transporte lipídico | Inhibido | ABCG5 (-2.09) | 🏭 Homeostasis lipídica colapsada. |
-| Splicing | Inhibido | SNRNP25 (-2.06) | ✂️ Procesamiento de RNA comprometido. |
-| Daño en ADN | Inhibido | H2AFX (-2.05) | 🚨 Vulnerabilidad genómica elevada. |
+| Sistema Biológico             | Estado    | Blanco-Melo Genes (LogFC) | OmniRNA-seq Genes (LogFC)               | Hallazgo Biológico                                                              |
+| ----------------------------- | --------- | ------------------------- | --------------------------------------- | ------------------------------------------------------------------------------- |
+| 🚨 Interferón Tipo I          | Activo    | IFNB1 ↑↑                  | IFNB1 (+8.70)                           | Tormenta IFNβ extrema. Maestro antiviral. ppl-ai-file-upload.s3.amazonaws​      |
+| 🛡️ Interferón Tipo III       | Activo    | IFNL1/2/3 ↑               | IFNL2 (+7.88) IFNL3 (+7.47) IFNL1 (+7.24) | Defensa mucosal IFN-λ. Firma COVID clásica. ppl-ai-file-upload.s3.amazonaws​    |
+| 🔥 Citocinas Proinflamatorias | Activo    | TNF ↑, IL6 ↑              | TNF (+6.96) IL6 (+5.94) IL1A (+3.20)    | Tormenta citocinas sistémica. ppl-ai-file-upload.s3.amazonaws​                  |
+| 🧲 Reclutamiento Inmune       | Activo    | CXCL10 ↑, CXCL16 ↑        | CXCL10 (+5.88) CSF2 (+6.46) ICAM1 (+2.40) | Infiltrado T-cells/macrófagos. ppl-ai-file-upload.s3.amazonaws​                 |
+| 🎯 Vigilancia NK              | Activo    | Quimiocinas ↑             | ULBP1 (+2.90) PTX3 (+2.80)               | Citotoxicidad NK activada. ppl-ai-file-upload.s3.amazonaws​                     |
+| 🛡️ Bloqueo Viral             | Activo    | CH25H ↑                   | CH25H (+6.57)                           | Oxisteroles alteran membranas virales. ppl-ai-file-upload.s3.amazonaws​         |
+| 🔒 Barrera Epitelial          | Reprimido | CLDN2 ↓↓                  | CLDN2 (-3.47) TJP1 (-2.35)               | Ruptura tight junctions. Edema pulmonar. ppl-ai-file-upload.s3.amazonaws​       |
+| 🧬 Identidad Epitelial        | Reprimido | SCGN ↓                    | SCGN (-3.10) KRT7 (-2.30) MUC1 (-2.20)  | Desdiferenciación + pérdida mucina protectora. ppl-ai-file-upload.s3.amazonaws​ |
+| 📡 Señalización GPCR          | Reprimido | NPBWR1 ↓                  | NPBWR1 (-2.82) KCNK2 (-2.44)             | Comunicación/homeostasis iónica colapsada. ppl-ai-file-upload.s3.amazonaws​     |
+| 🧪 Metabolismo Basal          | Reprimido | METTL7A ↓                 | METTL7A (-2.75) DDC (-2.39)              | Detox + rutas aminas reprogramadas. ppl-ai-file-upload.s3.amazonaws​            |
+| 🏗️ Citoesqueleto/Estructura  | Reprimido | NEB ↓↓                    | NEB (-2.71) ANXA13 (-2.43)               | Arquitectura celular destruida. ppl-ai-file-upload.s3.amazonaws​                |
+| 🧱 Membrana/Microdominios     | Reprimido | TM4SF4 ↓↓                 | TM4SF4 (-2.45) CAV1 (-2.95)              | Reorganización favorece virus. ppl-ai-file-upload.s3.amazonaws​                 |
+| 🚚 Transporte Vesicular       | Reprimido | SYT12 ↓                   | SYT12 (-2.45) EPN3 (-2.19)               | Endocitosis/secreción bloqueada. ppl-ai-file-upload.s3.amazonaws​               |
+| 🧬 Procesamiento RNA          | Reprimido | SNRNP25 ↓                 | SNRNP25 (-2.06) MXD3 (-2.30)             | Splicing + proliferación suprimidos. ppl-ai-file-upload.s3.amazonaws​           |
+| 💻 Regulación Epigenética     | Reprimido | C1QTNF9B-AS1 ↓            | C1QTNF9B-AS1 (-2.12)                    | lncRNA alterados. ppl-ai-file-upload.s3.amazonaws​                              |
+| 🛢️ Lipidos/Colesterol        | Reprimido | ABCG5 ↓                   | ABCG5 (-2.09) FABP5 (-4.20)              | Transporte lipídico colapsado. ppl-ai-file-upload.s3.amazonaws​                 |
+| 🧬 Reparación ADN             | Reprimido | H2AFX ↓                   | H2AFX (-2.05)                           | Vulnerabilidad genómica aumentada. ppl-ai-file-upload.s3.amazonaws​             |
+| 🧬 Organización Nuclear       | Reprimido | LRRC45 ↓                  | LRRC45 (-2.31)                          | Centrosomas/núcleo desorganizados. ppl-ai-file-upload.s3.amazonaws​             |
+| 🧬 Diferenciación Wnt         | Reprimido | SOSTDC1 ↓                 | SOSTDC1 (-2.19)                         | Remodelado tisular inhibido. ppl-ai-file-upload.s3.amazonaws​                   |
+
 
 
 
