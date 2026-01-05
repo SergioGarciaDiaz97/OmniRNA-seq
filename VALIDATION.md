@@ -227,7 +227,7 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 ## 📊 Dinámica de Sistemas – SARS-CoV-2 en Calu-3
 
 | Sistema Biológico             | Estado    | Blanco-Melo Genes (LogFC) | OmniRNA-seq Genes (LogFC)               | Hallazgo Biológico                                                              |
-| ----------------------------- | --------- | ------------------------- | --------------------------------------- | ------------------------------------------------------------------------------- |
+| :-----------------------------: | :---------: | :-------------------------: | :---------------------------------------: | :-------------------------------------------------------------------------------: |
 | 🚨 Interferón Tipo I          | Activo    | IFNB1 (+8.70)               | IFNB1 (+10.00)                           | Tormenta IFNβ extrema. Maestro antiviral.        |
 | 🛡️ Interferón Tipo III       | Activo    | IFNL2 (+7.88) IFNL3 (+7.47) IFNL1 (+7.24)               | IFNL2 (+11.37) IFNL3 (+9.84) IFNL1 (+8.18) | Defensa mucosal IFN-λ. Firma COVID clásica.      |
 | 🔥 Citocinas Proinflamatorias | Activo    | TNF (+6.96) IL6 (+5.94) IL1A (+5.15)               | TNF (+7.71) IL6 (+6.06) IL1A (+5.23)    | Tormenta citocinas sistémica.                    |
