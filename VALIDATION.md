@@ -189,3 +189,19 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 </details>
 
 </div>
+
+---
+
+## 💻 $\color{#8B0000}{\text{B. Modo Explorer}}$
+<br>
+<div style="background-color:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:22px;margin-bottom:24px;">
+<summary>$\Large \color{#000080}{\textbf{🔬 Caso de Estudio 1: Silenciamiento de la Helicasa DDX21}}$</summary>
+  
+**Validación Técnica**
+
+- **🆔 Estudio:** GSE147507 (Blanco-Melo et al., 2020, *Europe PMC*)  
+  🔗 https://doi.org/10.1038/s41556-021-00784-w](https://doi.org/10.1016/j.cell.2020.04.026 
+- **🧬 Organismo:** *Homo sapiens* (hg38)
+- **⚙️ Estrategia:** `fastq_list_strategy: "manual". **Precomputed Matrix Mode**.
+- **🎯 Objetivo:** 
+- **⚗️ Diseño Experimental:**
