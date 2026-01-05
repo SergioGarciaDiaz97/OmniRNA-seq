@@ -89,8 +89,6 @@ El análisis de expresión diferencial realizado por **OmniRNA-seq** capturó co
 
 Los datos revelan una **respuesta celular altamente coordinada y masiva** ante la pérdida de DDX21. El pipeline detectó con precisión el evento iniciador: la **activación del eje p53-p21** (subida de *CDKN1A* y *MDM2*), que funciona como el gatillo del arresto celular. Esta señal provoca un efecto cascada de represión sobre dos pilares vitales: 
 
-
-
 1. **Fase S:** El colapso absoluto de la replicación del ADN, evidenciado por la bajada de licencias de origen (*CDC6, CDT1*) y el desmantelamiento de la helicasa (*MCM10*) y polimerasas (*POLE*).
 2. **Fase M:** Un desmantelamiento estructural de la mitosis, caracterizado por la **"masacre de kinesinas"** (represión de múltiples *KIFs*) y la pérdida de integridad en el centrómero (*CENPA, NDC80*). 
 
@@ -192,6 +190,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
 ---
 
 <br>
+
 ## 🗺️ $\color{#8B0000}{\text{B. Modo Explorer}}$
 
 <summary>$\Large \color{#000080}{\textbf{🔬 Caso de Estudio 1: Respuesta Transcriptómica al SARS-CoV-2}}$</summary>
