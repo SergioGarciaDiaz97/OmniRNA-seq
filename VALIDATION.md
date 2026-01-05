@@ -199,10 +199,10 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
   
 **Validación Técnica**
 
-- **🆔 Estudio:** GSE147507 (Blanco-Melo et al., Cell, 2020).
+- **🆔 Estudio:** GSE147507 (Blanco-Melo et al., Cell, 2020)
   🔗 https://doi.org/10.1016/j.cell.2020.04.026
 - **🧬 Organismo:** *Homo sapiens* (hg38)
-- **⚙️ Estrategia:** `fastq_list_strategy: "manual", execution_mode: **"precomputed_matrix"**.
+- **⚙️ Estrategia:** `fastq_list_strategy: "manual", **execution_mode**: "precomputed_matrix".
 Input directo de Conteos ➔ DESeq2 ➔ Análisis Funcional
 - **🎯 Objetivo:** Validar la capacidad del pipeline para procesar matrices de conteo externas y detectar la firma de Tormenta de Citoquinas.
 - **⚗️ Diseño Experimental:** Contraste directo: SARS-CoV-2_vs_Mock (Infectado vs Control).
