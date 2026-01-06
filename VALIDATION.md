@@ -255,4 +255,101 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 <br>
 
 
+
+
+
+<details>
+<summary>$\Large \color{#000080}{\textbf{📊 Resultados Interactivos y Reportes Generados}}$</summary>
+<br>
+
+### <span style="color:#000080;">🔴 Volcano Plots (Interactivos)</span>
+
+<p align="center">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_01_vs_Control.html" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_calu.png" width="300">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/VolcanoPlot_Dashboard_siRNA_02_vs_Control.html" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_a549" width="300">
+  </a>
+  <br>
+  <sub><b>siRNA 01 (Izquierda) — siRNA 02 (Derecha)</b></sub>
+</p>
+
+---
+
+### <span style="color:#000080;">🟢 Dashboards Transcriptómicos</span>
+
+<p align="center">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_01_vs_Control.html" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard_calu.png" width="300">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Interactivo_siRNA_02_vs_Control.html" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard_a549.png" width="300">
+  </a>
+  <br>
+  <sub><b>Dashboard siRNA 01 — Dashboard siRNA 02</b></sub>
+</p>
+
+---
+
+### <span style="color:#000080;">🟣 Reportes Transcriptómicos (PDF)</span>
+
+<p align="center">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_01_vs_Control.pdf" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf_calu.png" width="300">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Transcriptomica_Completo_siRNA_02_vs_Control.pdf" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf_a549.png" width="300">
+  </a>
+  <br>
+  <sub><b>Reporte Completo 01 — Reporte Completo 02</b></sub>
+</p>
+
+---
+
+### <span style="color:#000080;">🧬 Enriquecimiento Funcional — Gene Ontology</span>
+
+#### Calu-3
+
+<p align="center">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_01_vs_Control.pdf" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp_calu.png" width="240">
+  </a>
+  &nbsp;
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_01_vs_Control.pdf" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc_calu.png" width="240">
+  </a>
+  &nbsp;
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_01_vs_Control.pdf" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf_calu.png" width="240">
+  </a>
+</p>
+
+#### 549
+
+<p align="center">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_02_vs_Control.pdf" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp_a549.png" width="240">
+  </a>
+  &nbsp;
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_CC_siRNA_02_vs_Control.pdf" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc_a549.png" width="240">
+  </a>
+  &nbsp;
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_MF_siRNA_02_vs_Control.pdf" target="_blank">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf_a549.png" width="240">
+  </a>
+</p>
+
+</details>
+
+</div>
+
+---
+
+<br>
+
 ## 📊 Dinámica de Sistemas – SARS-CoV-2 en A549
