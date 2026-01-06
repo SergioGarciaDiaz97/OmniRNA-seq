@@ -256,6 +256,8 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 
 
 
+## 📊 Dinámica de Sistemas – SARS-CoV-2 en A549
+
 
 
 <details>
@@ -328,7 +330,7 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
   </a>
 </p>
 
-#### 549
+#### A549
 
 <p align="center">
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_local/Informe_Visual_GO_BP_siRNA_02_vs_Control.pdf" target="_blank">
@@ -351,5 +353,3 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 ---
 
 <br>
-
-## 📊 Dinámica de Sistemas – SARS-CoV-2 en A549
