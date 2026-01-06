@@ -271,7 +271,7 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_calu.png" width="300">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/" target="_blank">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/VolcanoPlot_Dashboard_SARS_CoV_2_vs_Mock_A549.html" target="_blank">
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_a549.png" width="300">
   </a>
   <br>
