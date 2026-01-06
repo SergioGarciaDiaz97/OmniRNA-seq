@@ -299,11 +299,11 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 ### <span style="color:#000080;">🟣 Reportes Transcriptómicos (PDF)</span>
 
 <p align="center">
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/" target="_blank">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/Informe_Transcriptomica_Completo_SARS_CoV_2_vs_Mock_Calu.pdf" target="_blank">
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf_calu.png" width="300">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/" target="_blank">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/Informe_Transcriptomica_Completo_SARS_CoV_2_vs_Mock_A549.pdf" target="_blank">
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf_a549.png" width="300">
   </a>
   <br>
