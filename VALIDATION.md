@@ -146,7 +146,7 @@ La extrema consistencia en los valores Log2FC entre siRNA-01 y siRNA-02 valida l
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf2.png" width="300">
   </a>
   <br>
-  <sub><b>Reporte Completo 01 — Reporte Completo 02</b></sub>
+  <sub><b>Reporte Completo siRNA 01 — Reporte Completo siRNA 02</b></sub>
 </p>
 
 ---
@@ -275,7 +275,7 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_a549" width="300">
   </a>
   <br>
-  <sub><b>siRNA 01 (Izquierda) — siRNA 02 (Derecha)</b></sub>
+  <sub><b>Calu-3 (Izquierda) — A549 (Derecha)</b></sub>
 </p>
 
 ---
@@ -291,7 +291,7 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard_a549.png" width="300">
   </a>
   <br>
-  <sub><b>Dashboard siRNA 01 — Dashboard siRNA 02</b></sub>
+  <sub><b>Dashboard Calu-3 — Dashboard A549</b></sub>
 </p>
 
 ---
@@ -307,7 +307,7 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/gProf_a549.png" width="300">
   </a>
   <br>
-  <sub><b>Reporte Completo 01 — Reporte Completo 02</b></sub>
+  <sub><b>Reporte Completo Calu-3 — Reporte Completo A549</b></sub>
 </p>
 
 ---
