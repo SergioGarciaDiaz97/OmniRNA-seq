@@ -317,15 +317,15 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 #### Calu-3
 
 <p align="center">
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/" target="_blank">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/Informe_Visual_GO_BP_SARS_CoV_2_vs_Mock_Calu.pdf" target="_blank">
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/bp_calu.png" width="240">
   </a>
   &nbsp;
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/" target="_blank">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/Informe_Visual_GO_CC_SARS_CoV_2_vs_Mock_Calu.pdf" target="_blank">
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/cc_calu.png" width="240">
   </a>
   &nbsp;
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/" target="_blank">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/Informe_Visual_GO_MF_SARS_CoV_2_vs_Mock_Calu.pdf" target="_blank">
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/mf_calu.png" width="240">
   </a>
 </p>
