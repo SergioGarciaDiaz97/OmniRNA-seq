@@ -283,7 +283,7 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
 ### <span style="color:#000080;">🟢 Dashboards Transcriptómicos</span>
 
 <p align="center">
-  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/" target="_blank">
+  <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/Informe_Interactivo_SARS_CoV_2_vs_Mock.html" target="_blank">
     <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/dashboard_calu.png" width="300">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
