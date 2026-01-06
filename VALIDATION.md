@@ -272,7 +272,7 @@ El estudio demuestra que la infección por SARS-CoV-2 desencadena una activació
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://SergioGarciaDiaz97.github.io/OmniRNA-seq/Resultados/Modo_explorer/COVID/" target="_blank">
-    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_a549" width="300">
+    <img src="https://raw.githubusercontent.com/SergioGarciaDiaz97/OmniRNA-seq/main/assets/volcanoplot_a549.png" width="300">
   </a>
   <br>
   <sub><b>Calu-3 (Izquierda) — A549 (Derecha)</b></sub>
